@@ -1,3 +1,5 @@
+package LawEnforcementDatabase;
+
 public class DataWriter {
     
     public void savePersons(){

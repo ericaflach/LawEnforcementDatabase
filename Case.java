@@ -1,6 +1,5 @@
 package LawEnforcementDatabase;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Case {
@@ -17,43 +16,43 @@ public class Case {
     private int legalClearance;
 
     public User getCreator(){
-        
+        return null;
     }
 
     public String getWitnesses(){
-    
+        return null;
     }
 
     public String getPersonsOfInterest(){
-
+        return null;
     }
 
     public String getSuspects(){
-
+        return null;
     }
 
     public boolean getCaseOpen(){
-
+        return false;
     }
 
     public int getCaseNum(){
-
+        return 0;
     }
 
     public String getEvidence(){
-
+        return null;
     }
 
     public int getCrimeLevel(){
-
+        return 0;
     }
 
     public String getOfficers(){
-
+        return null;
     }
 
     public int getLegalClearance(){
-
+        return 0;
     }
 
     public void setCaseOpen(boolean caseOpen){

@@ -17,34 +17,34 @@ public class Criminal {
 
     }
     public User getCreator(){
-
+        return null;
     }
     public ArrayList<Case> getPastCrimes(){
-
+        return null;
     }
     public String getAddress(){
-
+        return null;
     }
     public double getShoeSize(){
-
+        return 0.0;
     }
     public int getPriority(){
-
+        return 0;
     }
     public boolean getAlive(){
-
+        return false;
     }
     public int getCrimesCommitted(){
-
+        return 0;
     }
     public ArrayList<String> getPhysicalAttributes(){
-
+        return null;
     }
     public boolean inJail(){
-
+        return false;
     }
     public int getCriminalID(){
-
+        return 0;
     }
     public void setAddress(String address){
 

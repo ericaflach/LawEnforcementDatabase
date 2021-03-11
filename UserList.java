@@ -11,10 +11,10 @@ public class UserList {
     }
     public UserList getInstance()
     {
-
+        return null;
     }
     public User getUser(String username)
     {
-        
+        return null;
     }
 }
