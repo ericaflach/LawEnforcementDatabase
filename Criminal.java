@@ -3,6 +3,7 @@ package LawEnforcementDatabase;
 import java.util.ArrayList;
 
 public class Criminal {
+
     private User creator;
     private ArrayList<Case> pastCrimes;
     private String address;
@@ -14,60 +15,79 @@ public class Criminal {
     private int criminalID;
 
     public Criminal(){
-
-    }
-    public User getCreator(){
-        return null;
-    }
-    public ArrayList<Case> getPastCrimes(){
-        return null;
-    }
-    public String getAddress(){
-        return null;
-    }
-    public double getShoeSize(){
-        return 0.0;
-    }
-    public int getPriority(){
-        return 0;
-    }
-    public boolean getAlive(){
-        return false;
-    }
-    public int getCrimesCommitted(){
-        return 0;
-    }
-    public ArrayList<String> getPhysicalAttributes(){
-        return null;
-    }
-    public boolean inJail(){
-        return false;
-    }
-    public int getCriminalID(){
-        return 0;
-    }
-    public void setAddress(String address){
-
-    }
-    public void setShoeSize(double shoeSize){
-
-    }
-    public void setPriority(int priority){
-
-    }
-    public void setAlive(boolean alive){
-
-    }
-    public void addPhysicalAttributes(String attribute){
-
-    }
-    public void addPastCrime(Case crime){
-
-    }
-    public void removePastCrime(Case crime){
-
-    }
-    public void removePhysicalAttribute(String attribute){
         
     }
+
+    public User getCreator(){
+        return creator;
+    }
+
+    public ArrayList<Case> getPastCrimes(){
+        return pastCrimes;
+    }
+
+    public String getAddress(){
+        return address;
+    }
+
+    public double getShoeSize(){
+        return shoeSize;
+    }
+
+    public int getPriority(){
+        return priority;
+    }
+
+    public boolean getAlive(){
+        return alive;
+    }
+
+    public int getCrimesCommitted(){
+        return pastCrimes.size();
+    }
+
+    public ArrayList<String> getPhysicalAttributes(){
+        return physicalAttributes;
+    }
+
+    public boolean inJail(){
+        return inJail;
+    }
+
+    public int getCriminalID(){
+        return criminalID;
+    }
+
+    public void setAddress(String address){
+        this.address = address;
+    }
+
+    public void setShoeSize(double shoeSize){
+        this.shoeSize = shoeSize;
+    }
+
+    public void setPriority(int priority){
+        this.priority = priority;
+    }
+
+    public void setAlive(boolean alive){
+        this.alive = alive;
+    }
+
+    public void addPhysicalAttributes(String attribute){
+        physicalAttributes.add(attribute);
+    }
+
+    public void removePhysicalAttribute(String attribute){
+        physicalAttributes.remove(attribute);
+    }
+
+    public void addPastCrime(Case crime){
+        pastCrimes.add(crime);
+    }
+
+    public void removePastCrime(Case crime){
+        pastCrimes.remove(crime);
+    }
+
 }
