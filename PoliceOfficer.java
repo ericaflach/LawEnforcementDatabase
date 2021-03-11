@@ -1,3 +1,5 @@
+package LawEnforcementDatabase;
+
 import java.util.ArrayList;
 
 public class PoliceOfficer extends User {

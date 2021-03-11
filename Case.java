@@ -1,7 +1,9 @@
+package LawEnforcementDatabase;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class CaseStub {
+public class Case {
     
     private User creator;
     private ArrayList witnesses;

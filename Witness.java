@@ -1,8 +1,10 @@
-public class PersonOfInterestStub {
+package LawEnforcementDatabase;
+
+public class Witness {
     
     private String description;
     private String contact;
-    private int poiID;
+    private int witnessID;
 
     public String getDescription(){
         return description;
@@ -12,8 +14,8 @@ public class PersonOfInterestStub {
         return contact;
     }
 
-    public int getPoiID(){
-        return poiID;
+    public int getWitnessID(){
+        return witnessID;
     }
 
     public void setDescription(String description){
@@ -24,7 +26,7 @@ public class PersonOfInterestStub {
 
     }
 
-    public void setWitnessID(int poiID){
-        
+    public void setWitnessID(int witnessID){
+
     }
 }

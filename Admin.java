@@ -1,4 +1,6 @@
-public class AdminStub {
+package LawEnforcementDatabase;
+
+public class Admin {
 
     private int adminID;
 
