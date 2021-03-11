@@ -1,4 +1,6 @@
-public class SuspectStub {
+package LawEnforcementDatabase;
+
+public class Suspect extends Criminal {
     
     private String alibi;
     private int suspectID;

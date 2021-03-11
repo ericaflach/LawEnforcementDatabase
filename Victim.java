@@ -1,3 +1,5 @@
+package LawEnforcementDatabase;
+
 public class Victim extends Person{
 
     private String description;
