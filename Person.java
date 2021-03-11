@@ -10,20 +10,20 @@ public class Person {
 
     }
     public void setAge(int age){
-
+        this.age = age;
     }
     public void setName(String firstName, String lastName){
-
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
     public void setDateOfBirth(String dateOfBirth){
-
+        this.dateOfBirth = dateOfBirth;
     }
     public String getName(){
         return firstName + lastName;
     }
     public int getAge(){
-        return age;
-
+        return this.age;
     }
     public String getDateOfBirth()
     {

@@ -28,6 +28,6 @@ public class User{
     }
 
     public int getClearanceLevel(){
-        
+        return clearanceLevel;
     }
 }
