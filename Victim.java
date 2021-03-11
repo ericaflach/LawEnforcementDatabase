@@ -1,4 +1,4 @@
-public class Victim{
+public class Victim extends Person{
 
     private String description;
     private String contact;
