@@ -23,7 +23,7 @@ public class User{
 
     }
 
-    public void removeCriminal(nt criminalID){
+    public void removeCriminal(int criminalID){
 
     }
 
