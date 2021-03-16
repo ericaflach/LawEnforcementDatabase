@@ -19,14 +19,17 @@ public class Witness {
     }
 
     public void setDescription(String description){
+        this.description = description;
 
     }
 
     public void setContact(String contact){
+        this.contact = contact;
 
     }
 
     public void setWitnessID(int witnessID){
+        this.witnessID = witnessID;
 
     }
 }
