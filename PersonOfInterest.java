@@ -19,14 +19,17 @@ public class PersonOfInterest extends Person{
     }
 
     public void setDescription(String description){
+        this.description = description;
 
     }
 
     public void setContact(String contact){
+        this.contact = contact;
 
     }
 
     public void setWitnessID(int poiID){
+        this.poiID = poiID;
         
     }
 }
