@@ -4,16 +4,12 @@ public class Admin {
 
     private int adminID;
 
-    public void addUser(int officerID){
-
+    public void setAdminID(int adminID){
+        this.adminID=adminID;
     }
 
-    public void deleteUser(int officerID){
-
-    }
-
-    public void deleteCriminal(int criminalID){
-
+    public int setAdminID(){
+        return adminID;
     }
 
 }
