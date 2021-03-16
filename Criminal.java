@@ -18,6 +18,19 @@ public class Criminal {
         
     }
 
+    public Criminal(User creator, ArrayList<Case> pastCrimes, String address, double shoeSize, int priority, boolean alive,
+    ArrayList<String> physicalAttributes, boolean inJail, int criminalID){
+        this.creator = creator;
+        this.pastCrimes = pastCrimes;
+        this.address = address;
+        this.shoeSize = shoeSize;
+        this.priority = priority;
+        this.alive = alive;
+        this.physicalAttributes = physicalAttributes;
+        this.inJail = inJail;
+        this.criminalID = criminalID;
+    }
+
     public User getCreator(){
         return creator;
     }
