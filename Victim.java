@@ -14,7 +14,7 @@ public class Victim extends Person{
         return contact;
     }
 
-    public int getID(){
+    public int getVictimID(){
         return victimID;
     }
 
@@ -26,7 +26,7 @@ public class Victim extends Person{
         this.contact = contact;
     }
 
-    public void setID(int ID){
-        this.victimID = ID;
+    public void setID(int victimID){
+        this.victimID = victimID;
     }
 }
