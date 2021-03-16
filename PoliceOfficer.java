@@ -3,12 +3,23 @@ package LawEnforcementDatabase;
 import java.util.ArrayList;
 
 public class PoliceOfficer extends User {
-    
+
     private String policeDepartment;
     private int officerID;
     private ArrayList<Criminal> myCriminals;
     private ArrayList<Case> myCases;
 
+    public PoliceOfficer(String firstName, String lastName, String username, String password, String email,int phoneNumber, int clearanceLevel, 
+    String policeDepartment, int officerID) {
+
+        super(firstName, lastName, username, password, email, phoneNumber, clearanceLevel);
+        
+        this.policeDepartment = policeDepartment;
+        this.officerID = officerID;
+
+        myCriminals = new ArrayList<Criminal>();
+        myCases = new ArrayList<Case>();
+    }
     public void setPoliceDepartment(String department){
         this.policeDepartment = department;
     }
@@ -21,7 +32,7 @@ public class PoliceOfficer extends User {
         this.myCriminals=myCriminals;
     }
 
-    public setMyCases(ArrayList<Case> myCases){
+    public void setMyCases(ArrayList<Case> myCases){
         this.myCases=myCases;
     }
 
