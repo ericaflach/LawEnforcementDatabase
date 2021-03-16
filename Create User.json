@@ -1,6 +1,6 @@
 
 {
-"Officer ID":3344221
+"Officer ID":3344221,
 "First name":"Ben",
 "Last name":"Fields",
 "User name":"Bfields",
@@ -17,6 +17,42 @@
 "Phone Number": 8432210012,
 "Password":"Yak22beF!",
 "Clearance level": 3,
+
+"Officer ID":3344221,
+"First name":"Alex",
+"Last name":"Marant",
+"User name":"Amarant",
+"Email":"Amarant@sb.gov",
+"Phone Number": 8642219012,
+"Password": "LakeMurrz21!",
+"Clearance level": 1,
+
+"Officer ID":3229001,
+"First name":"Joshua",
+"Last name":"Staff",
+"User name":"Jstaff",
+"Email":"Jstaff@sb.gov",
+"Phone Number": 8432948172,
+"Password":"Yak22beF!",
+"Clearance level": 3,
+
+"Officer ID":3344221,
+"First name":"Ben",
+"Last name":"Fields",
+"User name":"Bfields",
+"Email":"bfields@sb.gov",
+"Phone Number": 8432328812,
+"Password": "B27_overlook!",
+"Clearance level": 1,
+
+"Officer ID":3644991,
+"First name":"Alisa",
+"Last name":"Chassier",
+"User name":"Achassier",
+"Email":"Achassier@sb.gov",
+"Phone Number": 8642219090,
+"Password":"BigSur3xx@!",
+"Clearance level": 3
 }
 
 
