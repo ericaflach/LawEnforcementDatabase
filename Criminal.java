@@ -2,7 +2,9 @@ package LawEnforcementDatabase;
 
 import java.util.ArrayList;
 
-public class Criminal {
+public class Criminal extends Person{
+
+
 
     private User creator;
     private ArrayList<Case> pastCrimes;
@@ -14,12 +16,10 @@ public class Criminal {
     private boolean inJail;
     private int criminalID;
 
-    public Criminal(){
+    public Criminal(String firstName, String lastName, int age, String DOB, User creator, ArrayList<Case> pastCrimes, String address, double shoeSize, int priority, boolean alive,
+    ArrayList<String> physicalAttributes, boolean inJail, int criminalID) {
+        super(firstName, lastName, age, DOB);
         
-    }
-
-    public Criminal(User creator, ArrayList<Case> pastCrimes, String address, double shoeSize, int priority, boolean alive,
-    ArrayList<String> physicalAttributes, boolean inJail, int criminalID){
         this.creator = creator;
         this.pastCrimes = pastCrimes;
         this.address = address;
@@ -30,7 +30,6 @@ public class Criminal {
         this.inJail = inJail;
         this.criminalID = criminalID;
     }
-
     public User getCreator(){
         return creator;
     }

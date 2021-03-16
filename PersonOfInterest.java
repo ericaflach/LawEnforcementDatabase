@@ -1,10 +1,18 @@
 package LawEnforcementDatabase;
 
 public class PersonOfInterest extends Person{
-    
+
     private String description;
     private String contact;
     private int poiID;
+
+    public PersonOfInterest(String firstName, String lastName, int age, String DOB, String description, String contact, int poiID) {
+        super(firstName, lastName, age, DOB);
+
+        this.description = description;
+        this.contact = contact;
+        this.poiID = poiID;
+    }
 
     public String getDescription(){
         return description;

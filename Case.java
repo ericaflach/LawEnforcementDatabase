@@ -5,23 +5,23 @@ import java.util.ArrayList;
 public class Case {
     
     private User creator;
-    private ArrayList<Witness> witnesses;
-    private ArrayList<PersonOfInterest> personsOfInterest;
-    private ArrayList<Suspect> suspects;
+    private ArrayList<Person> witnesses;
+    private ArrayList<Person> personsOfInterest;
+    private ArrayList<Person> suspects;
     private boolean caseOpen;
     private int caseNum;
     private ArrayList<String> evidence;
     private int crimeLevel;
-    private ArrayList<PoliceOfficer> officers;
+    private ArrayList<User> officers;
     private int legalClearance;
 
     public Case(int caseNumber, int crimeLevel, boolean caseOpen, int legalClearance, User creator)
     {
-        witnesses = new ArrayList<Witness>();
-        personsOfInterest = new ArrayList<PersonOfInterest>();
-        suspects = new ArrayList<Suspect>();
+        witnesses = new ArrayList<Person>();
+        personsOfInterest = new ArrayList<Person>();
+        suspects = new ArrayList<Person>();
         evidence = new ArrayList<String>();
-        officers = new ArrayList<PoliceOfficer>();
+        officers = new ArrayList<User>();
 
         this.caseNum = caseNumber;
         this.crimeLevel = crimeLevel;
@@ -33,16 +33,32 @@ public class Case {
        return creator; 
     }
 
-    public String getWitnesses(){
-        return null;
+    public String getWitnesses(){  
+        String ret = "";
+        for(int i = 0; i < witnesses.size(); i++)
+        {
+            ret += witnesses.get(i).getName() + ", "; 
+        }
+        return ret;
+        
     }
 
     public String getPersonsOfInterest(){
-        return null;
+        String ret = "";
+        for(int i = 0; i < personsOfInterest.size(); i++)
+        {
+            ret += personsOfInterest.get(i).getName() + ", "; 
+        }
+        return ret;
     }
 
     public String getSuspects(){
-        return null;
+        String ret = "";
+        for(int i = 0; i < suspects.size(); i++)
+        {
+            ret += suspects.get(i).getName() + ", "; 
+        }
+        return ret;
     }
 
     public boolean getCaseOpen(){
@@ -54,7 +70,12 @@ public class Case {
     }
 
     public String getEvidence(){
-        return null;
+        String ret = "";
+        for(int i = 0; i < evidence.size(); i++)
+        {
+            ret += evidence.get(i) + ", "; 
+        }
+        return ret;
     }
 
     public int getCrimeLevel(){
@@ -62,11 +83,16 @@ public class Case {
     }
 
     public String getOfficers(){
-        return null;
+        String ret = "";
+        for(int i = 0; i < officers.size(); i++)
+        {
+            ret += officers.get(i).getName() + ", "; 
+        }
+        return ret;
     }
 
     public int getLegalClearance(){
-        return 0;
+        return legalClearance;
     }
 
     public void setCaseOpen(boolean caseOpen){
@@ -106,23 +132,28 @@ public class Case {
         evidence.add(evidenceString);
     }
 
-    public void removeWitnesses(Witness witness){
-        witnesses.remove(witness);
+    public void removeWitnesses(Person witness){
+        if(witnesses.contains(witness))
+            witnesses.remove(witness);
     }
 
     public void removePersonsOfInterest(PersonOfInterest personOfInterest){
-        personsOfInterest.remove(personOfInterest);
+        if(personsOfInterest.contains(personOfInterest))
+            personsOfInterest.remove(personOfInterest);
     }
 
-    public void removeOfficers(){
-
+    public void removeOfficers(PoliceOfficer officer){
+        if(officers.contains(officer))
+            officers.remove(officer);
     }
 
-    public void removeSuspects(String name){
-
+    public void removeSuspects(Suspect suspect){
+        if(suspects.contains(suspect))
+            suspects.remove(suspect);
     }
 
-    public void removeEvidence(String name){
-
+    public void removeEvidence(String evidenceString){
+        if(evidence.contains(evidenceString))
+            evidence.remove(evidenceString);
     }
 }
