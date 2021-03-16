@@ -5,18 +5,32 @@ import java.util.ArrayList;
 public class Case {
     
     private User creator;
-    private ArrayList witnesses;
-    private ArrayList personsOfInterest;
-    private ArrayList suspects;
+    private ArrayList<Witness> witnesses;
+    private ArrayList<PersonOfInterest> personsOfInterest;
+    private ArrayList<Suspect> suspects;
     private boolean caseOpen;
     private int caseNum;
-    private ArrayList evidence;
+    private ArrayList<String> evidence;
     private int crimeLevel;
-    private ArrayList officers;
+    private ArrayList<PoliceOfficer> officers;
     private int legalClearance;
 
+    public Case(int caseNumber, int crimeLevel, boolean caseOpen, int legalClearance, User creator)
+    {
+        witnesses = new ArrayList<Witness>();
+        personsOfInterest = new ArrayList<PersonOfInterest>();
+        suspects = new ArrayList<Suspect>();
+        evidence = new ArrayList<String>();
+        officers = new ArrayList<PoliceOfficer>();
+
+        this.caseNum = caseNumber;
+        this.crimeLevel = crimeLevel;
+        this.caseOpen = caseOpen;
+        this.legalClearance = legalClearance;
+        this.creator = creator;
+    }
     public User getCreator(){
-        return null;
+       return creator; 
     }
 
     public String getWitnesses(){
@@ -32,11 +46,11 @@ public class Case {
     }
 
     public boolean getCaseOpen(){
-        return false;
+        return caseOpen;
     }
 
     public int getCaseNum(){
-        return 0;
+        return caseNum;
     }
 
     public String getEvidence(){
@@ -44,7 +58,7 @@ public class Case {
     }
 
     public int getCrimeLevel(){
-        return 0;
+        return crimeLevel;
     }
 
     public String getOfficers(){
@@ -56,50 +70,51 @@ public class Case {
     }
 
     public void setCaseOpen(boolean caseOpen){
-
+        this.caseOpen = caseOpen;
     }
 
     public void setCaseNum(int caseNum){
-
+        this.caseNum = caseNum;
     }
 
     public void setCrimeLevel(int crimeLevel){
-
+        this.crimeLevel = crimeLevel;
     }
 
     public void setLegalClearance(int legalClearance){
-
+        this.legalClearance = legalClearance;
     }
 
-    public void addWitnesses(String name){
-
+    public void addWitnesses(Witness witness){
+        witnesses.add(witness);
     }
 
-    public void addPersonsOfInterest(String name){
-
+    public void addPersonsOfInterest(PersonOfInterest personOfInterest)
+    {
+        personsOfInterest.add(personOfInterest);
     }
 
-    public void addOfficers(String name){
-
+    public void addOfficers(PoliceOfficer officer){
+        officers.add(officer);
     }
 
-    public void addSuspects(String name){
-
+    public void addSuspects(Suspect suspect){
+        suspects.add(suspect);
     }
 
-    public void addEvidence(String name){
-
+    public void addEvidence(String evidenceString){
+        evidence.add(evidenceString);
     }
 
-    public void removeWitnesses(String name){
-
+    public void removeWitnesses(Witness witness){
+        witnesses.remove(witness);
     }
 
-    public void removePersonsOfInterest(String name){
-
+    public void removePersonsOfInterest(PersonOfInterest personOfInterest){
+        personsOfInterest.remove(personOfInterest);
     }
 
-    public void removeOfficers(String name){
+    public void removeOfficers(){
 
     }
 

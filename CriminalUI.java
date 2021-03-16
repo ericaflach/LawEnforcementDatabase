@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class CriminalUI {
 
     private Scanner scanner;
-    private application CriminalApplication;
+    private CriminalApplication application;
 
     public void run(){
 
