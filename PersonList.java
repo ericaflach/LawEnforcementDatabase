@@ -3,19 +3,19 @@ package LawEnforcementDatabase;
 import java.util.ArrayList;
 
 public class PersonList {
-    private PersonList personList;
-    private ArrayList<Person> persons;
+    private static PersonList personList = null;
+    private static ArrayList<Person> people = new ArrayList<Person>();
     
     private PersonList()
     {
 
     }
-    public PersonList getInstance()
+    public static PersonList getInstance()
     {
         return null;
     }
-    public Person getPerson(int ID)
+    public ArrayList<Person> getPerson()
     {
-        return null;
+        return people;
     }
 }
