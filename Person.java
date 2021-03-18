@@ -6,25 +6,34 @@ public class Person {
     private String lastName;
     private int age;
     private String dateOfBirth;
+    private String phoneNumber;
 
-    public Person(String firstName, String lastName, int age, String DOB){
+    public Person(String firstName, String lastName, int age, String DOB, String phoneNumber){
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.dateOfBirth = DOB;
+        this.phoneNumber = phoneNumber;
     }
     
-    public String getName(){
-        return firstName + " " + lastName;
+    public String getFirstName(){
+        return firstName;
+    }
+
+    public String getLastName(){
+        return lastName;
     }
 
     public int getAge(){
         return this.age;
     }
     
-    public String getDateOfBirth()
-    {
+    public String getDateOfBirth(){
         return dateOfBirth;
+    }
+
+    public String getPhoneNumber(){
+        return phoneNumber;
     }
 
     public void setFirstName(String name){
@@ -41,5 +50,9 @@ public class Person {
 
     public void setDOB(String DOB){
         this.dateOfBirth = DOB;
+    }
+    
+    public void setPhoneNumber(String phoneNumber){
+        this.phoneNumber = phoneNumber;
     }
 }

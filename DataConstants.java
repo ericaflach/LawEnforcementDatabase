@@ -4,6 +4,8 @@ public abstract class DataConstants {
         protected static final String PEOPLE = "people";
         protected static final String PEOPLE_FIRST_NAME = "firstName";
         protected static final String PEOPLE_LAST_NAME = "lastName";
+        protected static final String PEOPLE_AGE = "age";
+        protected static final String PEOPLE_DATEOFBIRTH = "dateOfBirth";
         protected static final String PEOPLE_PHONE_NUMBER = "phoneNumber";
     
 }

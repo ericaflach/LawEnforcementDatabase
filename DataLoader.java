@@ -2,7 +2,7 @@ package LawEnforcementDatabase;
 
 import java.util.ArrayList;
 
-public class DataLoader {
+public class DataLoader extends DataConstants{
     
     public ArrayList<Person> getPersons(){
         return new ArrayList<Person>();
