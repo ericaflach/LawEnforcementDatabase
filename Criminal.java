@@ -16,9 +16,9 @@ public class Criminal extends Person{
     private boolean inJail;
     private int criminalID;
 
-    public Criminal(String firstName, String lastName, int age, String DOB, User creator, ArrayList<Case> pastCrimes, String address, double shoeSize, int priority, boolean alive,
+    public Criminal(String firstName, String lastName, int age, String DOB, String phoneNumber, User creator, ArrayList<Case> pastCrimes, String address, double shoeSize, int priority, boolean alive,
     ArrayList<String> physicalAttributes, boolean inJail, int criminalID) {
-        super(firstName, lastName, age, DOB);
+        super(firstName, lastName, age, DOB,phoneNumber);
         
         this.creator = creator;
         this.pastCrimes = pastCrimes;

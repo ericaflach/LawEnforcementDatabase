@@ -6,8 +6,8 @@ public class PersonOfInterest extends Person{
     private String contact;
     private int poiID;
 
-    public PersonOfInterest(String firstName, String lastName, int age, String DOB, String description, String contact, int poiID) {
-        super(firstName, lastName, age, DOB);
+    public PersonOfInterest(String firstName, String lastName, int age, String DOB, String phoneNumber, String description, String contact, int poiID) {
+        super(firstName, lastName, age, DOB,phoneNumber);
 
         this.description = description;
         this.contact = contact;

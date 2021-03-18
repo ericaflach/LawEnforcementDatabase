@@ -1,3 +1,5 @@
+package LawEnforcementDatabase;
+
 public abstract class DataConstants {
 
         protected static final String PEOPLE_FILE_NAME = "src/people.json";
