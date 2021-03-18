@@ -40,7 +40,9 @@ public class DataWriter extends DataConstants{
             file.write(jsonUsers.toJSONString());
             file.flush();
         }
-
+        catch(IOException e){
+            e.printStackTrace();
+        }
 
     }
 
