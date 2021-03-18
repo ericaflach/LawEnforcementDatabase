@@ -9,7 +9,8 @@ public class CriminalApplication {
     private User user;
 
     public CriminalApplication(){
-        
+        personList = PersonList.getInstance();
+        userList = UserList.getInstance();
     }
 
     public ArrayList<Criminal> searchCriminals(){
