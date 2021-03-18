@@ -23,9 +23,8 @@ public class DataLoader extends DataConstants{
 				String lastName = (String)peopleJSON.get(PEOPLE_LAST_NAME);
 				int age = (int)peopleJSON.get(PEOPLE_AGE);
 				String dateOfBirth = (String)peopleJSON.get(PEOPLE_DATEOFBIRTH);
-                String phoneNumber = (String)peopleJSON.get(PEOPLE_PHONE_NUMBER);
 
-				people.add(new Person(firstName, lastName, age, dateOfBirth, phoneNumber));
+				people.add(new Person(firstName, lastName, age, dateOfBirth));
             }
             
             return people;

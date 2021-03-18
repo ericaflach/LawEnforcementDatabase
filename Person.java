@@ -6,7 +6,6 @@ public class Person {
     private String lastName;
     private int age;
     private String dateOfBirth;
-    private String phoneNumber;
 
     public Person(String firstName, String lastName, int age, String DOB){
         this.firstName = firstName;
@@ -33,9 +32,6 @@ public class Person {
         return dateOfBirth;
     }
 
-    public String getPhoneNumber(){
-        return phoneNumber;
-    }
 
     public void setFirstName(String name){
         this.firstName = name;
@@ -53,7 +49,4 @@ public class Person {
         this.dateOfBirth = DOB;
     }
     
-    public void setPhoneNumber(String phoneNumber){
-        this.phoneNumber = phoneNumber;
-    }
 }
