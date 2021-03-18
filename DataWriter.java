@@ -40,7 +40,9 @@ public class DataWriter extends DataConstants{
             file.write(jsonUsers.toJSONString());
             file.flush();
         }
-
+        catch(IOException e){
+            e.printStackTrace();
+        }
 
     }
 
@@ -50,7 +52,7 @@ public class DataWriter extends DataConstants{
         personDetails.put(PEOPLE_LAST_NAME, person.getLastName());
         personDetails.put(PEOPLE_AGE, person.getAge());
         personDetails.put(PEOPLE_DATEOFBIRTH, person.getDateOfBirth());
-        personDetails.put(PEOPLE_PHONE_NUMBER, person.getPhoneNumber());
 
+        return personDetails;
     }
 }
