@@ -7,8 +7,8 @@ public class Victim extends Person{
     private String contact;
     private int victimID;
 
-    public Victim(String firstName, String lastName, int age, String DOB, String description, String contact, int victimID) {
-        super(firstName, lastName, age, DOB);
+    public Victim(String firstName, String lastName, int age, String DOB, String phoneNumber, String description, String contact, int victimID) {
+        super(firstName, lastName, age, DOB, phoneNumber);
 
         this.description = description; 
         this.contact = contact;

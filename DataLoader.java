@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class DataLoader extends DataConstants{
     
-    public ArrayList<Person> getPersons(){
+    public static ArrayList<Person> getPersons(){
         return new ArrayList<Person>();
     }
 
-    public ArrayList<User> getUsers(){
+    public static ArrayList<User> getUsers(){
         return new ArrayList<User>();
     }
 }

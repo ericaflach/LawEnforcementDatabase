@@ -23,7 +23,9 @@ public class Person {
     public String getLastName(){
         return lastName;
     }
-
+    public String getName(){
+        return firstName + " " + lastName;
+    }
     public int getAge(){
         return this.age;
     }

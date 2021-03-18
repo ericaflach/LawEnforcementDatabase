@@ -6,8 +6,8 @@ public class Witness extends Person{
     private String contact;
     private int witnessID;
 
-    public Witness(String firstName, String lastName, int age, String DOB, String description, String contact, int witnessID) {
-        super(firstName, lastName, age, DOB);
+    public Witness(String firstName, String lastName, int age, String DOB, String phoneNumber, String description, String contact, int witnessID) {
+        super(firstName, lastName, age, DOB, phoneNumber);
         
         this.description = description;
         this.contact = contact;
