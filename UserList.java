@@ -13,7 +13,7 @@ public class UserList {
     {
         return null;
     }
-    public User getUser(String username)
+    public User getUsers()
     {
         return null;
     }
