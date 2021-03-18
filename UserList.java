@@ -16,11 +16,7 @@ public class UserList {
         }
         return userList;
     }
-<<<<<<< HEAD
     public ArrayList<User> getUser(String username)
-=======
-    public User getUsers()
->>>>>>> 442e7e95e9eb516fe2cbb3fb23a39375587bfd10
     {
         return users;
     }
