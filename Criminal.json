@@ -1,0 +1,61 @@
+[{
+"creator":"Jstaff",
+"pastCrimes":"Robbery",
+"address":"13 Cali Dr.",
+"shoeSize":11.5,
+"priority":2,
+"alive":"false",
+"physicalAttributes":"Brown eyes, black hair",
+"inJail":"false",
+"criminalID":4455
+},{
+"creator":"Jbakes",
+"pastCrimes":"Arson",
+"address":"44 Stange Ave.",
+"shoeSize":10.5,
+"priority":3,
+"alive":"false",
+"physicalAttributes":"Blue eyes, blond hair",
+"inJail":"false",
+"criminalID":1011
+},{
+"creator":"Achassier",
+"pastCrimes":"Drug Possession",
+"address":"1900 Barning St",
+"shoeSize":12.5,
+"priority":1,
+"alive":"false",
+"physicalAttributes":"Black eyes, black hair",
+"inJail":"false",
+"criminalID":4455
+},{
+"creator":"Jbakes",
+"pastCrimes":"Auto Theft",
+"address":"1374 Wingman St",
+"shoeSize":10.5,
+"priority":2,
+"alive":"true",
+"physicalAttributes":"Green eyes, red hair",
+"inJail":"false",
+"criminalID":1099
+},{
+"creator":"Tducan",
+"pastCrimes":"1st Degree Murder",
+"address":"55 Ranger St.",
+"shoeSize":9.5,
+"priority":3,
+"alive":"true",
+"physicalAttributes":"Brown eyes, black hair, scar over right eyebrow",
+"inJail":"true",
+"criminalID":14553
+},{
+"creator":"Cbennett",
+"pastCrimes":"Aggravated Assualt",
+"address":"123 Park Cir.",
+"shoeSize":12,
+"priority":2,
+"alive":"false",
+"physicalAttributes":"Brown eyes, brown hair, cross tattoo on right hand",
+"inJail":"false",
+"criminalID":4145
+}]
