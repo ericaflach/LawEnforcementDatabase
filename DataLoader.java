@@ -52,7 +52,7 @@ public class DataLoader extends DataConstants{
 				String username = (String)usersJSON.get(USER_USERNAME);
 				String password = (String)usersJSON.get(USER_PASSWORD);
                 String email = (String)usersJSON.get(USER_EMAIL);
-				String phoneNumber = (String)usersJSON.get(USER_PHONE_NUMBER);
+				int phoneNumber = (int)usersJSON.get(USER_PHONE_NUMBER);
 				int clearanceLevel = (int)usersJSON.get(USER_CLEARANCE_LEVEL);
 
 				users.add(new User(firstName, lastName, username, password, email, phoneNumber, clearanceLevel));
