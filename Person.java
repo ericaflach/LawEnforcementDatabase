@@ -8,12 +8,11 @@ public class Person {
     private String dateOfBirth;
     private String phoneNumber;
 
-    public Person(String firstName, String lastName, int age, String DOB, String phoneNumber){
+    public Person(String firstName, String lastName, int age, String DOB){
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.dateOfBirth = DOB;
-        this.phoneNumber = phoneNumber;
     }
     
     public String getFirstName(){

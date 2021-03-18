@@ -7,14 +7,17 @@ public class UserList {
     private ArrayList<User> users;
     private UserList()
     {
-
+        users = new ArrayList<User>();
     }
     public UserList getInstance()
     {
-        return null;
+        if(userList == null){
+            userList = new UserList();
+        }
+        return userList;
     }
-    public User getUsers()
+    public ArrayList<User> getUser(String username)
     {
-        return null;
+        return users;
     }
 }

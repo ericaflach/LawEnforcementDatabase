@@ -9,7 +9,7 @@ public class CriminalApplication {
     private User user;
 
     public CriminalApplication(){
-
+        
     }
 
     public ArrayList<Criminal> searchCriminals(){
