@@ -26,4 +26,20 @@ public class Person {
     {
         return dateOfBirth;
     }
+
+    public void setFirstName(String name){
+        this.firstName = name;
+    }
+
+    public void setLastName(String name){
+        this.lastName = name;
+    }
+
+    public void setAge(int age){
+        this.age = age;
+    }
+
+    public void setDOB(String DOB){
+        this.dateOfBirth = DOB;
+    }
 }
