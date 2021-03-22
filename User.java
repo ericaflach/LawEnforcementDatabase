@@ -44,4 +44,18 @@ public class User{
     public String getName(){
         return firstName + " " + lastName;
     }
+    public String getUsername(){
+        return username;
+    }
+    public String getEmail(){
+        return email;
+    }
+    public int getPhoneNumber(){
+        return phoneNumber;
+    }
+    public String toString(){
+        String accountInfo;
+        accountInfo="Name: "+getName()+"\nUsername: "+getUsername()+"\nEmail: "+getEmail()+"\nPhone number: "+getPhoneNumber()+"\nClearance level: "+getClearanceLevel();
+        return accountInfo;
+    }
 }
