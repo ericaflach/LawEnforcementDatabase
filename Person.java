@@ -14,18 +14,24 @@ public class Person {
         this.dateOfBirth = DOB;
     }
     
+    public String getFirstName(){
+        return firstName;
+    }
+
+    public String getLastName(){
+        return lastName;
+    }
     public String getName(){
         return firstName + " " + lastName;
     }
-
     public int getAge(){
         return this.age;
     }
     
-    public String getDateOfBirth()
-    {
+    public String getDateOfBirth(){
         return dateOfBirth;
     }
+
 
     public void setFirstName(String name){
         this.firstName = name;
@@ -42,4 +48,5 @@ public class Person {
     public void setDOB(String DOB){
         this.dateOfBirth = DOB;
     }
+    
 }
