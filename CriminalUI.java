@@ -81,7 +81,7 @@ public class CriminalUI {
         System.out.println("-----Account Info-----");
         System.out.println();
         System.out.println(toString());
-        if (getClearanceLevel()==3){
+        if (User.clearanceLevel == 3){
             System.out.println("Would you like to edit this information? (y/n)");
             String edit;
             edit=scanner.nextLine();
