@@ -1,24 +1,48 @@
 [{
+    "First Name":"Jonathan",
+    "Last Name":"Rogers",
+    "Age":62,
+    "Date of Birth":"05/10/1959",
     "description":"Jonathan Rogers",
     "contact":"(864)-331-4455",
     "suspectID":1334
     },{
+    "First Name":"Kourtney",
+    "Last Name":"Bates",
+    "Age":49,
+    "Date of Birth":"04/13/1972",
     "description":"Kourtney Bates",
     "contact":"(864)-991-4255",
     "suspectID":1900
     },{
+    "First Name":"N/A",
+    "Last Name":"N/A",
+    "Age":-1,
+    "Date of Birth":"N/A",
     "description":"Potential suspect was wearing a black hoodie, blue jeans and grey sneakers and about 6 feet. The person of interest may go by the name Blake Jackson",
     "contact":"N/A",
     "suspectID":8241
     },{
+    "First Name":"N/A",
+    "Last Name":"N/A",
+    "Age":-1,
+    "Date of Birth":"N/A",
     "description":"Male about 6 foot, between the age of 34-40, with short hair and wearing a blue Dolphins jersey and cargo shorts",
     "contact":"N/A",
     "suspectID":9384
     },{
+    "First Name":"Tyler",
+    "Last Name":"Reynolds",
+    "Age":32,
+    "Date of Birth":"01/31/1989",
     "description":"Tyler Reynolds",
     "contact":"(834)-9781-1005",
     "suspectID":1414
     },{
+    "First Name":"N/A",
+    "Last Name":"N/A",
+    "Age":-1,
+    "Date of Birth":"N/A",
     "description":"Female about 5'10, between the age 23-25, hair was covered and was wearing sunglasses.",
     "contact":"N/A",
     "suspectID":3141
