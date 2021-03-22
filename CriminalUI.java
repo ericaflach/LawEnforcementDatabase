@@ -81,16 +81,6 @@ public class CriminalUI {
         System.out.println("-----Account Info-----");
         System.out.println();
         System.out.println(toString());
-        if (User.clearanceLevel == 3){
-            System.out.println("Would you like to edit this information? (y/n)");
-            String edit;
-            edit=scanner.nextLine();
-        }
-        else {
-            System.out.println("An administrator is required to make changes. Enter x to go back to the main menu.");
-            String exit;
-            exit=scanner.nextLine();
-        }
     }
     public static void main(String[] args) {
         CriminalUI ui = new CriminalUI();
