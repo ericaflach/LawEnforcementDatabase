@@ -15,11 +15,17 @@ public class User{
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
-        this.password = password;
+        this.setPassword(password);
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.clearanceLevel = clearanceLevel; 
 
+    }
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
     }
     public void setName(String firstName, String lastName){
         this.firstName=firstName;
