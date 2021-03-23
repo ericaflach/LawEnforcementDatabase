@@ -13,6 +13,7 @@ public class CriminalApplication {
         personList = PersonList.getInstance();
         userList = UserList.getInstance();
         criminals = personList.getCriminals();
+        
     }
 
     public ArrayList<Criminal> searchCriminals(String firstName, String lastName){
@@ -27,7 +28,6 @@ public class CriminalApplication {
     public void createPoliceOfficer(String firstName, String lastName, String username, String email, int phoneNumber, String password, int clearanceLevel, String department, int officerID){
         
     }
-
     public void createAdmin(String firstName, String lastName, String username, String email, int phoneNumber, String password, int clearanceLevel, int adminID){
 
     }
