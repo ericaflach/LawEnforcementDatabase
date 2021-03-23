@@ -18,7 +18,7 @@ public class CriminalApplication {
     }
 
     public void createPoliceOfficer(String firstName, String lastName, String username, String email, int phoneNumber, String password, int clearanceLevel, String department, int officerID){
-
+        
     }
 
     public void createAdmin(String firstName, String lastName, String username, String email, int phoneNumber, String password, int clearanceLevel, int adminID){
