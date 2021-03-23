@@ -15,11 +15,17 @@ public class User{
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
-        this.password = password;
+        this.setPassword(password);
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.clearanceLevel = clearanceLevel; 
 
+    }
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
     }
     public void setName(String firstName, String lastName){
         this.firstName=firstName;
@@ -43,5 +49,19 @@ public class User{
     }
     public String getName(){
         return firstName + " " + lastName;
+    }
+    public String getUsername(){
+        return username;
+    }
+    public String getEmail(){
+        return email;
+    }
+    public int getPhoneNumber(){
+        return phoneNumber;
+    }
+    public String toString(){
+        String accountInfo;
+        accountInfo="Name: "+getName()+"\nUsername: "+getUsername()+"\nEmail: "+getEmail()+"\nPhone number: "+getPhoneNumber()+"\nClearance level: "+getClearanceLevel();
+        return accountInfo;
     }
 }
