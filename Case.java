@@ -14,20 +14,21 @@ public class Case {
     private int crimeLevel;
     private ArrayList<User> officers;
     private int legalClearance;
+    private CaseType caseType;
 
-    public Case(int caseNumber, int crimeLevel, boolean caseOpen, int legalClearance, User creator)
+    public Case(int caseNumber, int crimeLevel, boolean caseOpen, int legalClearance, User creator, CaseType caseType)
     {
         witnesses = new ArrayList<Person>();
         personsOfInterest = new ArrayList<Person>();
         suspects = new ArrayList<Person>();
         evidence = new ArrayList<String>();
         officers = new ArrayList<User>();
-
         this.caseNum = caseNumber;
         this.crimeLevel = crimeLevel;
         this.caseOpen = caseOpen;
         this.legalClearance = legalClearance;
         this.creator = creator;
+        this.caseType = caseType;
     }
     public User getCreator(){
        return creator; 
@@ -155,5 +156,9 @@ public class Case {
     public void removeEvidence(String evidenceString){
         if(evidence.contains(evidenceString))
             evidence.remove(evidenceString);
+    }
+
+    public String getCaseType() {
+        return caseType.toString();
     }
 }
