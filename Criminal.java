@@ -13,6 +13,7 @@ public class Criminal extends Person {
     private ArrayList<String> physicalAttributes;
     private boolean inJail;
     private int criminalID;
+    private ArrayList<String> tattoos;
 
     public Criminal(String firstName, String lastName, int age, String DOB, User creator, ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority, boolean alive,
     ArrayList<String> physicalAttributes, boolean inJail, int criminalID) {
@@ -27,6 +28,7 @@ public class Criminal extends Person {
         this.physicalAttributes = physicalAttributes;
         this.inJail = inJail;
         this.criminalID = criminalID;
+        this.tatoos = tattoos
     }
 
     public User getCreator() {
@@ -69,6 +71,10 @@ public class Criminal extends Person {
         return criminalID;
     }
 
+    public ArrayList<String> getTattoos(){
+        return tattoos;
+    }
+
     public void setAddress(String address) {
         this.address = address;
     }
@@ -91,6 +97,14 @@ public class Criminal extends Person {
 
     public void removePhysicalAttribute(String attribute) {
         physicalAttributes.remove(attribute);
+    }
+
+    public void addTattoos(String tattoo){
+        tattoos.add(tattoo);
+    }
+
+    public void removeTattoos(String tattoo){
+        tattoos.remove(tattoo);
     }
 
     public void addPastCrime(int caseNumber) {
