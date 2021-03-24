@@ -3,13 +3,12 @@ package LawEnforcementDatabase;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 public class DataWriter extends DataConstants{
     
-    public void savePersons(){
+    public static void savePersons(){
        PersonList personList = PersonList.getInstance();
        ArrayList<Person> people = personList.getPerson();
        JSONArray jsonPeople = new JSONArray();
@@ -29,8 +28,8 @@ public class DataWriter extends DataConstants{
 
     public void saveUsers(){
         UserList userList = UserList.getInstance();
-        ArrayList<User> users = userList.getUsers();
-        JSONArray jsonUsers = new JsonArray();
+        ArrayList<User> users = userList.getUser();
+        JSONArray jsonUsers = new JSONArray();
 
         for(int i = 0; i < userList.size(); i++){
             jsonUsers.add(getUserJSON(users.get(i)));

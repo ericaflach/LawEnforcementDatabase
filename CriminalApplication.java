@@ -7,20 +7,27 @@ public class CriminalApplication {
     private PersonList personList;
     private UserList userList;
     private User user;
+    private ArrayList<Criminal> criminals;
 
     public CriminalApplication(){
         personList = PersonList.getInstance();
         userList = UserList.getInstance();
-    }
-
-    public ArrayList<Criminal> searchCriminals(){
-        return new ArrayList<Criminal>();
-    }
-
-    public void createPoliceOfficer(String firstName, String lastName, String username, String email, int phoneNumber, String password, int clearanceLevel, String department, int officerID){
+        criminals = personList.getCriminals();
         
     }
 
+    public ArrayList<Criminal> searchCriminals(String firstName, String lastName){
+        ArrayList<Criminal> ret = new ArrayList<Criminal>();
+        for(int i = 0; i < criminals.size(); i++){
+            if(criminals.get(i).getFirstName().contains(firstName) && criminals.get(i).getLastName().contains(lastName)){
+                ret.add(criminals.get(i));
+            }
+        }
+        return ret;
+    }
+    public void createPoliceOfficer(String firstName, String lastName, String username, String email, int phoneNumber, String password, int clearanceLevel, String department, int officerID){
+        
+    }
     public void createAdmin(String firstName, String lastName, String username, String email, int phoneNumber, String password, int clearanceLevel, int adminID){
 
     }
