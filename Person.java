@@ -2,50 +2,51 @@ package LawEnforcementDatabase;
 
 public class Person {
 
-    private String firstName;
-    private String lastName;
+    protected String firstName;
+    protected String lastName;
     private int age;
     private String dateOfBirth;
 
-    public Person(String firstName, String lastName, int age, String DOB){
+    public Person(String firstName, String lastName, int age, String DOB) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.dateOfBirth = DOB;
     }
     
-    public String getFirstName(){
+    public String getFirstName() {
         return firstName;
     }
 
-    public String getLastName(){
+    public String getLastName() {
         return lastName;
     }
-    public String getName(){
+
+    public String getName() {
         return firstName + " " + lastName;
     }
-    public int getAge(){
+
+    public int getAge() {
         return this.age;
     }
     
-    public String getDateOfBirth(){
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-
-    public void setFirstName(String name){
+    public void setFirstName(String name) {
         this.firstName = name;
     }
 
-    public void setLastName(String name){
+    public void setLastName(String name) {
         this.lastName = name;
     }
 
-    public void setAge(int age){
+    public void setAge(int age) {
         this.age = age;
     }
 
-    public void setDOB(String DOB){
+    public void setDOB(String DOB) {
         this.dateOfBirth = DOB;
     }
     
