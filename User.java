@@ -10,8 +10,9 @@ public class User{
     private String email;
     private int phoneNumber;
     private int clearanceLevel;
+    private int ID;
     
-    public User(String firstName, String lastName, String username, String password, String email, int phoneNumber, int clearanceLevel){
+    public User(String firstName, String lastName, String username, String password, String email, int phoneNumber, int clearanceLevel, int ID){
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
@@ -19,6 +20,7 @@ public class User{
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.clearanceLevel = clearanceLevel; 
+        this.ID = ID;
 
     }
     public String getPassword() {
@@ -32,7 +34,9 @@ public class User{
         this.lastName=lastName;
     }
 
-
+    public int getID(){
+        return ID;
+    }
     public int getClearanceLevel(){
         return clearanceLevel;
     }
