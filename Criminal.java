@@ -102,4 +102,8 @@ public class Criminal extends Person{
         pastCrimes.remove(caseNumber);
     }
 
+    public string toString(){
+        return firstName+" "+lastName;
+    }
+
 }

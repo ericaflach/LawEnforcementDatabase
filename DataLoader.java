@@ -192,4 +192,10 @@ public class DataLoader extends DataConstants {
 		
 		return null;
     }
+    public static void main(String[] args){
+        ArrayList<Criminal> criminals=DataLoader.readCriminal();
+        for (int i=0; i<criminals.size(); i++){
+            System.out.println(criminals.get(i));
+        }
+    }
 }
