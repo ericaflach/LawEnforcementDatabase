@@ -8,63 +8,44 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 public class DataLoader extends DataConstants {
 
-    public static ArrayList<Person> getPersons() {
-        ArrayList<Person> people = new ArrayList<Person>();
-
-        try {
-            people.addAll(readCriminal());
-            people.addAll(readPersonOfInterest());
-            people.addAll(readSuspect());
-            people.addAll(readVictim());
-            
-            return people;
-        }
-
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return null;
-    }
-
-    public static ArrayList<Person> readCriminal() {
+    public static ArrayList<Criminal> readCriminal() {
         FileReader reader = new FileReader("src/Criminal.json");
         JSONParser parser = new JSONParser();
-        JSONArray peopleJSON = (JSONArray)new JSONParser().parse(reader);
-        ArrayList<Person> people = new ArrayList<Person>();
+        JSONArray criminalsJSON = (JSONArray)new JSONParser().parse(reader);
+        ArrayList<Criminal> criminals = new ArrayList<Criminal>();
+        ArrayList<Admin> admins = new ArrayList<Admin>();
 
-        for (int i = 0; i < peopleJSON.size(); i++) {
-            JSONObject personJSON = (JSONObject)peopleJSON.get(i);
-            String firstName = (String)personJSON.get("firstName");
-            String lastName = (String)personJSON.get("lastName");
-            int age = ((long)personJSON.get("age")).intValue();
-            String dateOfBirth = (String)personJSON.get("dateOfBirth");
-            String creator = (String)personJSON.get("creator");
-            String pastCrimes = (String)personJSON.get("pastCrimes");
-            String address = (String)personJSON.get("address");
-            double shoeSize = ((String)personJSON.get("shoeSize")).doubleValue();
-            int priority = ((long)personJSON.get("priority")).intValue();
-            boolean alive = ((String)personJSON.get("alive")).booleanValue();
-            String physicalAttributes = (String)personJSON.get("physicalAttributes");
-            boolean inJail = ((String)personJSON.get("inJail")).booleanValue();
-            int criminalID = ((long)personJSON.get("criminalID")).intValue();
+        for (int i = 0; i < criminalsJSON.size(); i++) {
+            JSONObject criminalJSON = (JSONObject)criminalJSON.get(i);
+            String firstName = (String)criminalJSON.get(PEOPLE_FIRST_NAME);
+            String lastName = (String)criminalJSON.get(PEOPLE_LAST_NAME);
+            int age = (int)criminalJSON.get(PEOPLE_AGE);
+            String dateOfBirth = (String)criminalJSON.get(PEOPLE_DATEOFBIRTH);
+            String creator = (String)criminalJSON.get(CRIMINAL_CREATOR);
+            String pastCrimes = (String)criminalJSON.get(CRIMINAL_PAST_CRIMES);
+            String address = (String)criminalJSON.get(CRIMINAL_ADDRESS);
+            double shoeSize = (double)criminalJSON.get(CRIMINAL_SHOE_SIZE);
+            int priority = (int)criminalJSON.get(CRIMINAL_PRIORITY);
+            boolean alive = (boolean)criminalJSON.get(CRIMINAL_ALIVE);
+            //ArrayList<String> physicalAttributes = (ArrayList<String>)criminalJSON.get("physicalAttributes");
+            boolean inJail = (boolean)criminalJSON.get(CRIMINAL_IN_JAIL);
+            int criminalID = (int)criminalJSON.get(CRIMINAL_ID);
             
-            people.add(new Criminal(firstName, lastName, age, dateOfBirth, creator, pastCrimes, address,
-            shoeSize, priority, alive, physicalAttributes, inJail, criminalID));
+            criminals.add(new Criminal(firstName, lastName, age, dateOfBirth, creator, pastCrimes, address, shoeSize, priority, alive, physicalAttributes, inJail, criminalID));
 
         }
 
-        return people;
+        return criminals;
     }
 
-    public static ArrayList<Person> readPersonOfInterest() {
+    public static ArrayList<PersonOfInterest> readPersonOfInterest() {
         FileReader reader = new FileReader("src/PersonOfInterest.json");
         JSONParser parser = new JSONParser();
-        JSONArray peopleJSON = (JSONArray)new JSONParser().parse(reader);
-        ArrayList<Person> people = new ArrayList<Person>();
+        JSONArray poiJSON = (JSONArray)new JSONParser().parse(reader);
+        ArrayList<PersonOfInterest> personsOfInterest = new ArrayList<PersonOfInterest>();
 
-        for (int i = 0; i < peopleJSON.size(); i++) {
-            JSONObject personJSON = (JSONObject)peopleJSON.get(i);
+        for (int i = 0; i < poiJSON.size(); i++) {
+            JSONObject personJSON = (JSONObject)poiJSON.get(i);
             String firstName = (String)personJSON.get("firstName");
             String lastName = (String)personJSON.get("lastName");
             int age = ((long)personJSON.get("age")).intValue();
@@ -73,7 +54,7 @@ public class DataLoader extends DataConstants {
             String contact = (String)personJSON.get("contact");
             int id = ((long)personJSON.get("personOfInterestID")).intValue();
             
-            people.add(new PersonOfInterest(firstName, lastName, age, dateOfBirth, description, contact, id));
+            criminals.add(new PersonOfInterest(firstName, lastName, age, dateOfBirth, description, contact, id));
         }
 
         return people;
@@ -83,7 +64,7 @@ public class DataLoader extends DataConstants {
         FileReader reader = new FileReader("src/Suspect.json");
         JSONParser parser = new JSONParser();
         JSONArray peopleJSON = (JSONArray)new JSONParser().parse(reader);
-        ArrayList<Person> people = new ArrayList<Person>();
+        ArrayList<Suspect> suspects = new ArrayList<Suspect>();
 
         for (int i = 0; i < peopleJSON.size(); i++) {
             JSONObject personJSON = (JSONObject)peopleJSON.get(i);
@@ -104,7 +85,7 @@ public class DataLoader extends DataConstants {
         FileReader reader = new FileReader("src/Victim.json");
         JSONParser parser = new JSONParser();
         JSONArray peopleJSON = (JSONArray)new JSONParser().parse(reader);
-        ArrayList<Person> people = new ArrayList<Person>();
+        ArrayList<Victim> victims = new ArrayList<Victim>();
 
         for (int i = 0; i < peopleJSON.size(); i++) {
             JSONObject personJSON = (JSONObject)peopleJSON.get(i);

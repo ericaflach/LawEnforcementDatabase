@@ -7,7 +7,7 @@ public class Criminal extends Person{
 
 
     private User creator;
-    private ArrayList<Case> pastCrimes;
+    private ArrayList<Integer> pastCrimes;
     private String address;
     private double shoeSize;
     private int priority;
@@ -16,7 +16,7 @@ public class Criminal extends Person{
     private boolean inJail;
     private int criminalID;
 
-    public Criminal(String firstName, String lastName, int age, String DOB, User creator, ArrayList<Case> pastCrimes, String address, double shoeSize, int priority, boolean alive,
+    public Criminal(String firstName, String lastName, int age, String DOB, User creator, ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority, boolean alive,
     ArrayList<String> physicalAttributes, boolean inJail, int criminalID) {
         super(firstName, lastName, age, DOB);
         
@@ -34,7 +34,7 @@ public class Criminal extends Person{
         return creator;
     }
 
-    public ArrayList<Case> getPastCrimes(){
+    public ArrayList<Integer> getPastCrimes(){
         return pastCrimes;
     }
 
@@ -94,12 +94,12 @@ public class Criminal extends Person{
         physicalAttributes.remove(attribute);
     }
 
-    public void addPastCrime(Case crime){
-        pastCrimes.add(crime);
+    public void addPastCrime(int caseNumber){
+        pastCrimes.add(caseNumber);
     }
 
-    public void removePastCrime(Case crime){
-        pastCrimes.remove(crime);
+    public void removePastCrime(int caseNumber){
+        pastCrimes.remove(caseNumber);
     }
 
 }

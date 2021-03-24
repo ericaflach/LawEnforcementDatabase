@@ -47,7 +47,7 @@ public class CriminalApplication {
     public ArrayList<Criminal> searchByCrimesCommitted(ArrayList<String> crimes) {
         ArrayList<Criminal> ret = new ArrayList<Criminal>();
         for (int i = 0; i < refinedList.size(); i++) {
-            ArrayList<Case> pastCrimes = refinedList.get(i).getPastCrimes();
+            //ArrayList<Case> pastCrimes = refinedList.get(i).getPastCrimes();
             for (int b = 0; b < pastCrimes.size(); b++) {
                 for (int a = 0; a < crimes.size(); a++) {
                     if(pastCrimes.get(b).getCaseType().contains(crimes.get(a))) {
@@ -75,7 +75,7 @@ public class CriminalApplication {
         return null;
     }
 
-    public void createCriminal(String firstName, String lastName, int age, String DOB, User creator, ArrayList<Case> pastCrimes, String address, double shoeSize, int priority, boolean alive,
+    public void createCriminal(String firstName, String lastName, int age, String DOB, User creator, ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority, boolean alive,
     ArrayList<String> physicalAttributes, boolean inJail, int criminalID) {
         criminals.add(new Criminal(firstName, lastName, age, DOB, creator, pastCrimes, address, shoeSize, priority, alive, physicalAttributes, inJail, criminalID));
     }
