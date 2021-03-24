@@ -51,6 +51,8 @@ public class PoliceOfficer extends User {
     public ArrayList<Case> getMyCases(){
         return myCases;
     }
-
+    public boolean checkPassword(String password) {
+        return (password.equals(super.getPassword())); 
+    }
     
 }

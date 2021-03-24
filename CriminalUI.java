@@ -15,14 +15,13 @@ public class CriminalUI {
         System.out.println();
         loginMenu();
         int option = displayMainMenu();
-        if(option == 1){
+        if(option == 1) {
             addMenu();
-        }else if(option == 2){
+        }else if(option == 2) {
             searchMenu();
-        }
-        else if (option == 3){
+        } else if (option == 3) {
             accountMenu();
-        }else{
+        } else {
             System.out.println("Incorrect Option. Goodbye!");
             System.exit(0);
         }
@@ -30,20 +29,29 @@ public class CriminalUI {
     }
 
     public void loginMenu(){
-        boolean login = true;
+        boolean login = false;
         String username = null;
         String password = null;
-        while(login==false){
+        int attempts = 0;
+        while(!login){
             System.out.print("Username: ");
             username=scanner.nextLine();
             System.out.print("Password: ");
             password=scanner.nextLine();
-            if(application.login(username, password) != null){
-                break;
+            if (application.login(username, password))
+            {
+                System.out.println("Login successful.");
+                login = true;
             }
-            System.out.println("Login unsuccessful. Please try again");
+            if (!login) {
+                System.out.println("Login unsuccessful. Please try again");
+            }
+            if (attempts == 2) {
+                System.out.println("Too many unsuccessful attempts. Goodbye!");
+                
+            }
         }
-        System.out.println("Login successful.");
+        
 
     }
 
@@ -75,6 +83,12 @@ public class CriminalUI {
         System.out.println("(2) Add a crime");
         System.out.println("What would you like to search? (1-2)");
         int choice = scanner.nextInt();
+        if (choice == 1) {
+            System.out.println("Enter the criminal's name");
+            
+        } else if (choice == 2) {
+            System.out.println("Choose the case type");
+        }
         return choice;
     }
     public void accountMenu(){

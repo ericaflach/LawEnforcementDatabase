@@ -3,8 +3,8 @@ package LawEnforcementDatabase;
 import java.util.ArrayList;
 public class UserList {
     private static UserList userList;
-    private ArrayList<PoliceOfficer> policeOfficers;
-    private ArrayList<Admin> admins;
+    private static ArrayList<PoliceOfficer> policeOfficers;
+    private static ArrayList<Admin> admins;
     private UserList(){
         admins = new ArrayList<Admin>();
         policeOfficers = new ArrayList<PoliceOfficer>();
