@@ -110,7 +110,7 @@ public class Criminal extends Person {
     }
 
     public String toString() {
-        return "Name: "+firstName+" "+lastName+"\nAge: "+age+"\nDOB: "+DOB+"\nID: "+
+        return "Name: "+firstName+" "+lastName+"\nAge: "+age+"\nDOB: "+DOB+"\nID: "+ID+"\nSex: "+sex+"\nCreator: "+creator+"\nPast crimes: "+pastCrimes+"\nAddress: "+address+"\nShoe size: "+shoeSize+"\nPriority: "+priority+"\nAlive: "+alive+"\nPhysical attributes: "+physicalAttributes+"\nIn jail: "+inJail+"\nTattoos: "+tattoos;
     }
 
 }

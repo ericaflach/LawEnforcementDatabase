@@ -69,8 +69,5 @@ public class User{
         return accountInfo;
     }
 
-    public void printInfo(){
-        System.out.print(user.toString());
-    }
 
 }
