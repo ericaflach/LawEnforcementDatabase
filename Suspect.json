@@ -2,8 +2,9 @@
     "firstName":"Jonathan",
     "lastName":"Rogers",
     "age":62,
-    "sex":"M",
     "dateOfBirth":"05/10/1959",
+    "ID":1334,
+    "sex":"M",
     "creator":"Peter Shelly",
     "pastCrimes":" ",
     "address":" ",
@@ -12,16 +13,15 @@
     "alive":true,
     "physicalAttributes":" ",
     "inJail":false,
-    "alibi":"N/A",
-    "description":"Jonathan Rogers",
-    "contact":"(864)-331-4455",
-    "ID":1334
+    "tatoos":[],
+    "alibi":"N/A"
     },{
     "firstName":"Kourtney",
     "lastName":"Bates",
     "age":49,
-    "sex":"F",
     "dateOfBirth":"04/13/1972",
+    "ID":1900,
+    "sex":"F",
     "creator":"Peter Shelly",
     "pastCrimes":" ",
     "address":" ",
@@ -30,16 +30,15 @@
     "alive":true,
     "PhysicalAttributes":" ",
     "inJail":false,
-    "alibi":"N/A",
-    "description":"Kourtney Bates",
-    "contact":"(864)-991-4255",
-    "ID":1900
+    "tatoos":[],
+    "alibi":"N/A"
     },{
     "firstName":"N/A",
     "lastName":"N/A",
     "age":-1,
-    "sex":"N/A",
     "dateOfBirth":"N/A",
+    "ID":8241,
+    "sex":"N/A",
     "creator":"Peter Shelly",
     "pastCrimes":" ",
     "address":" ",
@@ -48,16 +47,15 @@
     "alive":true,
     "physicalAttributes":" ",
     "inJail":false,
-    "alibi":"N/A",
-    "description":"Potential suspect was wearing a black hoodie, blue jeans and grey sneakers and about 6 feet. The person of interest may go by the name Blake Jackson",
-    "contact":"N/A",
-    "ID":8241
+    "tatoos":[],
+    "alibi":"N/A"
     },{
     "firstName":"N/A",
     "lastName":"N/A",
     "age":-1,
-    "sex":"N/A",
     "dateOfBirth":"N/A",
+    "ID":9384,
+    "sex":"N/A",
     "creator":"Peter Shelly",
     "pastCrimes":" ",
     "address":" ",
@@ -66,16 +64,15 @@
     "alive":true,
     "physicalAttributes":" ",
     "inJail":false,
-    "alibi":"N/A",
-    "description":"Male about 6 foot, between the age of 34-40, with short hair and wearing a blue Dolphins jersey and cargo shorts",
-    "contact":"N/A",
-    "ID":9384
+    "tatoos":[],
+    "alibi":"N/A"
     },{
     "firstName":"Tyler",
     "lastName":"Reynolds",
     "age":32,
-    "sex":"M",
     "dateOfBirth":"01/31/1989",
+    "ID":1414,
+    "sex":"M",
     "creator":"Peter Shelly",
     "pastCrimes":" ",
     "address":" ",
@@ -84,16 +81,15 @@
     "alive":true,
     "physicalAttributes":" ",
     "inJail":false,
-    "alibi":"N/A",
-    "description":"Tyler Reynolds",
-    "contact":"(834)-9781-1005",
-    "ID":1414
+    "tatoos":[],
+    "alibi":"N/A"
     },{
     "firstName":"N/A",
     "lastName":"N/A",
     "age":-1,
-    "sex":"N/A",
     "dateOfBirth":"N/A",
+    "ID":3141,
+    "sex":"N/A",
     "creator":"Peter Shelly",
     "pastCrimes":" ",
     "address":" ",
@@ -102,8 +98,6 @@
     "alive":true,
     "physicalAttributes":" ",
     "inJail":false,
-    "alibi":"N/A",
-    "description":"Female about 5'10, between the age 23-25, hair was covered and was wearing sunglasses.",
-    "contact":"N/A",
-    "ID":3141
+    "tatoos":[],
+    "alibi":"N/A"
     }]
