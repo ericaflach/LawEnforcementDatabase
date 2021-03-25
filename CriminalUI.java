@@ -24,7 +24,7 @@ public class CriminalUI {
                 addMenu();
                 int choice = getUserChoice();
                 if (choice == 1){
-                    application.createCriminal();
+                    addCriminal();
                 } else if (option == 2) {
                     application.createCrime();
                 } else {
@@ -49,59 +49,104 @@ public class CriminalUI {
         }
 
     }
+    public void addCriminal(){
+        System.out.println("-----Add a criminal-----");
+        System.out.println("Please enter as much of the following as possible, if you do not know, press enter to leave that field blank.");
+        System.out.println("First name: ");
+        String firstName = scanner.next();
+        System.out.println("Last name: ");
+        String lastName = scanner.next();
+        System.out.println("Age: ");
+        int age = scanner.nextInt();
+        System.out.println("DOB (mm/dd/yyy): ");
+        String DOB = scanner.next();
+        System.out.println("Address: ");
+        String address = scanner.next();
+        application.createCriminal(firstName, lastName, age, String DOB, User creator, ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority, boolean alive,
+    ArrayList<String> physicalAttributes, boolean inJail, int ID, char sex, ArrayList<String> tattoos
+
+    }
     public void searchCriminal(){
         System.out.println("-----Search a criminal-----");
         System.out.println();
-        System.out.println("You can search by:");
-        System.out.println("(1) Name");
-        System.out.println("(2) Age range");
-        System.out.println("(3) Crimes committed");
-        System.out.println("(4) Location");
-        System.out.println("(5) sex");
-        System.out.println("How would you like to search? (1-5)");
-        int choice=scanner.nextInt();
-        if (choice == 1){
-            System.out.println("Search by name");
-            System.out.println("First name: ");
-            String firstName=scanner.next();
-            System.out.println("Last name: ");
-            String lastName=scanner.next();
-            application.searchByName(firstName, lastName);
-        } else if (choice == 2) {
-            System.out.println("Search by age range");
-            System.out.println("Lower age bound: ");
-            int lowerAge = scanner.nextInt();
-            System.out.println("Upper age bound: ");
-            int upperAge = scanner.nextInt();
-            application.searchByAge(lowerAge, upperAge);
-        } else if (choice == 3) {
-            System.out.println("Search by crimes committed");
-            System.out.println("You may enter up to three crimes, press enter to skip.");
-            ArrayList<String> searchedCrimes=new ArrayList<String>();
-            for (int i=0; i<4; i++) {
-                System.out.println("Enter crime "+i+": ");
-                String crime = scanner.next();
-                if (crime == null) {
-                    break;
-                } else {
-                    searchedCrimes.add(crime);
+        boolean refine = true;
+        while (refine){
+            System.out.println("You can search by:");
+            System.out.println("(1) Name");
+            System.out.println("(2) Age range");
+            System.out.println("(3) Crimes committed");
+            System.out.println("(4) Location");
+            System.out.println("(5) sex");
+            System.out.println("How would you like to search? (1-5)");
+            int choice=scanner.nextInt();
+            if (choice == 1){
+                System.out.println("Search by name");
+                System.out.println("First name: ");
+                String firstName=scanner.next();
+                System.out.println("Last name: ");
+                String lastName=scanner.next();
+                application.searchByName(firstName, lastName);
+            } else if (choice == 2) {
+                System.out.println("Search by age range");
+                System.out.println("Lower age bound: ");
+                int lowerAge = scanner.nextInt();
+                System.out.println("Upper age bound: ");
+                int upperAge = scanner.nextInt();
+                application.searchByAge(lowerAge, upperAge);
+            } else if (choice == 3) {
+                System.out.println("Search by crimes committed");
+                System.out.println("You may enter up to three crimes, press enter to skip.");
+                ArrayList<String> searchedCrimes=new ArrayList<String>();
+                for (int i=0; i<4; i++) {
+                    System.out.println("Enter crime "+i+": ");
+                    String crime = scanner.next();
+                    if (crime == null) {
+                        break;
+                    } else {
+                        searchedCrimes.add(crime);
+                    }
+                    
                 }
-                
+                application.searchByCrimesCommitted(searchedCrimes);
+            } else if (choice == 4) {
+                System.out.println("Search by location");
+                System.out.println("City: ");
+                String city = scanner.next();
+                System.out.println("State: ");
+                String state = scanner.next();
+                application.searchByLocation(city, state);
+            } else if (choice == 5) {
+                    System.out.println("Search by sex");
+                    System.out.println("Sex: ");
+                    String sex = scanner.next();
+                    char entry = sex.atIndex(0);
+                    application.searchBySex(sex);
             }
-            application.searchByCrimesCommitted(searchedCrimes);
-        } else if (choice == 4) {
-            System.out.println("Search by location");
-            System.out.println("City: ");
-            String city = scanner.next();
-            System.out.println("State: ");
-            String state = scanner.next();
-            application.searchByLocation(city, state);
-       } else if (choice == 5) {
-            System.out.println("Search by sex");
-            System.out.println("Sex: ");
-            String sex = scanner.next();
-            char entry = sex.atIn
-       }
+            System.out.println("Here are your results: ");
+            System.out.println(refinedList);
+            System.out.println("Enter in a criminals name to view his or her profile, enter \"refine\" to add another search parameter, or enter \"reset\" to start a new search.");
+            String entry = scanner.next();
+            if (entry.equalsIgnoreCase("reset")) {
+                refine = true;
+                application.resetRefinedList();
+            } else if (entry.equalsIgnoreCase("refine")) {
+                refine = true;
+            } else {
+                for (int i=0; i<refinedList.size(); i++) {
+                    if (entry.equalsIgnoreCase(refinedList.get(i))){
+                        System.out.println(Criminal.toString());
+                        refine = false;
+                        System.out.println("When you are finished, press enter to go back to the main menu");
+                        String enter = scanner.next();
+                        reset = true;
+                    } else {
+                        System.out.println("Invalid entry, you will be taken back to the main menu.");
+                        refine = false;
+                        reset = true;
+                    }
+                }
+            }
+        }
 
     }
 
@@ -163,7 +208,7 @@ public class CriminalUI {
     public void accountMenu(){
         System.out.println("-----Account Info-----");
         System.out.println();
-        System.out.println(User.printInfo());
+        System.out.print(User.printInfo());
     }
     public static void main(String[] args) {
         CriminalUI ui = new CriminalUI();
