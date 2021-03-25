@@ -5,12 +5,12 @@
 "age": 34,
 "dateOfBirth":"05/03/1987",
 "sex":"M",
-"pastCrimes":"Robbery",
+"pastCrimes":[],
 "address":"13 Cali Dr.",
 "shoeSize":9.5,
 "priority":2,
 "alive":"false",
-"physicalAttributes":"Brown eyes, black hair",
+"physicalAttributes":[],
 "inJail":"false",
 "ID":4455
 },{
@@ -20,12 +20,12 @@
 "age": 55,
 "dateOfBirth":"08/12/1966",
 "sex":"M",
-"pastCrimes":"Arson",
+"pastCrimes":[],
 "address":"44 Stange Ave.",
 "shoeSize":10.5,
 "priority":3,
 "alive":"false",
-"physicalAttributes":"Blue eyes, blond hair",
+"physicalAttributes":[],
 "inJail":"false",
 "ID":1011
 },{
@@ -35,7 +35,7 @@
 "age": 21,
 "dateOfBirth":"10/28/199",
 "sex":"M",
-"pastCrimes":"Drug Possession",
+"pastCrimes":[],
 "address":"1900 Barning St",
 "shoeSize":10.5,
 "priority":1,
