@@ -5,7 +5,7 @@ public class Witness extends Person{
     private String description;
     private String contact;
 
-    public Witness(String firstName, String lastName, int age, String DOB, int ID, char sex String description, String contact) {
+    public Witness(String firstName, String lastName, int age, String DOB, int ID, char sex, String description, String contact) {
         super(firstName, lastName, age, DOB, ID, sex);
         
         this.description = description;

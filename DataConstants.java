@@ -6,7 +6,7 @@ public abstract class DataConstants {
         protected static final String PERSON_LAST_NAME = "lastName";
         protected static final String PERSON_AGE = "age";
         protected static final String PERSON_DATEOFBIRTH = "dateOfBirth";
-        protected static final String PERSON_ID = "id";
+        protected static final String PERSON_ID = "ID";
         protected static final String PERSON_SEX = "sex";
         
         protected static final String CRIMINAL_FILE_NAME = "src/Criminal.json";
