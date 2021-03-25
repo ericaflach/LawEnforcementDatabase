@@ -26,7 +26,7 @@ public class CriminalUI {
                 if (choice == 1){
                     addCriminal();
                 } else if (option == 2) {
-                    application.createCrime();
+                    addCrime();
                 } else {
                     reset=true;
                 }
@@ -36,7 +36,7 @@ public class CriminalUI {
                 if (choice == 1) {
                     searchCriminal();
                 } else if (choice == 2) {
-                    application.searchCrime();
+                    searchCrime();
                 } else {
                     reset=true;
                 }
@@ -48,6 +48,79 @@ public class CriminalUI {
             }
         }
 
+    }
+    public void addCrime(){
+        System.out.println("-----Add a crime-----");
+        System.out.println("Please enter as much of the following as possible, if you do not know, press enter to leave that field blank.");
+        System.out.println("First name: ");
+        String firstName = scanner.next();
+        System.out.println("Last name: ");
+        String lastName = scanner.next();
+        System.out.println("Age: ");
+        int age = scanner.nextInt();
+        System.out.println("DOB (mm/dd/yyy): ");
+        String DOB = scanner.next();
+        System.out.println("Address: ");
+        String address = scanner.next();
+        ArrayList<String> pastCrimes=new ArrayList<String>();
+        System.out.println("Enter crime committed: ");
+        String crime = scanner.next();
+        pastCrimes.add(crime);
+        System.out.println("Creator (your name): ");
+        String creator = scanner.next();
+        System.out.println("Shoe size: ");
+        double shoeSize = scanner.nextDouble();
+        System.out.println("Priority: ");
+        int priority = scanner.nextInt();
+        System.out.println("Alive (true/false): ");
+        boolean alive = scanner.nextBoolean();
+        ArrayList<String> physicalAttributes=new ArrayList<String>();
+        for (int i=0; i<10; i++) {
+            System.out.println("Physical attribute "+i+": ");
+            String attritbute = scanner.next();
+            if (attribute == null) {
+                break;
+            } else {
+                physicalAttributes.add(attribute);
+            }
+        }
+        System.out.println("In jail (true/false): ");
+        boolean inJail = scanner.nextBoolean();
+        System.out.println("ID: ");
+        int ID = scanner.nextInt();
+        System.out.println("Sex (m/f): ");
+        String entry = scanner.next();
+        char sex = entry.atIndex(0);
+        ArrayList<String> tattoos=new ArrayList<String>();
+        for (int i=0; i<10; i++) {
+            System.out.println("Tattoo "+i+": ");
+            String tat = scanner.next();
+            if (tat == null) {
+                break;
+            } else {
+                tattoos.add(tat);
+            }
+        }
+        application.createCriminal(firstName, lastName, age, DOB, creator, pastCrimes, address, shoeSize, priority, alive, physicalAttributes, inJail, ID, sex, tattoos);
+        System.out.println(crime+" has been entered for "+firstName+" "+lastName);
+        reset=true;
+    }
+    public void searchCrime(){
+        System.out.println("-----Search a crime-----");
+        System.out.println("You can lookup a specific case by its ID number, or press enter to go back to the menu, where you can search for criminals by their past crimes.");
+        System.out.println("Case ID number: ");
+        int ID = scanner.nextInt();
+        if (ID == 0) {
+            reset=true;
+        } else {
+            application.searchCaseID(ID);
+            System.out.println("Here is your case: ");
+            System.out.println(Case.toString());
+            System.out.println("Press enter to return to the main menu");
+            String enter = scanner.next();
+            reset=true;
+        }
+        
     }
     public void addCriminal(){
         System.out.println("-----Add a criminal-----");
@@ -254,7 +327,7 @@ public class CriminalUI {
     public void accountMenu(){
         System.out.println("-----Account Info-----");
         System.out.println();
-        System.out.print(User.printInfo());
+        System.out.print(User.toString());
     }
     public static void main(String[] args) {
         CriminalUI ui = new CriminalUI();

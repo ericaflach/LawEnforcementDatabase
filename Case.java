@@ -221,4 +221,20 @@ public class Case {
     public String getCaseType() {
         return caseType.toString();
     }
+
+    public String toString() {
+        return  "Creator: "+creator+
+                "\nWitnesses: "+witnesses+
+                "\nPeople of interest: "+peopleOfInterest+
+                "\nSuspects: "+suspects+
+                "\nCriminals: "+criminals+
+                "\nVictims: "+victims+
+                "\nCase open: "+caseOpen+
+                "\nID"+ID+
+                "\nEvidence: "+evidence+
+                "\nCrime level: "+crimeLevel+
+                "\nOfficers: "+officers+
+                "\nLegal clearance: "+legalClearance+
+                "\nCase type: "+caseType;
+    }
 }

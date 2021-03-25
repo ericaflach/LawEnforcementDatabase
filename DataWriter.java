@@ -168,4 +168,7 @@ public class DataWriter extends DataConstants {
         witnessDetails.put(WITNESS_DESCRIPTION, witness.getDescription());
         witnessDetails.put(WITNESS_CONTACT, witness.getContact());
     }
+
+    public static void saveUsers() {
+    }
 }

@@ -1,5 +1,5 @@
 [{
-"creator":"Jstaff",
+"creator":[20],
 "firstName":"Wei",
 "lastName":"Owo",
 "age": 34,
@@ -12,9 +12,9 @@
 "alive":"false",
 "physicalAttributes":[],
 "inJail":"false",
-"ID":4455
+"ID":1
 },{
-"creator":"Jbakes",
+"creator":[21],
 "firstName":"Steven",
 "lastName":"Frez",
 "age": 55,
@@ -27,9 +27,9 @@
 "alive":"false",
 "physicalAttributes":[],
 "inJail":"false",
-"ID":1011
+"ID":2
 },{
-"creator":"Achassier",
+"creator":[22],
 "firstName":"Pro",
 "lastName":"Karry",
 "age": 21,
@@ -40,11 +40,11 @@
 "shoeSize":10.5,
 "priority":1,
 "alive":"false",
-"physicalAttributes":"Black eyes, black hair",
+"physicalAttributes":[],
 "inJail":"false",
-"ID":4455
+"ID":7
 },{
-"creator":"Jbakes",
+"creator":[23],
 "firstName":"Morgan",
 "lastName":"Freeman",
 "age": 76,
@@ -57,9 +57,9 @@
 "alive":"true",
 "physicalAttributes":"Green eyes, red hair",
 "inJail":"false",
-"ID":1099
+"ID":4
 },{
-"creator":"Tducan",
+"creator":[24],
 "firstName":"Carol",
 "lastName":"Baskin",
 "age": 54,
@@ -72,9 +72,9 @@
 "alive":"true",
 "physicalAttributes":"Brown eyes, black hair, scar over right eyebrow",
 "inJail":"true",
-"ID":14553
+"ID":5
 },{
-"creator":"Cbennett",
+"creator":[25],
 "firstName":"Karl",
 "lastName":"Pension",
 "age": 44,
@@ -87,5 +87,5 @@
 "alive":"false",
 "physicalAttributes":"Brown eyes, brown hair, cross tattoo on right hand",
 "inJail":"false",
-"ID":4145
+"ID":6
 }]
