@@ -35,6 +35,7 @@ public class User{
         this.lastName=lastName;
     }
 
+<<<<<<< HEAD
     public void setID(int ID) {
         this.ID = ID;
     }
@@ -44,6 +45,12 @@ public class User{
     }
 
     public int getClearanceLevel() {
+=======
+    public int getID(){
+        return ID;
+    }
+    public int getClearanceLevel(){
+>>>>>>> ee95bb04114d68a8db05bbd500c54064c13bf652
         return clearanceLevel;
     }
 
