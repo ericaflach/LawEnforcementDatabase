@@ -57,12 +57,12 @@ public class Criminal extends Person {
         return pastCrimes.size();
     }
 
-    public ArrayList<String> getPhysicalAttributes() {
-        return physicalAttributes;
-    }
-
     public boolean getInJail() {
         return inJail;
+    }
+
+    public ArrayList<String> getPhysicalAttributes() {
+        return physicalAttributes;
     }
 
     public ArrayList<String> getTattoos(){
@@ -108,9 +108,24 @@ public class Criminal extends Person {
     public void removePastCrime(int caseNumber) {
         pastCrimes.remove(caseNumber);
     }
-
-    public String toString() {
-        return "Name: "+firstName+" "+lastName+"\nAge: "+age+"\nDOB: "+DOB+"\nID: "+
+    public String physicalAttributesToString() {
+        String attributes = "";
+        for (int i = 0; i < physicalAttributes.size(); i++) {
+            attributes = attributes + physicalAttributes.get(i) + ", "; 
+        }
+        return attributes;
     }
 
+    public String tattoosToString() {
+        String ret = "";
+        for (int i = 0; i < tattoos.size(); i++) {
+            ret = ret + tattoos.get(i) + ", ";
+        }
+        return ret;
+    }
+    public String toString() {
+        return "First Name: " + firstName + "\nLast Name: " + lastName +"\nAge: " + super.getAge() + "\nDOB: " + super.getDateOfBirth() + 
+            "\nSex: " + super.getSex() + "\nAddress: " + address + "\nPhysical description: " + physicalAttributesToString() + "Tattoos: " +
+            tattoosToString() + "Profile author: " + getCreator().getName();
+        }
 }
