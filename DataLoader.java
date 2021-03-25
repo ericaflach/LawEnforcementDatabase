@@ -32,7 +32,7 @@ public class DataLoader extends DataConstants {
                   boolean alive = Boolean.parseBoolean((String)criminalJSON.get(CRIMINAL_ALIVE));
                   ArrayList<String> physicalAttributes = new ArrayList<String>();//FIX!!!!!
                   boolean inJail = Boolean.parseBoolean((String)criminalJSON.get(CRIMINAL_IN_JAIL));
-                  //int criminalID = ((Long)criminalJSON.get(CRIMINAL_ID)).intValue();
+                  ArrayList<String> tatoos = new ArrayList<String>();//FIX!!!
 
                   //criminals.add(new Criminal(firstName, lastName, age, dateOfBirth, ID, sex, creator, pastCrimes, address, shoeSize, priority,
                   //alive, physicalAttributes, inJail));
@@ -50,7 +50,7 @@ public class DataLoader extends DataConstants {
         ArrayList<PersonOfInterest> peopleOfInterest = new ArrayList<PersonOfInterest>();
 
         try {
-            FileReader reader = new FileReader(PERSON_OF_INTEREST_FILE_NAME);
+            FileReader reader = new FileReader("LawEnforcementDatabase/PersonOfInterest.json");
             JSONParser parser = new JSONParser();
             JSONArray peopleOfInterestJSON = (JSONArray)new JSONParser().parse(reader);
 
@@ -244,9 +244,9 @@ public class DataLoader extends DataConstants {
 		return null;
     }
     public static void main(String[] args){
-        ArrayList<Witness> witnesses = DataLoader.getWitnesses();
-        for (int i=0; i<witnesses.size(); i++){
-            System.out.println(witnesses.get(i).getFirstName());
+        ArrayList<PersonOfInterest> peopleOfInterest = DataLoader.getPeopleOfInterest();
+        for (int i=0; i<peopleOfInterest.size(); i++){
+            System.out.println(peopleOfInterest.get(i).getFirstName());
         }
     }
 }
