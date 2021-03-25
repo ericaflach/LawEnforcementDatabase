@@ -1,0 +1,73 @@
+[{
+"ID":2149921,
+"firstName":"Casey",
+"lastName":"Siffa",
+"userName":"Csiffa",
+"email":"csiffa@sb.gov",
+"phoneNumber": 8439910012,
+"password": "iLoveLoMein77",
+"clearanceLevel": 2,
+"policeDepartment":"Santa Barbra Police Station",
+"myCriminals": "",
+"myCases": 2
+},{
+"ID":119521,
+"firstName":"Jonathan",
+"lastName":"Baker",
+"userName":"Jbaker",
+"email":"Jbaker@sb.gov",
+"phoneNumber": 8649010012,
+"password": "i444!@@@calI",
+"clearanceLevel": 1,
+"policeDepartment":"Santa Barbra Police Station",
+"myCriminals": "",
+"myCases": 2
+},{
+"ID":4449921,
+"firstName":"Clark",
+"lastName":"Smith",
+"userName":"Csmith",
+"email":"Csmith@sb.gov",
+"phoneNumber": 8439243002,
+"password": "LiveLuvLaugh1999",
+"clearanceLevel": 2,
+"policeDepartment":"Santa Barbra Police Station",
+"myCriminals": "",
+"myCases": 2
+},{
+"ID":3345221,
+"firstName":"Ben",
+"lastName":"Fields",
+"userName":"Bfields",
+"email":"bfields@sb.gov",
+"phoneNumber": 8432210012,
+"password": "iLovePoodles44",
+"clearanceLevel": 1,
+"policeDepartment":"Santa Barbra Police Station",
+"myCriminals": "",
+"myCases": 2
+},{
+"ID":3349221,
+"firstName":"Alex",
+"lastName":"Marant",
+"userName":"Amarant",
+"email":"Amarant@sb.gov",
+"phoneNumber": 8642219012,
+"password": "LakeMurz21!",
+"clearanceLevel": 1,
+"policeDepartment":"Santa Barbra Police Station",
+"myCriminals": "",
+"myCases": 2
+},{
+"ID":3374221,
+"firstName":"Emily",
+"lastName":"Barron",
+"User name":"Ebarron",
+"email":"Ebarron@sb.gov",
+"phoneNumber": 8432328812,
+"password": "MulanIs98@91",
+"clearanceLevel": 1,
+"policeDepartment":"Santa Barbra Police Station",
+"myCriminals": "",
+"myCases": 2
+}]

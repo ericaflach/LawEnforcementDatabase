@@ -6,12 +6,16 @@ public class Person {
     protected String lastName;
     private int age;
     private String dateOfBirth;
+    private int ID;
+    private char sex;
 
-    public Person(String firstName, String lastName, int age, String DOB) {
+    public Person(String firstName, String lastName, int age, String DOB, int ID, char sex) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.dateOfBirth = DOB;
+        this.ID = ID;
+        this.sex = sex;
     }
     
     public String getFirstName() {
@@ -32,6 +36,22 @@ public class Person {
     
     public String getDateOfBirth() {
         return dateOfBirth;
+    }
+
+    public int getID(){
+        return ID;
+    }
+
+    public char getSex(){
+        return sex;
+    }
+
+    public void setSex(char sex){
+        this.sex = sex;
+    }
+
+    public void setID(int ID){
+        this.ID = ID;
     }
 
     public void setFirstName(String name) {

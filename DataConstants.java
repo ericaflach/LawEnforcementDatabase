@@ -2,13 +2,12 @@ package LawEnforcementDatabase;
 
 public abstract class DataConstants {
 
-        //protected static final String PEOPLE_FILE_NAME = "src/people.json";
-        //protected static final String PEOPLE = "people";
-        protected static final String PEOPLE_FIRST_NAME = "firstName";
-        protected static final String PEOPLE_LAST_NAME = "lastName";
-        protected static final String PEOPLE_AGE = "age";
-        protected static final String PEOPLE_DATEOFBIRTH = "dateOfBirth";
-        //protected static final String PEOPLE_PHONE_NUMBER = "phoneNumber";
+        protected static final String PERSON_FIRST_NAME = "firstName";
+        protected static final String PERSON_LAST_NAME = "lastName";
+        protected static final String PERSON_AGE = "age";
+        protected static final String PERSON_DATEOFBIRTH = "dateOfBirth";
+        protected static final String PERSON_ID = "id";
+        protected static final String PERSON_SEX = "sex";
         
         protected static final String CRIMINAL_FILE_NAME = "src/Criminal.json";
         protected static final String CRIMINAL_CREATOR = "creator";
@@ -19,7 +18,7 @@ public abstract class DataConstants {
         protected static final String CRIMINAL_ALIVE = "alive";
         protected static final String CRIMINAL_PHYSICAL_ATTRIBUTES = "physicalAttributes";
         protected static final String CRIMINAL_IN_JAIL = "inJail";
-        protected static final String CRIMINAL_ID = "criminalID";
+        protected static final String CRIMINAL_TATOOS = "tatoos";
 
         protected static final String SUSPECT_FILE_NAME = "src/Suspect.json";
         protected static final String SUSPECT_ALIBI = "alibi";
@@ -55,8 +54,10 @@ public abstract class DataConstants {
         protected static final String CASE_WITNESSES = "witnesses";
         protected static final String CASE_PEOPLE_OF_INTEREST = "peopleOfInterest";
         protected static final String CASE_SUSPECTS = "suspects";
+        protected static final String CASE_CRIMINALS = "criminals";
+        protected static final String CASE_VICTIMS = "victims";
         protected static final String CASE_OPEN = "caseOpen";
-        protected static final String CASE_NUMBER = "caseNumber";
+        protected static final String CASE_ID = "id";
         protected static final String CASE_EVIDENCE = "evidence";
         protected static final String CASE_CRIME_LEVEL = "crimeLevel";
         protected static final String CASE_OFFICERS = "officers";

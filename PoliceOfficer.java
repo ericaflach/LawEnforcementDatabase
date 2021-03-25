@@ -5,27 +5,21 @@ import java.util.ArrayList;
 public class PoliceOfficer extends User {
 
     private String policeDepartment;
-    private int officerID;
     private ArrayList<Criminal> myCriminals;
     private ArrayList<Case> myCases;
 
     public PoliceOfficer(String firstName, String lastName, String username, String password, String email,int phoneNumber, int clearanceLevel, 
-    String policeDepartment, int officerID) {
+    String policeDepartment, int ID) {
 
-        super(firstName, lastName, username, password, email, phoneNumber, clearanceLevel);
+        super(firstName, lastName, username, password, email, phoneNumber, clearanceLevel, ID);
         
         this.policeDepartment = policeDepartment;
-        this.officerID = officerID;
 
         myCriminals = new ArrayList<Criminal>();
         myCases = new ArrayList<Case>();
     }
     public void setPoliceDepartment(String department){
         this.policeDepartment = department;
-    }
-
-    public void setOfficerID(int officerID){
-        this.officerID=officerID;
     }
 
     public void setMyCriminals(ArrayList<Criminal> myCriminals){
@@ -40,10 +34,6 @@ public class PoliceOfficer extends User {
         return policeDepartment;
     }
 
-    public int getOfficerID(){
-        return officerID;
-    }
-
     public ArrayList<Criminal> getMyCriminals(){
         return myCriminals;
     }
@@ -51,8 +41,12 @@ public class PoliceOfficer extends User {
     public ArrayList<Case> getMyCases(){
         return myCases;
     }
+
     public boolean checkPassword(String password) {
         return (password.equals(super.getPassword())); 
     }
     
+    public void addToMyCriminals(Criminal criminal) {
+        myCriminals.add(criminal);
+    }
 }

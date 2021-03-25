@@ -1,6 +1,8 @@
 [
     {
     "creator":"Peter Shelly",
+    "criminal":"Benson Burner",
+    "victim":" ",
     "witnesses":" ",
     "peopleOfInterest":" ",
     "suspects":" ",
@@ -8,62 +10,72 @@
     "caseNumber":12345,
     "evidence":" ",
     "criminalLevel":2,
-    "officers":" ",
-    "legalClearance":1
+    "officers":"Jonathan Baker",
+    "legalClearance":3
     },{
     "creator":"Peter Shelly",
+    "criminal":"Bart Simspon",
+    "victim":" ",
     "witnesses":" ",
     "peopleOfInterest":" ",
     "suspects":" ",
     "caseOpen":true,
-    "caseNumber":12345,
+    "caseNumber":12346,
     "evidence":" ",
     "criminalLevel":2,
-    "officers":" ",
-    "legalClearance":1
+    "officers":"Clark Smith",
+    "legalClearance":3
     },{
     "creator":"Peter Shelly",
+    "criminal":"Jeffrey Epstein",
+    "victim":" ",
     "witnesses":" ",
     "peopleOfInterest":" ",
     "suspects":" ",
     "caseOpen":true,
-    "caseNumber":12345,
+    "caseNumber":12347,
     "evidence":" ",
     "criminalLevel":2,
-    "officers":" ",
-    "legalClearance":1
+    "officers":"Ben Fields",
+    "legalClearance":3
     },{
     "creator":"Peter Shelly",
+    "criminal":"Carol Baskin",
+    "victim":" ",
     "witnesses":" ",
     "peopleOfInterest":" ",
     "suspects":" ",
     "caseOpen":true,
-    "caseNumber":12345,
+    "caseNumber":12348,
     "evidence":" ",
     "criminalLevel":2,
-    "officers":" ",
-    "legalClearance":1
+    "officers":"Emily Barron",
+    "legalClearance":3
     },{
     "creator":"Peter Shelly",
+    "criminal":"Katty Perry",
+    "victim":" ",
     "witnesses":" ",
     "peopleOfInterest":" ",
     "suspects":" ",
     "caseOpen":true,
-    "caseNumber":12345,
+    "caseNumber":12349,
     "evidence":" ",
     "criminalLevel":2,
-    "officers":" ",
-    "legalClearance":1
+    "officers":"Alex Marant",
+    "legalClearance":3
     },{
     "creator":"Peter Shelly",
+    "criminal":"Marvin Gates",
+    "victim":" ",
     "witnesses":" ",
     "peopleOfInterest":" ",
     "suspects":" ",
     "caseOpen":true,
-    "caseNumber":12345,
+    "caseNumber":12350,
     "evidence":" ",
     "criminalLevel":2,
-    "officers":" ",
-    "legalClearance":1
+    "officers":"Casey Siffa",
+    "legalClearance":3
     }
 ]

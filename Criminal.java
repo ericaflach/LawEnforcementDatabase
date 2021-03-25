@@ -12,13 +12,12 @@ public class Criminal extends Person {
     private boolean alive;
     private ArrayList<String> physicalAttributes;
     private boolean inJail;
-    private int criminalID;
     private ArrayList<String> tattoos;
 
-    public Criminal(String firstName, String lastName, int age, String DOB, User creator, ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority, boolean alive,
-    ArrayList<String> physicalAttributes, boolean inJail, int criminalID) {
+    public Criminal(String firstName, String lastName, int age, String DOB,int ID, char sex, User creator, ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority, boolean alive,
+    ArrayList<String> physicalAttributes, boolean inJail, ArrayList<String> tattoos) {
 
-        super(firstName, lastName, age, DOB);
+        super(firstName, lastName, age, DOB, ID, sex);
         this.creator = creator;
         this.pastCrimes = pastCrimes;
         this.address = address;
@@ -27,11 +26,10 @@ public class Criminal extends Person {
         this.alive = alive;
         this.physicalAttributes = physicalAttributes;
         this.inJail = inJail;
-        this.criminalID = criminalID;
-        this.tatoos = tattoos
+        this.tattoos = tattoos; 
     }
 
-    public User getCreator() {
+	public User getCreator() {
         return creator;
     }
 
@@ -63,12 +61,8 @@ public class Criminal extends Person {
         return physicalAttributes;
     }
 
-    public boolean inJail() {
+    public boolean getInJail() {
         return inJail;
-    }
-
-    public int getCriminalID() {
-        return criminalID;
     }
 
     public ArrayList<String> getTattoos(){
@@ -116,7 +110,7 @@ public class Criminal extends Person {
     }
 
     public String toString() {
-        return firstName+" "+lastName;
+        return "Name: "+firstName+" "+lastName+"\nAge: "+age+"\nDOB: "+DOB+"\nID: "+
     }
 
 }

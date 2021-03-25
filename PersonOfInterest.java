@@ -4,14 +4,12 @@ public class PersonOfInterest extends Person{
 
     private String description;
     private String contact;
-    private int poiID;
 
-    public PersonOfInterest(String firstName, String lastName, int age, String DOB, String description, String contact, int poiID) {
-        super(firstName, lastName, age, DOB);
+    public PersonOfInterest(String firstName, String lastName, int age, String DOB, int ID, char sex, String description, String contact) {
+        super(firstName, lastName, age, DOB, ID, sex);
 
         this.description = description;
         this.contact = contact;
-        this.poiID = poiID;
     }
 
     public String getDescription(){
@@ -20,10 +18,6 @@ public class PersonOfInterest extends Person{
 
     public String getContact(){
         return contact;
-    }
-
-    public int getPoiID(){
-        return poiID;
     }
 
     public void setDescription(String description){
@@ -36,8 +30,4 @@ public class PersonOfInterest extends Person{
 
     }
 
-    public void setWitnessID(int poiID){
-        this.poiID = poiID;
-        
-    }
 }
