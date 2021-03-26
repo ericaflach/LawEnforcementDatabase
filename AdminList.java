@@ -48,7 +48,7 @@ public class AdminList {
             return false;
         }
 
-        admins.add(new Admin(firstName, lastName, userName, password, email, phoneNumber, clearanceLevel, int ID));
+        admins.add(new Admin(firstName, lastName, userName, password, email, phoneNumber, clearanceLevel, ID));
         return true;
     }
 

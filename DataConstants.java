@@ -1,5 +1,6 @@
 package LawEnforcementDatabase;
 
+
 public abstract class DataConstants {
 
         protected static final String PERSON_FIRST_NAME = "firstName";
@@ -10,7 +11,6 @@ public abstract class DataConstants {
         protected static final String PERSON_SEX = "sex";
         
         protected static final String CRIMINAL_FILE_NAME = "src/Criminal.json";
-        protected static final String CRIMINAL_CREATOR = "creator";
         protected static final String CRIMINAL_PAST_CRIMES = "pastCrimes";
         protected static final String CRIMINAL_ADDRESS = "address";
         protected static final String CRIMINAL_SHOE_SIZE = "shoeSize";
@@ -19,6 +19,7 @@ public abstract class DataConstants {
         protected static final String CRIMINAL_PHYSICAL_ATTRIBUTES = "physicalAttributes";
         protected static final String CRIMINAL_IN_JAIL = "inJail";
         protected static final String CRIMINAL_TATOOS = "tatoos";
+        protected static final String CRIMINAL_CREATORID = "tatoos";
 
         protected static final String SUSPECT_FILE_NAME = "src/Suspect.json";
         protected static final String SUSPECT_ALIBI = "alibi";
@@ -51,9 +52,10 @@ public abstract class DataConstants {
         protected static final String USER_ID = "ID";
 
         protected static final String POLICE_DEPARTMENT = "policeDepartment";
+        protected static final String POLICE_MY_CRIMINALS = "myCriminals";
 
         protected static final String CASE_FILE_NAME = "src/Case.json";
-        protected static final String CASE_CREATOR = "creator";
+        protected static final String CASE_CREATORID = "creatorID";
         protected static final String CASE_WITNESSES = "witnesses";
         protected static final String CASE_PEOPLE_OF_INTEREST = "peopleOfInterest";
         protected static final String CASE_SUSPECTS = "suspects";
@@ -66,5 +68,4 @@ public abstract class DataConstants {
         protected static final String CASE_OFFICERS = "officers";
         protected static final String CASE_LEGAL_CLEARANCE = "legalClearance";
         protected static final String CASE_TYPE = "caseType";
-    
 }

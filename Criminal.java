@@ -4,17 +4,6 @@ import java.util.ArrayList;
 
 public class Criminal extends Person {
 
-<<<<<<< HEAD
-    protected User creator;
-    protected ArrayList<Integer> pastCrimes;
-    protected String address;
-    protected double shoeSize;
-    protected int priority;
-    protected boolean alive;
-    protected ArrayList<String> physicalAttributes;
-    protected boolean inJail;
-    protected ArrayList<String> tattoos;
-=======
     private int creatorID;
     private ArrayList<Integer> pastCrimes;
     private String address;
@@ -24,7 +13,6 @@ public class Criminal extends Person {
     private ArrayList<String> physicalAttributes;
     private boolean inJail;
     private ArrayList<String> tattoos;
->>>>>>> 655c25bd8b3bd7cc880e0575fa14fdfb3081cf23
 
     public Criminal(String firstName, String lastName, int age, String DOB,int ID, char sex, int creatorID, ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority, boolean alive,
     ArrayList<String> physicalAttributes, boolean inJail, ArrayList<String> tattoos) {
@@ -137,15 +125,8 @@ public class Criminal extends Person {
     }
 
     public String toString() {
-<<<<<<< HEAD
-        return "\nFirst Name: " + firstName + "\nLast Name: " + lastName +"\nAge: " + age + "\nDOB: " + dateOfBirth +
-            "\nID: " + ID + "\nSex: " + sex + "\nCreator: " + creator + "\nPast Crimes: " + pastCrimes.toString() +
-            "\nAddress: " + address + "\nShoe Size: " + shoeSize + "\nPriority: " + priority + "\nAlive: " + alive + 
-            "\nPhysical description: " + physicalAttributes.toString() + "\nIn Jail: " + inJail + "\nTattoos: " + tattoos.toString();
-=======
         return "First Name: " + firstName + "\nLast Name: " + lastName +"\nAge: " + super.getAge() + "\nDOB: " + super.getDateOfBirth() + 
             "\nSex: " + super.getSex() + "\nAddress: " + address + "\nPhysical description: " + physicalAttributesToString() + "Tattoos: " +
             tattoosToString() + "Profile author: " + getCreatorID();
->>>>>>> 655c25bd8b3bd7cc880e0575fa14fdfb3081cf23
         }
 }

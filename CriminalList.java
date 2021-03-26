@@ -41,15 +41,14 @@ public class CriminalList {
         return criminals;
     }
     
-    public boolean addCriminal(String firstName, String lastName, int age, String DOB,int ID, char sex, User creator, ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority, boolean alive,
+    public boolean addCriminal(String firstName, String lastName, int age, String DOB,int ID, char sex, int creatorID, ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority, boolean alive,
     ArrayList<String> physicalAttributes, boolean inJail, ArrayList<String> tattoos) {
         
         if(haveCriminal(firstName, lastName)) {
             return false;
         }
 
-        criminals.add(new Criminal(firstName, lastName, age, DOB, ID, sex, creator, pastCrimes, address, shoeSize, priority, alive, 
-        physicalAttributes, inJail, tattoos));
+        criminals.add(new Criminal(firstName, lastName, age, DOB, ID, sex, creatorID, pastCrimes, address, shoeSize, priority, alive, physicalAttributes, inJail, tattoos));
         return true;
 }
     public void saveUsers() {
