@@ -6,7 +6,7 @@ public class VictimList {
     private static ArrayList<Victim> victims;
 
     private VictimList() {
-        victims = DataLoader.getUsers();
+        victims = new ArrayList<Victim>();
     }
 
     

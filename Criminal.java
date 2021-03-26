@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Criminal extends Person {
 
-    private User creator;
+    private int creatorID;
     private ArrayList<Integer> pastCrimes;
     private String address;
     private double shoeSize;
@@ -14,11 +14,11 @@ public class Criminal extends Person {
     private boolean inJail;
     private ArrayList<String> tattoos;
 
-    public Criminal(String firstName, String lastName, int age, String DOB,int ID, char sex, User creator, ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority, boolean alive,
+    public Criminal(String firstName, String lastName, int age, String DOB,int ID, char sex, int creatorID, ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority, boolean alive,
     ArrayList<String> physicalAttributes, boolean inJail, ArrayList<String> tattoos) {
 
         super(firstName, lastName, age, DOB, ID, sex);
-        this.creator = creator;
+        this.creatorID = creatorID;
         this.pastCrimes = pastCrimes;
         this.address = address;
         this.shoeSize = shoeSize;
@@ -29,8 +29,8 @@ public class Criminal extends Person {
         this.tattoos = tattoos; 
     }
 
-	public User getCreator() {
-        return creator;
+	public int getCreatorID() {
+        return creatorID;
     }
 
     public ArrayList<Integer> getPastCrimes() {
@@ -126,6 +126,6 @@ public class Criminal extends Person {
     public String toString() {
         return "First Name: " + firstName + "\nLast Name: " + lastName +"\nAge: " + super.getAge() + "\nDOB: " + super.getDateOfBirth() + 
             "\nSex: " + super.getSex() + "\nAddress: " + address + "\nPhysical description: " + physicalAttributesToString() + "Tattoos: " +
-            tattoosToString() + "Profile author: " + getCreator().getName();
+            tattoosToString() + "Profile author: " + getCreatorID();
         }
 }
