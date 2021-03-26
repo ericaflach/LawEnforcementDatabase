@@ -46,6 +46,7 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    //This method works please do not edit!!
     public static ArrayList<PersonOfInterest> getPeopleOfInterest() {
         ArrayList<PersonOfInterest> peopleOfInterest = new ArrayList<PersonOfInterest>();
 
@@ -114,7 +115,7 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
-    //Dont touch this method it works!!
+    //Dont touch this method, it works!!
     public static ArrayList<Victim> getVictims() {
         ArrayList<Victim> victims = new ArrayList<Victim>();
 
@@ -145,7 +146,7 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
-    //Dont touch this method it works!!
+    //Dont touch this method, it works!!
     public static ArrayList<Witness> getWitnesses() {
         ArrayList<Witness> witnesses = new ArrayList<Witness>();
 

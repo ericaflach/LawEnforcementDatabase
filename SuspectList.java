@@ -1,13 +1,13 @@
 package LawEnforcementDatabase;
 
 import java.util.ArrayList;
-
 public class SuspectList {
+
     private static SuspectList suspectList;
     private static ArrayList<Suspect> suspects;
 
     private SuspectList() {
-        suspects = new ArrayList<Suspect>();
+        suspects = DataLoader.getSuspects();
     }
 
     public static SuspectList getInstance() {
