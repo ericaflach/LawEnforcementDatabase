@@ -203,7 +203,7 @@ public class DataLoader extends DataConstants {
         ArrayList<Admin> admins = new ArrayList<Admin>();
 
         try {
-            FileReader reader = new FileReader("LawEnforcementDatabase/Admin.json");
+            FileReader reader = new FileReader(ADMIN_FILE_NAME);
             JSONParser parser = new JSONParser();
             JSONArray adminsJSON = (JSONArray)new JSONParser().parse(reader);
 
@@ -281,13 +281,13 @@ public class DataLoader extends DataConstants {
         ArrayList<Case> cases = new ArrayList<Case>();
 		
 		try {
-			FileReader reader = new FileReader("src/Case.json");
+			FileReader reader = new FileReader(CASE_FILE_NAME);
 			JSONParser parser = new JSONParser();	
 			JSONArray casesJSON = (JSONArray)new JSONParser().parse(reader);
 			
 			for(int i=0; i < casesJSON.size(); i++) {
 				JSONObject caseJSON = (JSONObject)casesJSON.get(i);
-				int creatorID = ((Long)caseJSON.get(CRIMINAL_CREATORID)).intValue();
+				int creatorID = ((Long)caseJSON.get(CRIMINAL_CREATOR_ID)).intValue();
 
                 JSONArray witnessesJSON = (JSONArray)caseJSON.get(CASE_WITNESSES);
                 ArrayList<Integer> witnesses = new ArrayList<Integer>();
@@ -313,7 +313,7 @@ public class DataLoader extends DataConstants {
                     criminals.add(((Long)criminalsJSON.get(j)).intValue());
                 }
 
-               JSONArray victimsJSON = (JSONArray)caseJSON.get(CASE_VICTIMS);
+                JSONArray victimsJSON = (JSONArray)caseJSON.get(CASE_VICTIMS);
                 ArrayList<Integer> victims = new ArrayList<Integer>();
                 for(int j = 0; j < victimsJSON.size(); j++) {
                     victims.add(((Long)victimsJSON.get(j)).intValue());
@@ -329,6 +329,7 @@ public class DataLoader extends DataConstants {
                 }
 
                 int crimeLevel = ((Long)caseJSON.get(CASE_CRIME_LEVEL)).intValue();
+
                 JSONArray officersJSON = (JSONArray)caseJSON.get(CASE_OFFICERS);
                 ArrayList<Integer> officers = new ArrayList<Integer>();
                 for(int j = 0; j < officersJSON.size(); j++) {
@@ -350,11 +351,11 @@ public class DataLoader extends DataConstants {
 		
 		return null;
     }
-    public static void main(String[] args){
+    /*public static void main(String[] args){
         ArrayList<Case> x = DataLoader.getCases();
 
         for (int i=0; i < x.size(); i++){
             System.out.println(x.get(i).toString());
         }
-    }
+    }*/
 }

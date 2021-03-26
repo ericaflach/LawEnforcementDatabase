@@ -52,6 +52,8 @@ public abstract class DataConstants {
         protected static final String POLICE_DEPARTMENT = "policeDepartment";
         protected static final String POLICE_MY_CRIMINALS = "myCriminals";
 
+        protected static final String ADMIN_FILE_NAME = "LawEnforcementDatabase/Admin.json";
+
         protected static final String CASE_FILE_NAME = "LawEnforcementDatabase/Case.json";
         protected static final String CASE_CREATOR_ID = "creatorID";
         protected static final String CASE_WITNESSES = "witnesses";
@@ -60,7 +62,7 @@ public abstract class DataConstants {
         protected static final String CASE_CRIMINALS = "criminals";
         protected static final String CASE_VICTIMS = "victims";
         protected static final String CASE_OPEN = "caseOpen";
-        protected static final String CASE_ID = "id";
+        protected static final String CASE_ID = "ID";
         protected static final String CASE_EVIDENCE = "evidence";
         protected static final String CASE_CRIME_LEVEL = "crimeLevel";
         protected static final String CASE_OFFICERS = "officers";

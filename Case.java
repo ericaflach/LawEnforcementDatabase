@@ -221,18 +221,18 @@ public class Case {
     }
 
     public String toString() {
-        return  "Creator: "+creatorID+
-                "\nWitnesses: "+witnesses+
-                "\nPeople of interest: "+peopleOfInterest+
-                "\nSuspects: "+suspects+
-                "\nCriminals: "+criminals+
-                "\nVictims: "+victims+
-                "\nCase open: "+caseOpen+
-                "\nID"+ID+
-                "\nEvidence: "+evidence+
-                "\nCrime level: "+crimeLevel+
-                "\nOfficers: "+officers+
-                "\nLegal clearance: "+legalClearance+
-                "\nCase type: "+caseType;
+        return  "\nCreator: " + creatorID +
+                "\nWitnesses: " + witnesses +
+                "\nPeople of Interest: " + peopleOfInterest +
+                "\nSuspects: " + suspects +
+                "\nCriminals: " + criminals +
+                "\nVictims: " + victims +
+                "\nCase Open: " + caseOpen +
+                "\nID: " + ID +
+                "\nEvidence: " + evidence +
+                "\nCrime Level: " + crimeLevel +
+                "\nOfficers: " + officers +
+                "\nLegal Clearance: " + legalClearance +
+                "\nCase Type: " + caseType;
     }
 }
