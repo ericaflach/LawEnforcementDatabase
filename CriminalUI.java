@@ -7,7 +7,12 @@ public class CriminalUI {
     private Scanner scanner;
     private boolean reset=true;
     private CriminalApplication application;
-    public CriminalUI(){        scanner = new Scanner(System.in);
+    private User user;
+    private Criminal criminal;
+    private Case crime;
+
+    public CriminalUI(){       
+        scanner = new Scanner(System.in);
         application = new CriminalApplication();
     }
     public void run(){
@@ -115,10 +120,13 @@ public class CriminalUI {
         } else {
             application.searchCaseID(ID);
             System.out.println("Here is your case: ");
-            System.out.println(Case.toString());
+            System.out.println(crime.toString());
             System.out.println("Press enter to return to the main menu");
             String enter = scanner.next();
-            reset=true;
+            if (enter==null){
+                reset = true;
+            }
+            
         }
         
     }
@@ -242,7 +250,7 @@ public class CriminalUI {
                     application.searchBySex(sex);
             }
             System.out.println("Here are your results: ");
-            System.out.println(refinedList);
+            System.out.println(application.refinedList);
             System.out.println("Enter in a criminals name to view his or her profile, enter \"refine\" to add another search parameter, or enter \"reset\" to start a new search.");
             String entry = scanner.next();
             if (entry.equalsIgnoreCase("reset")) {
@@ -251,13 +259,15 @@ public class CriminalUI {
             } else if (entry.equalsIgnoreCase("refine")) {
                 refine = true;
             } else {
-                for (int i=0; i<refinedList.size(); i++) {
-                    if (entry.equalsIgnoreCase(refinedList.get(i))){
-                        System.out.println(Criminal.toString());
+                for (int i=0; i<application.refinedList.size(); i++) {
+                    if (entry.equals(criminal.getFirstName())){
+                        System.out.println(criminal.toString());
                         refine = false;
                         System.out.println("When you are finished, press enter to go back to the main menu");
                         String enter = scanner.next();
-                        reset = true;
+                        if (enter==null){
+                            reset = true;
+                        }
                     } else {
                         System.out.println("Invalid entry, you will be taken back to the main menu.");
                         refine = false;
@@ -327,7 +337,7 @@ public class CriminalUI {
     public void accountMenu(){
         System.out.println("-----Account Info-----");
         System.out.println();
-        System.out.print(User.toString());
+        System.out.print(user.toString());
     }
     public static void main(String[] args) {
         CriminalUI ui = new CriminalUI();

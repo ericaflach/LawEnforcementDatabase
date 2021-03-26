@@ -12,7 +12,7 @@ public class CriminalApplication {
     private PoliceOfficerList officerList;
     private CaseList caseList;
     private PoliceOfficer user;
-    private ArrayList<Criminal> refinedList;
+    ArrayList<Criminal> refinedList;
 
     public CriminalApplication() {
         criminalList = CriminalList.getInstance();
@@ -79,7 +79,7 @@ public class CriminalApplication {
         return null;
     }
 
-    public void createCriminal(String firstName, String lastName, int age, String DOB, User creator, ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority, boolean alive,
+    public void createCriminal(String firstName, String lastName, int age, String DOB, String creator, ArrayList<String> pastCrimes, String address, double shoeSize, int priority, boolean alive,
     ArrayList<String> physicalAttributes, boolean inJail, int ID, char sex, ArrayList<String> tattoos) {
         criminals.add(new Criminal(firstName, lastName, age, DOB, ID, sex, creator, pastCrimes, address, shoeSize, priority, alive, physicalAttributes, inJail, tattoos)
     }
@@ -99,6 +99,11 @@ public class CriminalApplication {
             }
         }
         return false;
+    }
+
+    public Case searchCaseID(int ID){
+        Case crime = new Case();
+        return crime;
     }
 
     public ArrayList<Criminal> getMyCriminals(){
