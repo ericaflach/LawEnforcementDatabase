@@ -8,8 +8,8 @@ public class PoliceOfficer extends User {
     private ArrayList<Criminal> myCriminals;
     private ArrayList<Case> myCases;
 
-    public PoliceOfficer(String firstName, String lastName, String username, String password, String email,int phoneNumber, int clearanceLevel, 
-    String policeDepartment, int ID) {
+    public PoliceOfficer(String firstName, String lastName, String username, String password, String email, int phoneNumber, int clearanceLevel,
+    int ID, String policeDepartment, ArrayList<Criminal> myCriminals, ArrayList<Case> myCases) {
 
         super(firstName, lastName, username, password, email, phoneNumber, clearanceLevel, ID);
         

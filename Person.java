@@ -4,10 +4,10 @@ public class Person {
 
     protected String firstName;
     protected String lastName;
-    private int age;
-    private String dateOfBirth;
-    private int ID;
-    private char sex;
+    protected int age;
+    protected String dateOfBirth;
+    protected int ID;
+    protected char sex;
 
     public Person(String firstName, String lastName, int age, String DOB, int ID, char sex) {
         this.firstName = firstName;

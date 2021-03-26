@@ -2,54 +2,54 @@
 "firstName":"Mary",
 "lastName":"Banks",
 "age":23,
+"dateOfBirth":"05/10/1998",
+"ID":1,
 "sex":"F",
-"dateOfBirth":"01/09/1998",
 "description":"Victim was sexually assualted at Pawleys Night club at 22:34.",
-"contact":"(864)-331-4455",
-"ID":1922
+"contact":"(864)-331-4455"
 },{
 "firstName":"Randy",
 "lastName":"Socks",
 "age":34,
-"sex":"M",
 "dateOfBirth":"05/10/1987",
+"ID":2,
+"sex":"M",
 "description":"Victim home Address 144 Place St, was set on fire at buring down the entire home at 02:31.",
-"contact":"(864)-991-4255",
-"ID":1972
+"contact":"(864)-991-4255"
 },{
 "firstName":"Christian",
 "lastName":"Dubson",
 "age":20,
-"sex":"M",
 "dateOfBirth":"09/04/2000",
+"ID":7,
+"sex":"M",
 "description":"Victim was robbed of wallet on 144 Wailing St at 13:04",
-"contact":"(864)-131-4955",
-"ID":1322
+"contact":"(864)-131-4955"
 },{
 "firstName":"Kendra",
 "lastName":"Blackmon",
 "age":79,
-"sex":"F",
 "dateOfBirth":"05/05/1942",
+"ID":4,
+"sex":"F",
 "description":"Victim car was stolen at the 1444 Sumter HWY BP gas station at 19:00",
 "contact":"(864)-345-4475",
-"ID":1942
 },{
 "firstName":"Jaquieline",
 "lastName":"Pelton",
 "age":24,
-"sex":"F",
 "dateOfBirth":"02/24/1997",
+"ID":5,
+"sex":"F",
 "description":"Victim was assualted at 5599 Business St, Family Law Firm LLC at 10:29",
-"contact":"(824)-341-1955",
-"ID":1931
+"contact":"(824)-341-1955"
 },{
 "firstName":"Ali",
 "lastName":"Adams",
 "age":61,
-"sex":"F",
 "dateOfBirth":"05/10/1959",
+"ID":6,
+"sex":"F",
 "description":"Victim was assualted at 220 Calhoun Ave at 22:54",
-"contact":"(891)-331-9005",
-"ID":19782
+"contact":"(891)-331-9005"
 }]

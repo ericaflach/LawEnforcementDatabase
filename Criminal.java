@@ -4,7 +4,18 @@ import java.util.ArrayList;
 
 public class Criminal extends Person {
 
-    private User creator;
+<<<<<<< HEAD
+    protected User creator;
+    protected ArrayList<Integer> pastCrimes;
+    protected String address;
+    protected double shoeSize;
+    protected int priority;
+    protected boolean alive;
+    protected ArrayList<String> physicalAttributes;
+    protected boolean inJail;
+    protected ArrayList<String> tattoos;
+=======
+    private int creatorID;
     private ArrayList<Integer> pastCrimes;
     private String address;
     private double shoeSize;
@@ -13,12 +24,13 @@ public class Criminal extends Person {
     private ArrayList<String> physicalAttributes;
     private boolean inJail;
     private ArrayList<String> tattoos;
+>>>>>>> 655c25bd8b3bd7cc880e0575fa14fdfb3081cf23
 
-    public Criminal(String firstName, String lastName, int age, String DOB,int ID, char sex, User creator, ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority, boolean alive,
+    public Criminal(String firstName, String lastName, int age, String DOB,int ID, char sex, int creatorID, ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority, boolean alive,
     ArrayList<String> physicalAttributes, boolean inJail, ArrayList<String> tattoos) {
 
         super(firstName, lastName, age, DOB, ID, sex);
-        this.creator = creator;
+        this.creatorID = creatorID;
         this.pastCrimes = pastCrimes;
         this.address = address;
         this.shoeSize = shoeSize;
@@ -29,8 +41,8 @@ public class Criminal extends Person {
         this.tattoos = tattoos; 
     }
 
-	public User getCreator() {
-        return creator;
+	public int getCreatorID() {
+        return creatorID;
     }
 
     public ArrayList<Integer> getPastCrimes() {
@@ -57,12 +69,12 @@ public class Criminal extends Person {
         return pastCrimes.size();
     }
 
-    public ArrayList<String> getPhysicalAttributes() {
-        return physicalAttributes;
-    }
-
     public boolean getInJail() {
         return inJail;
+    }
+
+    public ArrayList<String> getPhysicalAttributes() {
+        return physicalAttributes;
     }
 
     public ArrayList<String> getTattoos(){
@@ -108,9 +120,32 @@ public class Criminal extends Person {
     public void removePastCrime(int caseNumber) {
         pastCrimes.remove(caseNumber);
     }
-
-    public String toString() {
-        return "Name: "+firstName+" "+lastName+"\nAge: "+age+"\nDOB: "+DOB+"\nID: "+ID+"\nSex: "+sex+"\nCreator: "+creator+"\nPast crimes: "+pastCrimes+"\nAddress: "+address+"\nShoe size: "+shoeSize+"\nPriority: "+priority+"\nAlive: "+alive+"\nPhysical attributes: "+physicalAttributes+"\nIn jail: "+inJail+"\nTattoos: "+tattoos;
+    public String physicalAttributesToString() {
+        String attributes = "";
+        for (int i = 0; i < physicalAttributes.size(); i++) {
+            attributes = attributes + physicalAttributes.get(i) + ", "; 
+        }
+        return attributes;
     }
 
+    public String tattoosToString() {
+        String ret = "";
+        for (int i = 0; i < tattoos.size(); i++) {
+            ret = ret + tattoos.get(i) + ", ";
+        }
+        return ret;
+    }
+
+    public String toString() {
+<<<<<<< HEAD
+        return "\nFirst Name: " + firstName + "\nLast Name: " + lastName +"\nAge: " + age + "\nDOB: " + dateOfBirth +
+            "\nID: " + ID + "\nSex: " + sex + "\nCreator: " + creator + "\nPast Crimes: " + pastCrimes.toString() +
+            "\nAddress: " + address + "\nShoe Size: " + shoeSize + "\nPriority: " + priority + "\nAlive: " + alive + 
+            "\nPhysical description: " + physicalAttributes.toString() + "\nIn Jail: " + inJail + "\nTattoos: " + tattoos.toString();
+=======
+        return "First Name: " + firstName + "\nLast Name: " + lastName +"\nAge: " + super.getAge() + "\nDOB: " + super.getDateOfBirth() + 
+            "\nSex: " + super.getSex() + "\nAddress: " + address + "\nPhysical description: " + physicalAttributesToString() + "Tattoos: " +
+            tattoosToString() + "Profile author: " + getCreatorID();
+>>>>>>> 655c25bd8b3bd7cc880e0575fa14fdfb3081cf23
+        }
 }

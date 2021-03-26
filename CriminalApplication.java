@@ -9,18 +9,10 @@ public class CriminalApplication {
     private WitnessList witnessList;
     private PersonOfInterestList personOfInterestList;
     private SuspectList suspectList;
-    private UserList userList;
+    private PoliceOfficerList officerList;
     private CaseList caseList;
     private PoliceOfficer user;
-    private ArrayList<Criminal> criminals;
-    private ArrayList<Victim> victims;
-    private ArrayList<Witness> witnesses;
-    private ArrayList<PersonOfInterest> personOfInterests;
-    private ArrayList<Suspect> suspects;
     private ArrayList<Criminal> refinedList;
-    private ArrayList<PoliceOfficer> policeOfficers;
-    private ArrayList<Admin> admins;
-    private ArrayList<Case> cases;
 
     public CriminalApplication() {
         criminalList = CriminalList.getInstance();
@@ -28,16 +20,10 @@ public class CriminalApplication {
         witnessList = WitnessList.getInstance();
         personOfInterestList = PersonOfInterestList.getInstance();
         suspectList = SuspectList.getInstance();
-        userList = UserList.getInstance();
+        officerList = PoliceOfficerList.getInstance();
         caseList = CaseList.getInstance();
-
-        criminals = criminalList.getCriminals();
-        suspects
-        policeOfficers = userList.getPoliceOfficers();
-        cases = caseList.getCases();
-        refinedList = criminals;
-
-        policeOfficers.add(new PoliceOfficer("First", "Last", "user", "password", "example@email.com", 12345, 3, "San Jose", 123));
+        
+        
     }
     
     public ArrayList<Criminal> searchByName(String firstName, String lastName) {
@@ -149,6 +135,7 @@ public class CriminalApplication {
     public Criminal pickCriminal() {
         
     }
+
     public String toString() {
         String ret = "";
         for (int i = 0; i < refinedList.size(); i++) {

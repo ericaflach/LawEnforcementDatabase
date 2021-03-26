@@ -2,7 +2,7 @@ package LawEnforcementDatabase;
 
 import java.util.ArrayList;
 import java.io.FileReader;
-import java.util.UUID;
+//import java.util.UUID;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -12,7 +12,7 @@ public class DataLoader extends DataConstants {
         ArrayList<Criminal> criminals = new ArrayList<Criminal>();
 
         try {
-            FileReader reader = new FileReader(CRIMINAL_FILE_NAME);
+            FileReader reader = new FileReader("LawEnforcementDatabase/Criminal.json");
             JSONParser parser = new JSONParser();
             JSONArray criminalsJSON = (JSONArray)new JSONParser().parse(reader);
 
@@ -24,18 +24,18 @@ public class DataLoader extends DataConstants {
                   String dateOfBirth = (String)criminalJSON.get(PERSON_DATEOFBIRTH);
                   int ID = ((Long)criminalJSON.get(PERSON_ID)).intValue();
                   char sex = ((String)criminalJSON.get(PERSON_SEX)).charAt(0);
-                  User creator = new User("firstName", "lastName", "username", "password", "email", 3, 4);//FIX!!!!!
+                  User creator = new User("firstName", "lastName", "username", "password", "email", 3, 4, 5);//FIX!!!!!
                   ArrayList<Integer> pastCrimes = new ArrayList<Integer>();//FIX!!!!!
                   String address = (String)criminalJSON.get(CRIMINAL_ADDRESS);
-                  double shoeSize = ((Long)criminalJSON.get(CRIMINAL_SHOE_SIZE)).doubleValue();
+                  double shoeSize = Double.parseDouble((String)criminalJSON.get(CRIMINAL_SHOE_SIZE));
                   int priority = ((Long)criminalJSON.get(CRIMINAL_PRIORITY)).intValue();
                   boolean alive = Boolean.parseBoolean((String)criminalJSON.get(CRIMINAL_ALIVE));
                   ArrayList<String> physicalAttributes = new ArrayList<String>();//FIX!!!!!
                   boolean inJail = Boolean.parseBoolean((String)criminalJSON.get(CRIMINAL_IN_JAIL));
-                  //int criminalID = ((Long)criminalJSON.get(CRIMINAL_ID)).intValue();
+                  ArrayList<String> tattoos = new ArrayList<String>();//FIX!!!
 
                   criminals.add(new Criminal(firstName, lastName, age, dateOfBirth, ID, sex, creator, pastCrimes, address, shoeSize, priority,
-                  alive, physicalAttributes, inJail));
+                  alive, physicalAttributes, inJail, tattoos));
               }
 
               return criminals;
@@ -46,6 +46,7 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    //This method works please do not edit!!
     public static ArrayList<PersonOfInterest> getPeopleOfInterest() {
         ArrayList<PersonOfInterest> peopleOfInterest = new ArrayList<PersonOfInterest>();
 
@@ -65,7 +66,7 @@ public class DataLoader extends DataConstants {
                   String description = (String)personOfInterestJSON.get(PERSON_OF_INTEREST_DESCRIPTION);
                   String contact = (String)personOfInterestJSON.get(PERSON_OF_INTEREST_CONTACT);
 
-                  peopleOfInterest.add(new PersonOfInterest(firstName, lastName, age, dateOfBirth, description, contact, id));
+                  peopleOfInterest.add(new PersonOfInterest(firstName, lastName, age, dateOfBirth, ID, sex, description, contact));
               }
 
               return peopleOfInterest;
@@ -80,7 +81,7 @@ public class DataLoader extends DataConstants {
         ArrayList<Suspect> suspects = new ArrayList<Suspect>();
 
         try {
-            FileReader reader = new FileReader(SUSPECT_FILE_NAME);
+            FileReader reader = new FileReader("LawEnforcementDatabase/Suspect.json");
             JSONParser parser = new JSONParser();
             JSONArray suspectsJSON = (JSONArray)new JSONParser().parse(reader);
 
@@ -92,18 +93,19 @@ public class DataLoader extends DataConstants {
                   String dateOfBirth = (String)suspectJSON.get(PERSON_DATEOFBIRTH);
                   int ID = ((Long)suspectJSON.get(PERSON_ID)).intValue();
                   char sex = ((String)suspectJSON.get(PERSON_SEX)).charAt(0);
-                  User creator = new User("firstName", "lastName", "username", "password", "email", 3, 4);//FIX!!!!!
+                  User creator = new User("firstName", "lastName", "username", "password", "email", 3, 4, 5);//FIX!!!!!
                   ArrayList<Integer> pastCrimes = new ArrayList<Integer>();//FIX!!!!!
                   String address = (String)suspectJSON.get(CRIMINAL_ADDRESS);
-                  double shoeSize = ((Long)suspectJSON.get(CRIMINAL_SHOE_SIZE)).doubleValue();
+                  double shoeSize = Double.parseDouble((String)suspectJSON.get(CRIMINAL_SHOE_SIZE));
                   int priority = ((Long)suspectJSON.get(CRIMINAL_PRIORITY)).intValue();
                   boolean alive = Boolean.parseBoolean((String)suspectJSON.get(CRIMINAL_ALIVE));
                   ArrayList<String> physicalAttributes = new ArrayList<String>();//FIX!!!!!
                   boolean inJail = Boolean.parseBoolean((String)suspectJSON.get(CRIMINAL_IN_JAIL));
+                  ArrayList<String> tattoos = new ArrayList<String>();//FIX!!!
                   String alibi = (String)suspectJSON.get(SUSPECT_ALIBI);
 
                   suspects.add(new Suspect(firstName, lastName, age, dateOfBirth, ID, sex, creator, pastCrimes, address,
-                  shoeSize, priority, alive, physicalAttributes, inJail, criminalID, alibi, suspectID));
+                  shoeSize, priority, alive, physicalAttributes, inJail, tattoos, alibi));
               }
 
               return suspects;
@@ -114,11 +116,12 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    //Dont touch this method, it works!!
     public static ArrayList<Victim> getVictims() {
         ArrayList<Victim> victims = new ArrayList<Victim>();
 
         try {
-            FileReader reader = new FileReader(VICTIM_FILE_NAME);
+            FileReader reader = new FileReader("LawEnforcementDatabase/Victim.json");
             JSONParser parser = new JSONParser();
             JSONArray victimsJSON = (JSONArray)new JSONParser().parse(reader);
 
@@ -144,6 +147,7 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    //Dont touch this method, it works!!
     public static ArrayList<Witness> getWitnesses() {
         ArrayList<Witness> witnesses = new ArrayList<Witness>();
 
@@ -152,7 +156,7 @@ public class DataLoader extends DataConstants {
             JSONParser parser = new JSONParser();
             JSONArray witnessesJSON = (JSONArray)new JSONParser().parse(reader);
 
-              for (int i = 0; i < witnessessJSON.size(); i++) {
+              for (int i = 0; i < witnessesJSON.size(); i++) {
                   JSONObject witnessJSON = (JSONObject)witnessesJSON.get(i);
                   String firstName = (String)witnessJSON.get(PERSON_FIRST_NAME);
                   String lastName = (String)witnessJSON.get(PERSON_LAST_NAME);
@@ -163,7 +167,7 @@ public class DataLoader extends DataConstants {
                   String description = (String)witnessJSON.get(WITNESS_DESCRIPTION);
                   String contact = (String)witnessJSON.get(WITNESS_CONTACT);
 
-                  witnesses.add(new Witness(firstName, lastName, age, dateOfBirth, ID, sex, description, contact));
+                  //witnesses.add(new Witness(firstName, lastName, age, dateOfBirth, ID, sex, description, contact));
               }
 
               return witnesses;
@@ -174,28 +178,30 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
-    public static ArrayList<User> getUsers() {
-        ArrayList<User> users = new ArrayList<User>();
+    //This method works, please don't edit
+    public static ArrayList<Admin> getAdmins() {
+        ArrayList<Admin> admins = new ArrayList<Admin>();
 
         try {
-            FileReader reader = new FileReader(USER_FILE_NAME);
+            FileReader reader = new FileReader("LawEnforcementDatabase/Admin.json");
             JSONParser parser = new JSONParser();
-            JSONArray usersJSON = (JSONArray)new JSONParser().parse(reader);
+            JSONArray adminsJSON = (JSONArray)new JSONParser().parse(reader);
 
-              for (int i = 0; i < usersJSON.size(); i++) {
-                  JSONObject userJSON = (JSONObject)usersJSON.get(i);
-                  String firstName = (String)userJSON.get(USER_FIRST_NAME);
-                  String lastName = (String)userJSON.get(USER_LAST_NAME);
-                  String userName = (String)userJSON.get(USER_USERNAME);
-                  String password = (String)userJSON.get(USER_PASSWORD);
-                  String email = (String)userJSON.get(USER_EMAIL);
-                  int phoneNumber = ((Long)userJSON.get(USER_PHONE_NUMBER)).intValue();
-                  int clearanceLevel = ((Long)userJSON.get(USER_CLEARANCE_LEVEL)).intValue();
+              for (int i = 0; i < adminsJSON.size(); i++) {
+                  JSONObject adminJSON = (JSONObject)adminsJSON.get(i);
+                  String firstName = (String)adminJSON.get(USER_FIRST_NAME);
+                  String lastName = (String)adminJSON.get(USER_LAST_NAME);
+                  String userName = (String)adminJSON.get(USER_USERNAME);
+                  String password = (String)adminJSON.get(USER_PASSWORD);
+                  String email = (String)adminJSON.get(USER_EMAIL);
+                  int phoneNumber = ((Long)adminJSON.get(USER_PHONE_NUMBER)).intValue();
+                  int clearanceLevel = ((Long)adminJSON.get(USER_CLEARANCE_LEVEL)).intValue();
+                  int ID = ((Long)adminJSON.get(USER_ID)).intValue();
 
-                  users.add(new User(firstName, lastName, userName, password, email, phoneNumber, clearanceLevel));
+                  admins.add(new Admin(firstName, lastName, userName, password, email, phoneNumber, clearanceLevel, ID));
               }
             
-            return users;
+            return admins;
         }
 
         catch (Exception e) {
@@ -205,7 +211,41 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    public static ArrayList<PoliceOfficer> getPoliceOfficers() {
+        ArrayList<PoliceOfficer> policeOfficers = new ArrayList<PoliceOfficer>();
 
+        try {
+            FileReader reader = new FileReader("LawEnforcementDatabase/PoliceOfficer.json");
+            JSONParser parser = new JSONParser();
+            JSONArray policeOfficersJSON = (JSONArray)new JSONParser().parse(reader);
+
+              for (int i = 0; i < policeOfficersJSON.size(); i++) {
+                  JSONObject policeOfficerJSON = (JSONObject)policeOfficersJSON.get(i);
+                  String firstName = (String)policeOfficerJSON.get(USER_FIRST_NAME);
+                  String lastName = (String)policeOfficerJSON.get(USER_LAST_NAME);
+                  String userName = (String)policeOfficerJSON.get(USER_USERNAME);
+                  String password = (String)policeOfficerJSON.get(USER_PASSWORD);
+                  String email = (String)policeOfficerJSON.get(USER_EMAIL);
+                  int phoneNumber = ((Long)policeOfficerJSON.get(USER_PHONE_NUMBER)).intValue();
+                  int clearanceLevel = ((Long)policeOfficerJSON.get(USER_CLEARANCE_LEVEL)).intValue();
+                  int ID = ((Long)policeOfficerJSON.get(USER_ID)).intValue();
+                  String policeDepartment = (String)policeOfficerJSON.get(POLICE_DEPARTMENT);
+                  ArrayList<Criminal> myCriminals = new ArrayList<Criminal>();//FIX!!!
+                  ArrayList<Case> myCases = new ArrayList<Case>();//FIX!!!
+
+                  policeOfficers.add(new PoliceOfficer(firstName, lastName, userName, password, email, phoneNumber, clearanceLevel, ID,
+                  policeDepartment, myCriminals, myCases));
+              }
+            
+            return policeOfficers;
+        }
+
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
 
     public static ArrayList<Case> getCases() {
         ArrayList<Case> cases = new ArrayList<Case>();
@@ -217,20 +257,22 @@ public class DataLoader extends DataConstants {
 			
 			for(int i=0; i < casesJSON.size(); i++) {
 				JSONObject caseJSON = (JSONObject)casesJSON.get(i);
-				User creator = new User("firstName", "lastName", "username", "password", "email", 3, 4);//FIX!!!!!
+				User creator = new User("firstName", "lastName", "username", "password", "email", 3, 4, 5);//FIX!!!!!
                 ArrayList<Person> witnesses = new ArrayList<Person>();//Should be person or suspect??? + FIX!!!
                 ArrayList<Person> peopleOfInterest = new ArrayList<Person>();//FIX!!!
                 ArrayList<Person> suspects = new ArrayList<Person>();//FIX!!!
+                ArrayList<Criminal> criminals = new ArrayList<Criminal>();//FIX!!!
+                ArrayList<Victim> victims = new ArrayList<Victim>();//FIX!!!
                 boolean caseOpen = Boolean.parseBoolean((String)caseJSON.get(CASE_OPEN));
-                int caseID = ((Long)caseJSON.get(CASE_ID)).intValue();
+                int ID = ((Long)caseJSON.get(CASE_ID)).intValue();
                 ArrayList<String> evidence = new ArrayList<String>();//FIX!!!
                 int crimeLevel = ((Long)caseJSON.get(CASE_CRIME_LEVEL)).intValue();
                 ArrayList<User> officers = new ArrayList<User>();//FIX!!!
                 int legalClearance = ((Long)caseJSON.get(CASE_LEGAL_CLEARANCE)).intValue();
-                CaseType caseType = CaseType.AggravatedAssault;//FIX!!!
+                CaseType caseType = CaseType.Arson;
 
-                cases.add(new Case(creator, witnesses, peopleOfInterest, suspects, caseOpen, caseNumber, evidence, crimeLevel, officers, 
-                legalClearance, caseType));
+                cases.add(new Case(creator, witnesses, peopleOfInterest, suspects, criminals, victims, caseOpen, ID, evidence,
+                crimeLevel, officers, legalClearance, caseType));
 			}
 			
 			return cases;
@@ -242,9 +284,10 @@ public class DataLoader extends DataConstants {
 		return null;
     }
     public static void main(String[] args){
-        ArrayList<Criminal> criminals = DataLoader.getCriminals();
-        for (int i=0; i<criminals.size(); i++){
-            System.out.println(criminals.get(i));
+        ArrayList<Suspect> suspects = DataLoader.getSuspects();
+
+        for (int i=0; i < suspects.size(); i++){
+            System.out.println(suspects.get(i).toString());
         }
     }
 }
