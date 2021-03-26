@@ -6,14 +6,14 @@
 "ID":1,
 "sex":"M",
 "creatorID":20,
-"pastCrimes":[],
+"pastCrimes":[1, 2],
 "address":"13 Cali Dr.",
 "shoeSize":"9.5",
 "priority":2,
 "alive":"false",
-"physicalAttributes":[],
+"physicalAttributes":["tall", "skinny"],
 "inJail":"false",
-"tatoos":[]
+"tatoos":["cross", "bird"]
 },{
 "firstName":"Steven",
 "lastName":"Frez",
@@ -22,14 +22,14 @@
 "ID":2,
 "sex":"M",
 "creatorID":21,
-"pastCrimes":[],
+"pastCrimes":[2, 3],
 "address":"44 Stange Ave.",
 "shoeSize":"10.5",
 "priority":3,
 "alive":"false",
-"physicalAttributes":[],
+"physicalAttributes":["average height", "wearing a black hoodie"],
 "inJail":"false",
-"tatoos":[]
+"tatoos":["eagle on chest"]
 },{
 "firstName":"Pro",
 "lastName":"Karry",
@@ -38,14 +38,14 @@
 "ID":7,
 "sex":"M",
 "creatorID":22,
-"pastCrimes":[],
+"pastCrimes":[2, 3],
 "address":"1900 Barning St",
 "shoeSize":"10.5",
 "priority":1,
 "alive":"false",
-"physicalAttributes":[],
+"physicalAttributes":["blonde", "short"],
 "inJail":"false",
-"tatoos":[]
+"tatoos":["N/A"]
 },{
 "firstName":"Morgan",
 "lastName":"Freeman",
@@ -53,15 +53,15 @@
 "dateOfBirth":"06/12/1945",
 "ID":4,
 "sex":"M",
-"creatorID":[23],
-"pastCrimes":[],
+"creatorID":23,
+"pastCrimes":[2, 3],
 "address":"1374 Wingman St",
 "shoeSize":"10.5",
 "priority":2,
 "alive":"true",
-"physicalAttributes":"Green eyes, red hair",
+"physicalAttributes":["Green eyes", "red hair"],
 "inJail":"false",
-"tatoos":[]
+"tatoos":["N/A"]
 },{
 "firstName":"Carol",
 "lastName":"Baskin",
@@ -69,15 +69,15 @@
 "dateOfBirth":"05/05/1967",
 "ID":5,
 "sex":"F",
-"creatorID":[24],
-"pastCrimes":[],
+"creatorID":24,
+"pastCrimes":[2, 3],
 "address":"55 Ranger St.",
 "shoeSize":"9.0",
 "priority":3,
 "alive":"true",
-"physicalAttributes":"Brown eyes, black hair, scar over right eyebrow",
+"physicalAttributes":["Brown eyes, black hair", "scar over right eyebrow"],
 "inJail":"true",
-"tatoos":[]
+"tatoos":["N/A"]
 },{
 "firstName":"Karl",
 "lastName":"Pension",
@@ -85,13 +85,13 @@
 "dateOfBirth":"05/01/1967",
 "ID":6,
 "sex":"M",
-"creatorID":[25],
-"pastCrimes":[],
+"creatorID":25,
+"pastCrimes":[2, 3],
 "address":"123 Park Cir.",
 "shoeSize":"12.0",
 "priority":2,
 "alive":"false",
-"physicalAttributes":"Brown eyes, brown hair, cross tattoo on right hand",
+"physicalAttributes":["Brown eyes, brown hair", "cross tattoo on right hand"],
 "inJail":"false",
-"tatoos":[]
+"tatoos":["heart on right forearm"]
 }]

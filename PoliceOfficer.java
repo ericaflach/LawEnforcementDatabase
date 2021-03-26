@@ -9,14 +9,14 @@ public class PoliceOfficer extends User {
     private ArrayList<Integer> myCases;
 
     public PoliceOfficer(String firstName, String lastName, String username, String password, String email, int phoneNumber, int clearanceLevel,
-    int ID, String policeDepartment, ArrayList<Integer> myCriminalIDs, ArrayList<Integer> myCaseIDs) {
+    int ID, String policeDepartment, ArrayList<Integer> myCriminals, ArrayList<Integer> myCases) {
 
         super(firstName, lastName, username, password, email, phoneNumber, clearanceLevel, ID);
         
         this.policeDepartment = policeDepartment;
 
-        myCriminals = myCriminalIDs;
-        myCases = myCaseIDs;
+        this.myCriminals = myCriminals;
+        this.myCases = myCases;
     }
     public void setPoliceDepartment(String department){
         this.policeDepartment = department;
@@ -48,5 +48,12 @@ public class PoliceOfficer extends User {
     
     public void addToMyCriminals(int criminalID) {
         myCriminals.add(criminalID);
+    }
+
+    public String toString() {
+        return super.toString()
+        + "\nPolice Department: " + policeDepartment
+        + "\nMy Criminals: " + myCriminals
+        + "\nMy Cases: " + myCases;
     }
 }

@@ -6,10 +6,10 @@ public class Suspect extends Criminal {
 
     private String alibi;
 
-    public Suspect(String firstName, String lastName, int age, String DOB, int ID, char sex, User creator,
+    public Suspect(String firstName, String lastName, int age, String DOB, int ID, char sex, int creatorID,
      ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority, boolean alive,
       ArrayList<String> physicalAttributes, boolean inJail, ArrayList<String> tattoos, String alibi) {
-        super(firstName, lastName, age, DOB, ID, sex, creator, pastCrimes, address, shoeSize, priority, alive, physicalAttributes, inJail, tattoos);
+        super(firstName, lastName, age, DOB, ID, sex, creatorID, pastCrimes, address, shoeSize, priority, alive, physicalAttributes, inJail, tattoos);
         this.alibi = alibi;
     }
 

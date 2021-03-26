@@ -8,8 +8,8 @@
 "clearanceLevel": 2,
 "ID":2149921,
 "policeDepartment":"Santa Barbra Police Station",
-"myCriminals": [],
-"myCases": []
+"myCriminals": [2, 3, 4],
+"myCases": [1, 2, 3]
 },{
 "firstName":"Jonathan",
 "lastName":"Baker",
@@ -20,8 +20,8 @@
 "clearanceLevel": 1,
 "ID":119521,
 "policeDepartment":"Santa Barbra Police Station",
-"myCriminals": [],
-"myCases": []
+"myCriminals": [1, 2, 3],
+"myCases": [1]
 },{
 "firstName":"Clark",
 "lastName":"Smith",
@@ -32,8 +32,8 @@
 "clearanceLevel": 2,
 "ID":4449921,
 "policeDepartment":"Santa Barbra Police Station",
-"myCriminals": [],
-"myCases": []
+"myCriminals": [1, 2, 3],
+"myCases": [1, 2, 3]
 },{
 "firstName":"Ben",
 "lastName":"Fields",
@@ -44,8 +44,8 @@
 "clearanceLevel": 1,
 "ID":3345221,
 "policeDepartment":"Santa Barbra Police Station",
-"myCriminals": [],
-"myCases": []
+"myCriminals": [1, 2, 3],
+"myCases": [1, 2, 3]
 },{
 "firstName":"Alex",
 "lastName":"Marant",
@@ -56,8 +56,8 @@
 "clearanceLevel": 1,
 "ID":3349221,
 "policeDepartment":"Santa Barbra Police Station",
-"myCriminals": [],
-"myCases": []
+"myCriminals": [1, 2, 3],
+"myCases": [5]
 },{
 "firstName":"Emily",
 "lastName":"Barron",
@@ -68,6 +68,6 @@
 "clearanceLevel": 1,
 "ID":3374221,
 "policeDepartment":"Santa Barbra Police Station",
-"myCriminals": [],
-"myCases": []
+"myCriminals": [1, 2, 3],
+"myCases": [1, 2, 3]
 }]

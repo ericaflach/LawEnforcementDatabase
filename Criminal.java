@@ -125,8 +125,20 @@ public class Criminal extends Person {
     }
 
     public String toString() {
-        return "First Name: " + firstName + "\nLast Name: " + lastName +"\nAge: " + super.getAge() + "\nDOB: " + super.getDateOfBirth() + 
-            "\nSex: " + super.getSex() + "\nAddress: " + address + "\nPhysical description: " + physicalAttributesToString() + "Tattoos: " +
-            tattoosToString() + "Profile author: " + getCreatorID();
-        }
+        return "\nFirst Name: " + firstName
+        + "\nLast Name: " + lastName
+        + "\nAge: " + age
+        + "\nDate of Birth: " + dateOfBirth
+        + "\nID: " + ID
+        + "\nSex: " + sex
+        + "\nCreator ID: " + creatorID
+        + "\nPast Crimes: " + pastCrimes
+        + "\nAddress: " + address
+        + "\nShoe Size: " + shoeSize
+        + "\nPriority: " + priority
+        + "\nAlive: " + alive
+        + "\nPhysical Attributes: " + physicalAttributes
+        + "\nIn Jail: " + inJail
+        + "\nTattoos: " + tattoos;
+    }
 }

@@ -1,14 +1,14 @@
 package LawEnforcementDatabase;
 public class User{
 
-    private String firstName;
-    private String lastName;
-    private String username;
-    private String password;
-    private String email;
-    private int phoneNumber;
-    private int clearanceLevel;
-    private int ID;
+    protected String firstName;
+    protected String lastName;
+    protected String username;
+    protected String password;
+    protected String email;
+    protected int phoneNumber;
+    protected int clearanceLevel;
+    protected int ID;
     
     public User(String firstName, String lastName, String username, String password, String email, int phoneNumber, int clearanceLevel, int ID) {
         this.firstName = firstName;
@@ -64,9 +64,14 @@ public class User{
     }
 
     public String toString() {
-        String accountInfo;
-        accountInfo="Name: "+getName()+"\nUsername: "+getUsername()+"\nID: "+ID+"\nEmail: "+getEmail()+"\nPhone number: "+getPhoneNumber()+"\nClearance level: "+getClearanceLevel();
-        return accountInfo;
+        return "\nFirst Name: " + firstName
+        + "\nLast Name: " + lastName
+        + "\nUserName: " + username
+        + "\nPassword: " + password
+        + "\nEmail: " + email
+        + "\nPhone Number: " + phoneNumber
+        + "\nClearance Level: " + clearanceLevel
+        + "\nID: " + ID;
     }
 
 
