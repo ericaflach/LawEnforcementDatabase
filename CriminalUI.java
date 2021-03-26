@@ -254,7 +254,7 @@ public class CriminalUI {
     public void accountMenu(){
         System.out.println("-----Account Info-----");
         System.out.println();
-        System.out.print(User.printInfo());
+        System.out.print(User.toString());
     }
     public static void main(String[] args) {
         CriminalUI ui = new CriminalUI();
