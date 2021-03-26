@@ -6,7 +6,11 @@ public class VictimList {
     private static ArrayList<Victim> victims;
 
     private VictimList() {
+<<<<<<< HEAD
         victims = DataLoader.getVictims();
+=======
+        victims = new ArrayList<Victim>();
+>>>>>>> 655c25bd8b3bd7cc880e0575fa14fdfb3081cf23
     }
 
     
