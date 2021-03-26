@@ -5,7 +5,8 @@ public class PersonOfInterest extends Person{
     private String description;
     private String contact;
 
-    public PersonOfInterest(String firstName, String lastName, int age, String DOB, int ID, char sex, String description, String contact) {
+    public PersonOfInterest(String firstName, String lastName, int age, String DOB, int ID,
+     char sex, String description, String contact) {
         super(firstName, lastName, age, DOB, ID, sex);
 
         this.description = description;
