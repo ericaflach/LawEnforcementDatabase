@@ -4,15 +4,15 @@ import java.util.ArrayList;
 
 public class Criminal extends Person {
 
-    private User creator;
-    private ArrayList<Integer> pastCrimes;
-    private String address;
-    private double shoeSize;
-    private int priority;
-    private boolean alive;
-    private ArrayList<String> physicalAttributes;
-    private boolean inJail;
-    private ArrayList<String> tattoos;
+    protected User creator;
+    protected ArrayList<Integer> pastCrimes;
+    protected String address;
+    protected double shoeSize;
+    protected int priority;
+    protected boolean alive;
+    protected ArrayList<String> physicalAttributes;
+    protected boolean inJail;
+    protected ArrayList<String> tattoos;
 
     public Criminal(String firstName, String lastName, int age, String DOB,int ID, char sex, User creator, ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority, boolean alive,
     ArrayList<String> physicalAttributes, boolean inJail, ArrayList<String> tattoos) {
@@ -123,9 +123,11 @@ public class Criminal extends Person {
         }
         return ret;
     }
+
     public String toString() {
-        return "First Name: " + firstName + "\nLast Name: " + lastName +"\nAge: " + super.getAge() + "\nDOB: " + super.getDateOfBirth() + 
-            "\nSex: " + super.getSex() + "\nAddress: " + address + "\nPhysical description: " + physicalAttributesToString() + "Tattoos: " +
-            tattoosToString() + "Profile author: " + getCreator().getName();
+        return "\nFirst Name: " + firstName + "\nLast Name: " + lastName +"\nAge: " + age + "\nDOB: " + dateOfBirth +
+            "\nID: " + ID + "\nSex: " + sex + "\nCreator: " + creator + "\nPast Crimes: " + pastCrimes.toString() +
+            "\nAddress: " + address + "\nShoe Size: " + shoeSize + "\nPriority: " + priority + "\nAlive: " + alive + 
+            "\nPhysical description: " + physicalAttributes.toString() + "\nIn Jail: " + inJail + "\nTattoos: " + tattoos.toString();
         }
 }

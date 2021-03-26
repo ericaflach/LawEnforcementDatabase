@@ -6,8 +6,9 @@ public class Suspect extends Criminal {
 
     private String alibi;
 
-    public Suspect(String firstName, String lastName, int age, String DOB, int ID, char sex, User creator, ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority,
-    boolean alive, ArrayList<String> physicalAttributes, boolean inJail, ArrayList<String> tattoos, String alibi) {
+    public Suspect(String firstName, String lastName, int age, String DOB, int ID, char sex, User creator,
+     ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority, boolean alive,
+      ArrayList<String> physicalAttributes, boolean inJail, ArrayList<String> tattoos, String alibi) {
         super(firstName, lastName, age, DOB, ID, sex, creator, pastCrimes, address, shoeSize, priority, alive, physicalAttributes, inJail, tattoos);
         this.alibi = alibi;
     }
@@ -18,5 +19,9 @@ public class Suspect extends Criminal {
 
     public String getAlibi(){
         return alibi;
+    }
+
+    public String toString() {
+        return super.toString() + "\nAlibi: " + alibi;
     }
 }

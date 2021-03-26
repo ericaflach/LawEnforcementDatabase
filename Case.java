@@ -5,8 +5,6 @@ import java.util.ArrayList;
 public class Case {
     
     private User creator;
-    private ArrayList<Criminal> criminal;
-    private ArrayList<Victim> victim;
     private ArrayList<Witness> witnesses;
     private ArrayList<PersonOfInterest> peopleOfInterest;
     private ArrayList<Suspect> suspects;
@@ -44,34 +42,34 @@ public class Case {
 
     public String getCriminal(){
         String ret = "";
-        for(int i = 0; i < criminal.size(); i ++)
+        for (int i = 0; i < criminals.size(); i ++)
         {
-            ret += criminal.get(i).getName() + ", ";
+            ret += criminals.get(i).getName() + ", ";
         }
         return ret;
     }
 
-    public String getVictim(){
+    public String getVictim() {
         String ret = "";
-        for(int i = 0; i < victim.size(); i++)
+        for (int i = 0; i < victims.size(); i++)
         {
-            ret += victim.get(i).getName() + ", ";
+            ret += victims.get(i).getName() + ", ";
         }
         return ret;
     }
+
     public String getWitnesses() {  
         String ret = "";
-        for(int i = 0; i < witnesses.size(); i++)
+        for (int i = 0; i < witnesses.size(); i++)
         {
             ret += witnesses.get(i).getName() + ", "; 
         }
         return ret;
-        
     }
 
     public String getPersonsOfInterest() {
         String ret = "";
-        for(int i = 0; i < peopleOfInterest.size(); i++)
+        for (int i = 0; i < peopleOfInterest.size(); i++)
         {
             ret += peopleOfInterest.get(i).getName() + ", "; 
         }
@@ -80,7 +78,7 @@ public class Case {
 
     public String getSuspects() {
         String ret = "";
-        for(int i = 0; i < suspects.size(); i++)
+        for (int i = 0; i < suspects.size(); i++)
         {
             ret += suspects.get(i).getName() + ", "; 
         }
@@ -89,7 +87,7 @@ public class Case {
 
     public String getCriminals() {
         String ret = "";
-        for(int i = 0; i < criminals.size(); i++)
+        for (int i = 0; i < criminals.size(); i++)
         {
             ret += criminals.get(i).getName() + ", "; 
         }
@@ -98,7 +96,7 @@ public class Case {
 
     public String getVictims() {
         String ret = "";
-        for(int i = 0; i < victims.size(); i++)
+        for (int i = 0; i < victims.size(); i++)
         {
             ret += victims.get(i).getName() + ", "; 
         }

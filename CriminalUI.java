@@ -77,7 +77,7 @@ public class CriminalUI {
         ArrayList<String> physicalAttributes=new ArrayList<String>();
         for (int i=0; i<10; i++) {
             System.out.println("Physical attribute "+i+": ");
-            String attritbute = scanner.next();
+            String attribute = scanner.next();
             if (attribute == null) {
                 break;
             } else {
@@ -90,7 +90,7 @@ public class CriminalUI {
         int ID = scanner.nextInt();
         System.out.println("Sex (m/f): ");
         String entry = scanner.next();
-        char sex = entry.atIndex(0);
+        char sex = entry.charAt(0);
         ArrayList<String> tattoos=new ArrayList<String>();
         for (int i=0; i<10; i++) {
             System.out.println("Tattoo "+i+": ");
@@ -157,7 +157,7 @@ public class CriminalUI {
         ArrayList<String> physicalAttributes=new ArrayList<String>();
         for (int i=0; i<10; i++) {
             System.out.println("Physical attribute "+i+": ");
-            String attritbute = scanner.next();
+            String attribute = scanner.next();
             if (attribute == null) {
                 break;
             } else {
@@ -170,7 +170,7 @@ public class CriminalUI {
         int ID = scanner.nextInt();
         System.out.println("Sex (m/f): ");
         String entry = scanner.next();
-        char sex = entry.atIndex(0);
+        char sex = entry.charAt(0);
         ArrayList<String> tattoos=new ArrayList<String>();
         for (int i=0; i<10; i++) {
             System.out.println("Tattoo "+i+": ");
@@ -238,7 +238,7 @@ public class CriminalUI {
                     System.out.println("Search by sex");
                     System.out.println("Sex: ");
                     String entry = scanner.next();
-                    char sex = entry.atIndex(0);
+                    char sex = entry.charAt(0);
                     application.searchBySex(sex);
             }
             System.out.println("Here are your results: ");
