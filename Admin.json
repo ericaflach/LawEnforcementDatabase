@@ -15,7 +15,7 @@
 "password":"Yak22beF!",
 "email":"Jstaff@sb.gov",
 "phoneNumber": 8432948172,
-"clearanceLevel": 3,
+"clearanceLevel": 2,
 "ID":5212
 },{
 "firstName":"Alisa",
@@ -24,7 +24,7 @@
 "password":"BigSur3xx@!",
 "email":"Achassier@sb.gov",
 "phoneNumber": 8642219090,
-"clearanceLevel": 3,
+"clearanceLevel": 1,
 "ID":6782
 },{
 "firstName":"Jackson",
@@ -42,7 +42,7 @@
 "password":"ItsBritney44!",
 "email":"Dtucan@sb.gov",
 "phoneNumber": 8438715934,
-"clearanceLevel": 3,
+"clearanceLevel": 2,
 "ID":1869
 },{
 "frstName":"Carson",
@@ -51,7 +51,7 @@
 "password":"I_lovemyBo21",
 "email":"Cbennett@sb.gov",
 "phoneNumber": 8438755234,
-"clearanceLevel": 3,
+"clearanceLevel": 2,
 "ID":7248
 }]
 
