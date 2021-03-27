@@ -9,6 +9,7 @@ public class CriminalList {
 
     private CriminalList() {
         criminals = DataLoader.getCriminals();
+        refinedList = criminals;
     }
 
     public static CriminalList getInstance() {
@@ -19,29 +20,19 @@ public class CriminalList {
     }
 
     public static boolean haveCriminal(String firstName, String lastName) {
-        for (Criminal criminal : criminals) {
-            if (criminal.getFirstName().equals(firstName) && criminal.getLastName().equals(lastName)) {
+        for(Criminal criminal : criminals) {
+            if(criminal.getFirstName().contentEquals(firstName) && criminal.getLastName().contentEquals(lastName)) {
                 return true;
             }
         }
-
         return false;
     }
 
-    public Criminal getCriminal(String firstName, String lastName) {
-        for(Criminal criminal : criminals) {
-            if(criminal.getFirstName().equals(firstName) && criminal.getLastName().equals(lastName)) {
-                return criminal;
-            }
-        }
-
-        return null;
-    }
     public ArrayList<Criminal> getCriminals() {
         return criminals;
     }
     
-    public static boolean addCriminal(String firstName, String lastName, int age, String DOB,int ID, char sex,
+    public boolean addCriminal(String firstName, String lastName, int age, String DOB,int ID, char sex,
      int creatorID, ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority, boolean alive,
     ArrayList<String> physicalAttributes, boolean inJail, ArrayList<String> tattoos) {
         
@@ -52,7 +43,17 @@ public class CriminalList {
         criminals.add(new Criminal(firstName, lastName, age, DOB, ID, sex, creatorID, pastCrimes, address, shoeSize,
         priority, alive, physicalAttributes, inJail, tattoos));
         return true;
-}
+    }
+
+    public Criminal getCriminal(int criminalID) {
+        for(Criminal criminal : criminals) {
+            if(criminal.getID() == criminalID) {
+                return criminal;
+            }
+        }
+        return null;
+    }
+
     public void saveCriminals() {
         DataWriter.saveCriminals();
     }

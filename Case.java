@@ -191,9 +191,9 @@ public class Case {
         officers.add(officerID);
     }
 
-    public void removeWitnesses(Person witness) {
-        if(witnesses.contains(witness))
-            witnesses.remove(witness);
+    public void removeWitnesses(Integer witnessID) {
+        if(witnesses.contains(witnessID))
+            witnesses.remove(witnessID);
     }
 
     public void removePersonsOfInterest(Integer personOfInterestID) {

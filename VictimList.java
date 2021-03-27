@@ -1,6 +1,15 @@
 package LawEnforcementDatabase;
 
+/**
+     * This method 
+     * @return 
+     */
 import java.util.ArrayList;
+
+/**
+     * This method 
+     * @return 
+     */
 public class VictimList {
     private static VictimList victimList;
     private static ArrayList<Victim> victims;

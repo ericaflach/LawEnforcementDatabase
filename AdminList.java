@@ -1,16 +1,31 @@
 package LawEnforcementDatabase;
 
+/**
+     * This method 
+     * @return 
+     */
 import java.util.ArrayList;
-
+/**
+     * This method 
+     * @return 
+     */
 public class AdminList {
 
     private static AdminList adminList;
     private static ArrayList<Admin> admins;
     
+    /**
+     * This method 
+     * @return 
+     */
     private AdminList() {
         admins = DataLoader.getAdmins();
     }
     
+    /**
+     * This method 
+     * @return 
+     */
     public static AdminList getInstance() {
         if(adminList == null) {
             adminList = new AdminList();
@@ -18,6 +33,10 @@ public class AdminList {
         return adminList;
     }
 
+    /**
+     * This method 
+     * @return 
+     */
     public boolean haveAdmin(String userName) {
         for(Admin admin : admins) {
             if(admin.getUsername().equals(userName)) {
@@ -28,7 +47,11 @@ public class AdminList {
         return false;
     }
 
-    public User getAdmin(String userName) {
+    /**
+     * This method 
+     * @return 
+     */
+    public Admin getAdmin(String userName) {
         for(Admin admin : admins) {
             if(admin.getUsername().equals(userName)) {
                 return admin;
@@ -38,10 +61,18 @@ public class AdminList {
         return null;
     }
 
+    /**
+     * This method 
+     * @return 
+     */
     public ArrayList<Admin> getAdmins() {
         return admins;
     }
 
+    /**
+     * This method 
+     * @return 
+     */
     public boolean addAdmin(String firstName, String lastName, String userName, String password, String email, int phoneNumber,
     int clearanceLevel, int ID) {
         if(haveAdmin(userName)) {
@@ -52,6 +83,10 @@ public class AdminList {
         return true;
     }
 
+    /**
+     * This method 
+     * @return 
+     */
     public void saveAdminss() {
         DataWriter.saveAdmins();
     }

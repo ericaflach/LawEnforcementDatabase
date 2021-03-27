@@ -43,6 +43,14 @@ public class CaseList {
         return cases;
     }
 
+    public ArrayList<Case> getCasesFromIDs(ArrayList<Integer> caseIDs) {
+        ArrayList<Case> temp = new ArrayList<Case>();
+        for(int caseID : caseIDs) {
+            temp.add(getCase(caseID));
+        }
+        return temp;
+    }
+
     public boolean addCase(int creatorID, ArrayList<Integer> witnesses, ArrayList<Integer> peopleOfInterest, ArrayList<Integer> suspects, 
     ArrayList<Integer> criminals, ArrayList<Integer> victims, boolean caseOpen, int ID, ArrayList<String> evidence, int crimeLevel,
     ArrayList<Integer> officers, int legalClearance, String caseType) {

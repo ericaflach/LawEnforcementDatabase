@@ -130,6 +130,7 @@ public class Criminal extends Person {
         }
         return ret;
     }
+    
     public String pastCrimesToString() {
         String ret = "";
         if (pastCrimes == null) {

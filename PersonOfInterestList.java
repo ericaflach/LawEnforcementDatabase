@@ -6,10 +6,18 @@ public class PersonOfInterestList {
     private static PersonOfInterestList personsOfInterestList;
     private static ArrayList<PersonOfInterest> personsOfInterest;
 
+     /**
+     * This method 
+     * @return 
+     */
     private PersonOfInterestList() {
         personsOfInterest = DataLoader.getPeopleOfInterest();
     }
 
+     /**
+     * This method 
+     * @return 
+     */
     public static PersonOfInterestList getInstance() {
         if(personsOfInterestList == null) {
             personsOfInterestList = new PersonOfInterestList();
@@ -17,6 +25,10 @@ public class PersonOfInterestList {
         return personsOfInterestList;
     }
 
+     /**
+     * This method 
+     * @return 
+     */
     public boolean havePersonOfInterest(String firstName, String lastName) {
         for(PersonOfInterest personOfInterest : personsOfInterest) {
             if(personOfInterest.getFirstName().equals(firstName) && personOfInterest.getLastName().equals(lastName)) {
@@ -27,6 +39,10 @@ public class PersonOfInterestList {
         return false;
     }
 
+     /**
+     * This method 
+     * @return 
+     */
     public PersonOfInterest getPersonOfInterest(String firstName, String lastName) {
         for(PersonOfInterest personOfInterest : personsOfInterest) {
             if(personOfInterest.getFirstName().equals(firstName) && personOfInterest.getLastName().equals(lastName)) {
@@ -37,10 +53,18 @@ public class PersonOfInterestList {
         return null;
     }
 
+     /**
+     * This method 
+     * @return 
+     */
     public ArrayList<PersonOfInterest> getPersonsOfInterest() {
         return personsOfInterest;
     }
 
+     /**
+     * This method 
+     * @return 
+     */
     public boolean addPersonOfInterest(String firstName, String lastName, int age,
     String DOB, int ID, char sex, String description, String contact) {
         if(havePersonOfInterest(firstName, lastName)) {
@@ -51,6 +75,10 @@ public class PersonOfInterestList {
         return true;
     }
 
+     /**
+     * This method 
+     * @return 
+     */
     public void savePersonsOfInterest() {
         DataWriter.savePeopleOfInterest();
     }

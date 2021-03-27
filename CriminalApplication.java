@@ -10,8 +10,10 @@ public class CriminalApplication {
     private PersonOfInterestList personOfInterestList;
     private SuspectList suspectList;
     private PoliceOfficerList officerList;
+    private AdminList adminList;
     private CaseList caseList;
-    private PoliceOfficer user;
+    private PoliceOfficer officer;
+    private Admin admin; 
     ArrayList<Criminal> refinedList;
 
     public CriminalApplication() {
@@ -22,13 +24,15 @@ public class CriminalApplication {
         suspectList = SuspectList.getInstance();
         officerList = PoliceOfficerList.getInstance();
         caseList = CaseList.getInstance();
+        adminList = AdminList.getInstance();
+        refinedList = criminalList.getCriminals();
     }
     
     public ArrayList<Criminal> searchByName(String firstName, String lastName) {
         ArrayList<Criminal> ret = new ArrayList<Criminal>();
-        for (int i = 0; i < refinedList.size(); i++) {
-            if (refinedList.get(i).getFirstName().contentEquals(firstName) && refinedList.get(i).getLastName().contentEquals(lastName)) {
-                ret.add(refinedList.get(i));
+        for(Criminal criminal : refinedList) {
+            if(criminal.getFirstName().contentEquals(firstName) && criminal.getLastName().contentEquals(lastName)) {
+                ret.add(criminal);
             }
         }
         refinedList = ret;
@@ -36,10 +40,10 @@ public class CriminalApplication {
     }
 
     public ArrayList<Criminal> searchByAge(int lowerAge, int upperAge) {
-        ArrayList<Criminal> ret = new ArrayList<Criminal>();
-        for (int i = 0; i < refinedList.size(); i++) {
-            if(refinedList.get(i).getAge() >= lowerAge && refinedList.get(i).getAge() <= upperAge) {
-                ret.add(refinedList.get(i));
+                ArrayList<Criminal> ret = new ArrayList<Criminal>();
+        for(Criminal criminal : refinedList) {
+            if(criminal.getAge() >= lowerAge && criminal.getAge() <= upperAge) {
+                ret.add(criminal);
             }
         }
         refinedList = ret;
@@ -49,7 +53,7 @@ public class CriminalApplication {
     public ArrayList<Criminal> searchByCrimesCommitted(ArrayList<String> searchedCrimes) {
         ArrayList<Criminal> ret = new ArrayList<Criminal>();
         for (int i = 0 ; i < refinedList.size(); i++) {
-            ArrayList<Case> criminalCases = getCasesFromID(refinedList.get(i)); 
+            ArrayList<Case> criminalCases = caseList.getCasesFromIDs(refinedList.get(i).getPastCrimes()); 
             for (int a = 0; a < searchedCrimes.size(); a++) {
                 for (int b = 0; b < criminalCases.size(); b++) {
                     if(containsLowerCase(criminalCases.get(b).getCaseType(), searchedCrimes.get(a))) {
@@ -77,27 +81,38 @@ public class CriminalApplication {
         return null;
     }
 
-    public void createCriminal(String firstName, String lastName, int age, String DOB, String creator,
-     ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority, boolean alive,
-    ArrayList<String> physicalAttributes, boolean inJail, int ID, char sex, ArrayList<String> tattoos) {
-        criminals.add(new Criminal(firstName, lastName, age, DOB, ID, sex, creator, pastCrimes, address, shoeSize, priority, alive, physicalAttributes, inJail, tattoos));
+    public void createCriminal(String firstName, String lastName, int age, String DOB, int ID, char sex, int creatorID, ArrayList<Integer> pastCrimes, String address,
+    double shoeSize, int priority, boolean alive, ArrayList<String> physicalAttributes, boolean inJail, ArrayList<String> tattoos) {
+        criminalList.addCriminal(firstName, lastName, age, DOB, ID, sex, creatorID, pastCrimes, address, shoeSize, priority, alive, physicalAttributes, inJail, tattoos);
     }
 
+    public void createCase(int creatorID, ArrayList<Integer> witnesses, ArrayList<Integer> peopleOfInterest, ArrayList<Integer> suspects, 
+    ArrayList<Integer> criminals, ArrayList<Integer> victims, boolean caseOpen, int ID, ArrayList<String> evidence, int crimeLevel,
+    ArrayList<Integer> officers, int legalClearance, String caseType) {
+        caseList.addCase(creatorID, witnesses, peopleOfInterest, suspects, criminals, victims, caseOpen, ID, evidence, crimeLevel, officers, legalClearance, caseType);
+    }
     public void createPoliceOfficer(String firstName, String lastName, String username, String email,
      int phoneNumber, String password, int clearanceLevel, String department, int officerID) {
-        policeOfficers.add(new PoliceOfficer(firstName, lastName, username, password, email,
-         phoneNumber, clearanceLevel, department, officerID));
+         ArrayList<Integer> myCriminals = null; 
+         ArrayList<Integer> myCases = null;
+        officerList.addUser(firstName, lastName, username, password, email, phoneNumber, clearanceLevel, officerID, department, myCriminals, myCases);
     }
 
     public void createAdmin(String firstName, String lastName, String username, String email,
      int phoneNumber, String password, int clearanceLevel, int adminID) {
-        admins.add(new Admin(firstName, lastName, username, password, email, phoneNumber, clearanceLevel, adminID));
+        adminList.addAdmin(firstName, lastName, username, password, email, phoneNumber, clearanceLevel, adminID);
     }
 
     public boolean login(String username, String password) {
-        for (int i = 0; i < policeOfficers.size(); i++) {
-            if (policeOfficers.get(i).getUsername().equals(username) && policeOfficers.get(i).checkPassword(password)) {
-                user = policeOfficers.get(i);
+        if(officerList.havePoliceOfficer(username)) {
+            if(officerList.getPoliceOfficer(username).checkPassword(password)) {
+                officer = officerList.getPoliceOfficer(username);
+                return true;
+            }
+        }
+        if(adminList.haveAdmin(username)) {
+            if(adminList.getAdmin(username).checkPassword(password)) {
+                admin = adminList.getAdmin(username); 
                 return true;
             }
         }
@@ -105,50 +120,44 @@ public class CriminalApplication {
     }
 
     public Case searchCaseID(int ID){
-        Case crime = new Case();
+        Case crime = caseList.getCase(ID);
         return crime;
     }
 
     public ArrayList<Criminal> getMyCriminals(){
-        return user.getMyCriminals();
+        ArrayList<Criminal> myCriminals = new ArrayList<Criminal>();
+        for(int criminalID : officer.getMyCriminals()) {
+            myCriminals.add(criminalList.getCriminal(criminalID));
+        }
+        return myCriminals;
     }
 
     public ArrayList<Case> getMyCases(){
-        return user.getMyCases();
+        ArrayList<Case> myCases = new ArrayList<Case>();
+        for(int caseID : officer.getMyCases()) {
+            myCases.add(caseList.getCase(caseID));
+        }
+        return myCases;
     }
-    public void editCriminal() {
-
-    }
-
     public void resetRefinedList() {
-        refinedList = criminals;
+        refinedList = criminalList.getCriminals();
     }
 
     private boolean containsLowerCase(String larger, String shorter) {
         return larger.toLowerCase().contains(shorter.toLowerCase());
     }
-    
-    private ArrayList<Case> getCasesFromID(Criminal criminal) {
-        ArrayList<Case> ret = new ArrayList<Case>();
-        for (int i = 0; i < criminal.getPastCrimes().size(); i++) {
-            for (int a = 0; a < cases.size(); a++) {
-                if(criminal.getPastCrimes().get(i) == cases.get(a).getID()) {
-                    ret.add(cases.get(a));
-                }
-            }
-        }
-        return ret;
-    }
-
-    public Criminal pickCriminal() {
-        return criminal;
-    }
 
     public String toString() {
         String ret = "";
         for (int i = 0; i < refinedList.size(); i++) {
-            String criminal = 
+            
         }
+        return ret;
     }
-
+    public User getUser() {
+        if(admin == null) {
+            return officer;
+        }
+        return admin; 
+    }
 }

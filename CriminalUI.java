@@ -67,12 +67,7 @@ public class CriminalUI {
         String DOB = scanner.next();
         System.out.println("Address: ");
         String address = scanner.next();
-        ArrayList<String> pastCrimes=new ArrayList<String>();
-        System.out.println("Enter crime committed: ");
-        String crime = scanner.next();
-        pastCrimes.add(crime);
-        System.out.println("Creator (your name): ");
-        String creator = scanner.next();
+        ArrayList<Integer> pastCrimes=new ArrayList<Integer>();
         System.out.println("Shoe size: ");
         double shoeSize = scanner.nextDouble();
         System.out.println("Priority: ");
@@ -106,7 +101,7 @@ public class CriminalUI {
                 tattoos.add(tat);
             }
         }
-        application.createCriminal(firstName, lastName, age, DOB, creator, pastCrimes, address, shoeSize, priority, alive, physicalAttributes, inJail, ID, sex, tattoos);
+        application.createCriminal(firstName, lastName, age, DOB, ID, sex, application.getUser().getID(), pastCrimes, address, shoeSize, priority, alive, physicalAttributes, inJail, tattoos);
         System.out.println(crime+" has been entered for "+firstName+" "+lastName);
         reset=true;
     }
@@ -127,8 +122,7 @@ public class CriminalUI {
                 reset = true;
             }
             
-        }
-        
+        }   
     }
     public void addCriminal(){
         System.out.println("-----Add a criminal-----");
@@ -143,17 +137,8 @@ public class CriminalUI {
         String DOB = scanner.next();
         System.out.println("Address: ");
         String address = scanner.next();
-        ArrayList<String> pastCrimes=new ArrayList<String>();
-                for (int i=0; i<10; i++) {
-                    System.out.println("Enter crime "+i+": ");
-                    String crime = scanner.next();
-                    if (crime == null) {
-                        break;
-                    } else {
-                        pastCrimes.add(crime);
-                    }
-                    
-                }
+        ArrayList<Integer> pastCrimes=new ArrayList<Integer>();
+
         System.out.println("Creator (your name): ");
         String creator = scanner.next();
         System.out.println("Shoe size: ");
@@ -189,7 +174,7 @@ public class CriminalUI {
                 tattoos.add(tat);
             }
         }
-        application.createCriminal(firstName, lastName, age, DOB, creator, pastCrimes, address, shoeSize, priority, alive, physicalAttributes, inJail, ID, sex, tattoos);
+        application.createCriminal(firstName, lastName, age, DOB, ID, sex, application.getUser().getID(), pastCrimes, address, shoeSize, priority, alive, physicalAttributes, inJail, tattoos);
         System.out.println(firstName+" "+lastName+" has been entered into the database, you will now be taken back to the main menu.");
         reset = true;
     }
@@ -276,7 +261,6 @@ public class CriminalUI {
                 }
             }
         }
-
     }
 
     public void loginMenu(){

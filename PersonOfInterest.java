@@ -2,9 +2,17 @@ package LawEnforcementDatabase;
 
 public class PersonOfInterest extends Person{
 
+     /**
+     * This method 
+     * @return 
+     */
     private String description;
     private String contact;
 
+     /**
+     * This method 
+     * @return 
+     */
     public PersonOfInterest(String firstName, String lastName, int age, String DOB, int ID,
      char sex, String description, String contact) {
         super(firstName, lastName, age, DOB, ID, sex);
@@ -13,19 +21,35 @@ public class PersonOfInterest extends Person{
         this.contact = contact;
     }
 
+     /**
+     * This method 
+     * @return 
+     */
     public String getDescription(){
         return description;
     }
 
+     /**
+     * This method 
+     * @return 
+     */
     public String getContact(){
         return contact;
     }
 
+     /**
+     * This method 
+     * @return 
+     */
     public void setDescription(String description){
         this.description = description;
 
     }
 
+     /**
+     * This method 
+     * @return 
+     */
     public void setContact(String contact){
         this.contact = contact;
 

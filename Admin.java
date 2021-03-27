@@ -7,8 +7,13 @@ public class Admin extends User{
         super(firstName, lastName, username, password, email, phoneNumber, clearanceLevel, ID);
     }
 
-    public String toString() {
-        return super.toString();
+    public String toString() 
+    {
+       return super.toString();
     }
 
+    public boolean checkPassword(String password) 
+    {
+        return super.getPassword().contentEquals(password);
+    }
 }
