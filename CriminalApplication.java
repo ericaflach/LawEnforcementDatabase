@@ -22,8 +22,6 @@ public class CriminalApplication {
         suspectList = SuspectList.getInstance();
         officerList = PoliceOfficerList.getInstance();
         caseList = CaseList.getInstance();
-        
-        
     }
     
     public ArrayList<Criminal> searchByName(String firstName, String lastName) {
@@ -79,15 +77,21 @@ public class CriminalApplication {
         return null;
     }
 
-    public void createCriminal(String firstName, String lastName, int age, String DOB, String creator, ArrayList<String> pastCrimes, String address, double shoeSize, int priority, boolean alive,
+    public void createCriminal(String firstName, String lastName, int age, String DOB, String creator,
+     ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority, boolean alive,
     ArrayList<String> physicalAttributes, boolean inJail, int ID, char sex, ArrayList<String> tattoos) {
-        criminals.add(new Criminal(firstName, lastName, age, DOB, ID, sex, creator, pastCrimes, address, shoeSize, priority, alive, physicalAttributes, inJail, tattoos)
-    }
-    public void createPoliceOfficer(String firstName, String lastName, String username, String email, int phoneNumber, String password, int clearanceLevel, String department, int officerID) {
-        policeOfficers.add(new PoliceOfficer(firstName, lastName, username, password, email, phoneNumber, clearanceLevel, department, officerID));
+        criminals.add(new Criminal(firstName, lastName, age, DOB, ID, sex, creator, pastCrimes,
+         address, shoeSize, priority, alive, physicalAttributes, inJail, tattoos));
     }
 
-    public void createAdmin(String firstName, String lastName, String username, String email, int phoneNumber, String password, int clearanceLevel, int adminID) {
+    public void createPoliceOfficer(String firstName, String lastName, String username, String email,
+     int phoneNumber, String password, int clearanceLevel, String department, int officerID) {
+        policeOfficers.add(new PoliceOfficer(firstName, lastName, username, password, email,
+         phoneNumber, clearanceLevel, department, officerID));
+    }
+
+    public void createAdmin(String firstName, String lastName, String username, String email,
+     int phoneNumber, String password, int clearanceLevel, int adminID) {
         admins.add(new Admin(firstName, lastName, username, password, email, phoneNumber, clearanceLevel, adminID));
     }
 
