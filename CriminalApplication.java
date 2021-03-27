@@ -80,12 +80,7 @@ public class CriminalApplication {
     public void createCriminal(String firstName, String lastName, int age, String DOB, String creator,
      ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority, boolean alive,
     ArrayList<String> physicalAttributes, boolean inJail, int ID, char sex, ArrayList<String> tattoos) {
-<<<<<<< HEAD
-        criminals.add(new Criminal(firstName, lastName, age, DOB, ID, sex, creator, pastCrimes,
-         address, shoeSize, priority, alive, physicalAttributes, inJail, tattoos));
-=======
         criminals.add(new Criminal(firstName, lastName, age, DOB, ID, sex, creator, pastCrimes, address, shoeSize, priority, alive, physicalAttributes, inJail, tattoos));
->>>>>>> d229a694fcb339cc5cca6b53597a35ced7f50720
     }
 
     public void createPoliceOfficer(String firstName, String lastName, String username, String email,
