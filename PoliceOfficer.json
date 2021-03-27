@@ -6,7 +6,7 @@
 "email":"csiffa@sb.gov",
 "phoneNumber": 8439910012,
 "clearanceLevel": 2,
-"ID":2149921,
+"ID":1965,
 "policeDepartment":"Santa Barbra Police Station",
 "myCriminals": [2, 3, 4],
 "myCases": [1, 2, 3]
@@ -18,7 +18,7 @@
 "email":"Jbaker@sb.gov",
 "phoneNumber": 8649010012,
 "clearanceLevel": 1,
-"ID":119521,
+"ID":2965,
 "policeDepartment":"Santa Barbra Police Station",
 "myCriminals": [1, 2, 3],
 "myCases": [1]
@@ -30,7 +30,7 @@
 "email":"Csmith@sb.gov",
 "phoneNumber": 8439243002,
 "clearanceLevel": 2,
-"ID":4449921,
+"ID":4464,
 "policeDepartment":"Santa Barbra Police Station",
 "myCriminals": [1, 2, 3],
 "myCases": [1, 2, 3]
@@ -42,7 +42,7 @@
 "email":"bfields@sb.gov",
 "phoneNumber": 8432210012,
 "clearanceLevel": 1,
-"ID":3345221,
+"ID":1409,
 "policeDepartment":"Santa Barbra Police Station",
 "myCriminals": [1, 2, 3],
 "myCases": [1, 2, 3]
@@ -54,7 +54,7 @@
 "email":"Amarant@sb.gov",
 "phoneNumber": 8642219012,
 "clearanceLevel": 1,
-"ID":3349221,
+"ID":2816,
 "policeDepartment":"Santa Barbra Police Station",
 "myCriminals": [1, 2, 3],
 "myCases": [5]
@@ -66,7 +66,7 @@
 "email":"Ebarron@sb.gov",
 "phoneNumber": 8432328812,
 "clearanceLevel": 1,
-"ID":3374221,
+"ID":9943,
 "policeDepartment":"Santa Barbra Police Station",
 "myCriminals": [1, 2, 3],
 "myCases": [1, 2, 3]

@@ -36,29 +36,39 @@ public class Case {
         this.caseType = caseType;
     }
 
-    public int getCreator() {
+    public int getCreatorID() {
        return creatorID; 
     }
 
-    public String getCriminal(){
-        String ret = "";
-        for (int i = 0; i < criminals.size(); i ++)
-        {
-            ret += criminals.get(i) + ", ";
-        }
-        return ret;
+    public ArrayList<Integer> getWitnesses(){
+        return witnesses;
     }
 
-    public String getVictim() {
-        String ret = "";
-        for (int i = 0; i < victims.size(); i++)
-        {
-            ret += victims.get(i) + ", ";
-        }
-        return ret;
+    public ArrayList<Integer> getPeopleOfInterest() {
+        return peopleOfInterest;
     }
 
-    public String getWitnesses() {  
+    public ArrayList<Integer> getSuspects() {
+        return suspects;
+    }
+
+    public ArrayList<Integer> getCriminals(){
+        return criminals;
+    }
+
+    public ArrayList<Integer> getVictims() {
+        return victims;
+    }
+
+    public ArrayList<String> getEvidence() {
+        return evidence;
+    }
+
+    public ArrayList<Integer> getOfficers() {
+        return officers;
+    }
+
+    public String witnessesToString() {  
         String ret = "";
         for (int i = 0; i < witnesses.size(); i++)
         {
@@ -67,7 +77,7 @@ public class Case {
         return ret;
     }
 
-    public String getPersonsOfInterest() {
+    public String personsOfInterestToString() {
         String ret = "";
         for (int i = 0; i < peopleOfInterest.size(); i++)
         {
@@ -76,7 +86,7 @@ public class Case {
         return ret;
     }
 
-    public String getSuspects() {
+    public String suspectsToString() {
         String ret = "";
         for (int i = 0; i < suspects.size(); i++)
         {
@@ -85,7 +95,7 @@ public class Case {
         return ret;
     }
 
-    public String getCriminals() {
+    public String criminalsToString() {
         String ret = "";
         for (int i = 0; i < criminals.size(); i++)
         {
@@ -94,7 +104,7 @@ public class Case {
         return ret;
     }
 
-    public String getVictims() {
+    public String victimsToString() {
         String ret = "";
         for (int i = 0; i < victims.size(); i++)
         {
@@ -111,7 +121,7 @@ public class Case {
         return ID;
     }
 
-    public String getEvidence() {
+    public String evidenceToString() {
         String ret = "";
         for(int i = 0; i < evidence.size(); i++)
         {
@@ -124,7 +134,7 @@ public class Case {
         return crimeLevel;
     }
 
-    public String getOfficers() {
+    public String officersToString() {
         String ret = "";
         for(int i = 0; i < officers.size(); i++)
         {

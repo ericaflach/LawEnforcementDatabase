@@ -29,4 +29,9 @@ public class Witness extends Person{
         this.contact = contact;
     }
 
+    public String toString() {
+        return super.toString()
+        + "\nDescription: " + description
+        + "\nContact: " + contact;
+    }
 }

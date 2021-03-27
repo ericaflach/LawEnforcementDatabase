@@ -1,3 +1,6 @@
+/**
+ * Written by Erica Flach and Ben Friend
+ */
 package LawEnforcementDatabase;
 
 
@@ -51,6 +54,7 @@ public abstract class DataConstants {
         protected static final String POLICE_FILE_NAME = "LawEnforcementDatabase/PoliceOfficer.json";
         protected static final String POLICE_DEPARTMENT = "policeDepartment";
         protected static final String POLICE_MY_CRIMINALS = "myCriminals";
+        protected static final String POLICE_MY_CASES = "myCases";
 
         protected static final String ADMIN_FILE_NAME = "LawEnforcementDatabase/Admin.json";
 
