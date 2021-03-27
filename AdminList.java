@@ -52,7 +52,7 @@ public class AdminList {
         return true;
     }
 
-    public void saveUsers() {
-        DataWriter.saveUsers();
+    public void saveAdminss() {
+        DataWriter.saveAdmins();
     }
 }

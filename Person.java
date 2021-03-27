@@ -69,5 +69,14 @@ public class Person {
     public void setDOB(String DOB) {
         this.dateOfBirth = DOB;
     }
+
+    public String toString() {
+        return "\nFirst Name: " + firstName
+        + "\nLast Name: " + lastName
+        + "\nAge: " + age
+        + "\nDate of Birth: " + dateOfBirth
+        + "\nID: " + ID
+        + "\nSex: " + sex;
+    }
     
 }

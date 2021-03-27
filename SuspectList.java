@@ -42,13 +42,13 @@ public class SuspectList {
     }
 
     public boolean addSuspect(String firstName, String lastName, int age, String DOB, int ID,
-    char sex, User creator, ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority,
+    char sex, int creatorID, ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority,
     boolean alive, ArrayList<String> physicalAttributes, boolean inJail, ArrayList<String> tattoos, String alibi) {
         if(haveSuspect(firstName, lastName)) {
             return false;
         }
 
-        suspects.add(new Suspect(firstName, lastName, age, DOB, ID, sex, creator, pastCrimes, address, shoeSize, priority,
+        suspects.add(new Suspect(firstName, lastName, age, DOB, ID, sex, creatorID, pastCrimes, address, shoeSize, priority,
         alive, physicalAttributes, inJail, tattoos, alibi));
         return true;
     }

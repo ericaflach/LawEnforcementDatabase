@@ -43,14 +43,14 @@ public class CaseList {
         return cases;
     }
 
-    public boolean addCase(User creator, ArrayList<Witness> witnesses, ArrayList<PersonOfInterest> peopleOfInterest, ArrayList<Suspect> suspects, 
-    ArrayList<Criminal> criminals, ArrayList<Victim> victims, boolean caseOpen, int ID, ArrayList<String> evidence, int crimeLevel,
-    ArrayList<PoliceOfficer> officers, int legalClearance, CaseType caseType) {
+    public boolean addCase(int creatorID, ArrayList<Integer> witnesses, ArrayList<Integer> peopleOfInterest, ArrayList<Integer> suspects, 
+    ArrayList<Integer> criminals, ArrayList<Integer> victims, boolean caseOpen, int ID, ArrayList<String> evidence, int crimeLevel,
+    ArrayList<Integer> officers, int legalClearance, String caseType) {
         if(haveCase(ID)) {
             return false;
         }
 
-        cases.add(new Case(creator, witnesses, peopleOfInterest, suspects, criminals, victims, caseOpen, ID,
+        cases.add(new Case(creatorID, witnesses, peopleOfInterest, suspects, criminals, victims, caseOpen, ID,
          evidence, crimeLevel, officers, legalClearance, caseType));
          return true;
     }

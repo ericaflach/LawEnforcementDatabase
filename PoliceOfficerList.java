@@ -7,7 +7,7 @@ public class PoliceOfficerList {
     private static ArrayList<PoliceOfficer> policeOfficers;
 
     private PoliceOfficerList() {
-        policeOfficers = DataLoader.getOfficers();
+        policeOfficers = DataLoader.getPoliceOfficers();
     }
 
     public static PoliceOfficerList getInstance() {
@@ -41,13 +41,15 @@ public class PoliceOfficerList {
         return policeOfficers;
     }
 
-    public boolean addUser(String firstName, String lastName, String userName, String password, String email,int phoneNumber, int clearanceLevel, 
-    String policeDepartment, int ID) {
+    public boolean addUser(String firstName, String lastName, String userName, String password, String email,
+    int phoneNumber, int clearanceLevel, int ID, String policeDepartment, ArrayList<Integer> myCriminals,
+    ArrayList<Integer> myCases) {
         if(havePoliceOfficer(userName)) {
             return false;
         }
 
-        policeOfficers.add(new PoliceOfficer(firstName, lastName, userName, password, email, phoneNumber, clearanceLevel, policeDepartment, ID));
+        policeOfficers.add(new PoliceOfficer(firstName, lastName, userName, password, email, phoneNumber,
+        clearanceLevel, ID, policeDepartment, myCriminals, myCases));
         return true;
     }
 

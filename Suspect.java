@@ -22,6 +22,7 @@ public class Suspect extends Criminal {
     }
 
     public String toString() {
-        return super.toString() + "\nAlibi: " + alibi;
+        return super.toString() 
+        + "\nAlibi: " + alibi;
     }
 }

@@ -7,4 +7,8 @@ public class Admin extends User{
         super(firstName, lastName, username, password, email, phoneNumber, clearanceLevel, ID);
     }
 
+    public String toString() {
+        return super.toString();
+    }
+
 }
