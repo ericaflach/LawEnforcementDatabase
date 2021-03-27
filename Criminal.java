@@ -110,6 +110,9 @@ public class Criminal extends Person {
     }
     public String physicalAttributesToString() {
         String attributes = "";
+        if (physicalAttributes == null) {
+            return attributes;
+        }
         for (int i = 0; i < physicalAttributes.size(); i++) {
             attributes = attributes + physicalAttributes.get(i) + ", "; 
         }
@@ -118,15 +121,27 @@ public class Criminal extends Person {
 
     public String tattoosToString() {
         String ret = "";
+        if(tattoos == null) {
+            return ret;
+        }
         for (int i = 0; i < tattoos.size(); i++) {
             ret = ret + tattoos.get(i) + ", ";
         }
         return ret;
     }
-
+    public String pastCrimesToString() {
+        String ret = "";
+        if (pastCrimes == null) {
+            return ret;
+        }
+        for (int i = 0; i < pastCrimes.size(); i++) {
+            ret = ret + pastCrimes.get(i) + ", "; 
+        }
+        return ret;
+    }
     public String toString() {
         return "First Name: " + firstName + "\nLast Name: " + lastName +"\nAge: " + super.getAge() + "\nDOB: " + super.getDateOfBirth() + 
-            "\nSex: " + super.getSex() + "\nAddress: " + address + "\nPhysical description: " + physicalAttributesToString() + "Tattoos: " +
-            tattoosToString() + "Profile author: " + getCreatorID();
+            "\nSex: " + super.getSex() + "\nAddress: " + address + "\nPast Crimes: " + pastCrimesToString() + "\nPhysical description: " + physicalAttributesToString() + "\nTattoos: " +
+            tattoosToString() + "\nProfile author: " + getCreatorID();
         }
 }
