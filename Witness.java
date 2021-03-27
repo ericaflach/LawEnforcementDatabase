@@ -46,7 +46,7 @@ public class Witness extends Person{
     }
 
      /**
-     * This method setContact 
+     * This method setContact updates the value of the variable Contact
      * @return the unique attribute value Contact
      */
     public void setContact(String contact) {
