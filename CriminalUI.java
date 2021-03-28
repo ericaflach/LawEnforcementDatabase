@@ -60,10 +60,12 @@ public class CriminalUI {
                 accountMenu();
             } else if (option == 4) {
                 editMenu();
-                    
+            } else if (option == 9){
+                System.out.println("Goodbye!");
+                System.exit(0);
             } else {
-                System.out.println("Incorrect Option");
-                reset=true;
+                System.out.println("Invalid Option.");
+                reset = true; 
             }
         }
 
@@ -167,7 +169,6 @@ public class CriminalUI {
             } else {
                 System.out.println("Invalid choice.");
             }
-        
         } else if (choice == 2) {
             System.out.println("First enter the officerID");
             int officerID = scanner.nextInt();
@@ -229,18 +230,20 @@ public class CriminalUI {
         System.out.println("-----Add a criminal-----");
         System.out.println("Please enter as much of the following as possible, if you do not know, press enter to leave that field blank.");
         System.out.println("First name: ");
-        String firstName = scanner.next();
+        scanner.next();
+        String firstName = scanner.nextLine();
         System.out.println("Last name: ");
-        String lastName = scanner.next();
+        String lastName = scanner.nextLine();
         System.out.println("Age: ");
         int age = scanner.nextInt();
         System.out.println("DOB (mm/dd/yyy): ");
-        String DOB = scanner.next();
+        scanner.next();
+        String DOB = scanner.nextLine();
         System.out.println("Address: ");
-        String address = scanner.next();
+        String address = scanner.nextLine();
         ArrayList<Integer> pastCrimes=new ArrayList<Integer>();
         System.out.println("Creator (your name): ");
-        String creator = scanner.next();
+        String creator = scanner.nextLine();
         System.out.println("Shoe size: ");
         double shoeSize = scanner.nextDouble();
         System.out.println("Priority: ");
@@ -248,9 +251,10 @@ public class CriminalUI {
         System.out.println("Alive (true/false): ");
         boolean alive = scanner.nextBoolean();
         ArrayList<String> physicalAttributes=new ArrayList<String>();
+        System.out.println("Physical Attributes (Press enter when done): ");
         for (int i=0; i<10; i++) {
-            System.out.println("Physical attribute "+i+": ");
-            String attribute = scanner.next();
+            System.out.println("Physical attribute "+(i + 1)+": ");
+            String attribute = scanner.nextLine();
             if (attribute == null) {
                 break;
             } else {
@@ -262,12 +266,13 @@ public class CriminalUI {
         System.out.println("ID: ");
         int ID = scanner.nextInt();
         System.out.println("Sex (m/f): ");
-        String entry = scanner.next();
+        scanner.next();
+        String entry = scanner.nextLine();
         char sex = entry.charAt(0);
         ArrayList<String> tattoos=new ArrayList<String>();
         for (int i=0; i<10; i++) {
             System.out.println("Tattoo "+i+": ");
-            String tat = scanner.next();
+            String tat = scanner.nextLine();
             if (tat == null) {
                 break;
             } else {
