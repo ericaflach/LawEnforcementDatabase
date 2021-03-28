@@ -263,8 +263,8 @@ public class CriminalUI {
         System.out.println("-----Add a criminal-----");
         System.out.println("Please enter as much of the following as possible, if you do not know, press enter to leave that field blank.");
         System.out.println("First name: ");
-        scanner.next();
-        String firstName = scanner.nextLine();
+        scanner.nextLine();
+        String name = scanner.nextLine();
         System.out.println("Last name: ");
         String lastName = scanner.nextLine();
         System.out.println("Age: ");
@@ -318,8 +318,8 @@ public class CriminalUI {
                 tattoos.add(tat);
             }
         }
-        System.out.println("New criminal added successfully.");
-        application.createCriminal(firstName, lastName, age, DOB, ID, sex, application.getUser().getID(), pastCrimes, address, shoeSize, priority, alive, physicalAttributes, inJail, tattoos);
+        System.out.println("New criminal "+name+" "+lastName+" added successfully.");
+        application.createCriminal(name, lastName, age, DOB, ID, sex, application.getUser().getID(), pastCrimes, address, shoeSize, priority, alive, physicalAttributes, inJail, tattoos);
         reset = true;
     }
 
