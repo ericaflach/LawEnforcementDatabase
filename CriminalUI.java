@@ -250,7 +250,7 @@ public class CriminalUI {
             scanner.next();
             String enter = scanner.nextLine();
             if (enter.equals("print")){
-                application.print();
+                System.out.println(crime.toString());
             }
             reset = true;
         }   
@@ -265,6 +265,7 @@ public class CriminalUI {
         System.out.println("First name: ");
         scanner.nextLine();
         String name = scanner.nextLine();
+        System.out.println("Test: " + name);
         System.out.println("Last name: ");
         String lastName = scanner.nextLine();
         System.out.println("Age: ");
@@ -338,7 +339,7 @@ public class CriminalUI {
             System.out.println("(3) Crimes committed");
             System.out.println("(4) Location");
             System.out.println("(5) Sex");
-            System.out.println("(6) Physical attribute")
+            System.out.println("(6) Physical attribute");
             System.out.println("How would you like to search? (1-6)");
             int choice = scanner.nextInt();
             if (choice == 1){
@@ -468,7 +469,8 @@ public class CriminalUI {
         System.out.println("(2) Search a criminal or crime");
         System.out.println("(3) Account");
         System.out.println("(4) Edit criminal or edit crime");
-        System.out.println("What would you like to do? (1-4)");
+        System.err.println("(9) To exit the program");
+        System.out.println("What would you like to do? (1-4, 9)");
     }
 
     /**
