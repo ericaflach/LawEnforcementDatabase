@@ -79,8 +79,6 @@ public class CriminalUI {
         System.out.println("Please enter as much of the following as possible, if you do not know, press enter to leave that field blank.");
         System.out.println("Crime: ");
         String caseType = scanner.nextLine();
-        System.out.println("Creator ID (your ID)");
-        int creatorID = scanner.nextInt();
         System.out.println("Enter the witnesses IDs");
         ArrayList<Integer> witnesses = new ArrayList<Integer>();
         int witnessID = 0;
@@ -153,6 +151,7 @@ public class CriminalUI {
             String exhibit = scanner.nextLine();
             evidence.add(exhibit);
         }
+        int creatorID = user.getID();
         application.createCase(creatorID, witnesses, peopleOfInterest, suspects, criminals, victims, caseOpen, ID, evidence, crimeLevel, officers, legalClearance, caseType);
         System.out.println("New crime successfully added.");
         reset = true;
