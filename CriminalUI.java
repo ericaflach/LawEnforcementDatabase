@@ -434,7 +434,6 @@ public class CriminalUI {
             System.out.println("Here are your results: ");
             System.out.println(application.refinedListToString());
             System.out.println("Enter \"refine\" to add another search parameter, enter \"reset\" to start a new search, or enter \"exit\" to go back to the main menu");
-            scanner.nextLine();
             String entry = scanner.nextLine();
             if (entry.equalsIgnoreCase("reset")) {
             refine = true;

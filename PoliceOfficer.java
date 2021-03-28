@@ -25,7 +25,7 @@ public class PoliceOfficer extends User {
      * @param myCriminals
      * @param myCases
      */
-    public PoliceOfficer(String firstName, String lastName, String username, String password, String email, int phoneNumber, int clearanceLevel,
+    public PoliceOfficer(String firstName, String lastName, String username, String password, String email, Long phoneNumber, int clearanceLevel,
     int ID, String policeDepartment, ArrayList<Integer> myCriminals, ArrayList<Integer> myCases) {
 
         super(firstName, lastName, username, password, email, phoneNumber, clearanceLevel, ID);

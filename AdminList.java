@@ -78,7 +78,7 @@ public class AdminList {
      * @param ID
      * @return true or false
      */
-    public boolean addAdmin(String firstName, String lastName, String userName, String password, String email, int phoneNumber,
+    public boolean addAdmin(String firstName, String lastName, String userName, String password, String email, Long phoneNumber,
     int clearanceLevel, int ID) {
         if(haveAdmin(userName)) {
             return false;

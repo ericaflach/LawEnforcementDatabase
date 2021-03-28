@@ -9,7 +9,7 @@ public class User{
     protected String userName;
     protected String password;
     protected String email;
-    protected int phoneNumber;
+    protected Long phoneNumber;
     protected int clearanceLevel;
     protected int ID;
     
@@ -25,7 +25,7 @@ public class User{
      * @param ID
      */
     public User(String firstName, String lastName, String userName, String password,
-     String email, int phoneNumber, int clearanceLevel, int ID) {
+     String email, Long phoneNumber, int clearanceLevel, int ID) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
@@ -91,7 +91,7 @@ public class User{
      * This method sets the user's phone number
      * @param phoneNumber
      */
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(Long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -163,7 +163,7 @@ public class User{
      * this method gets the user's phone number
      * @return phoneNumber
      */
-    public int getPhoneNumber() {
+    public Long getPhoneNumber() {
         return phoneNumber;
     }
 
@@ -198,5 +198,5 @@ public class User{
         + "\nID: " + ID;
     }
 
-
+    
 }

@@ -16,7 +16,7 @@ public class Admin extends User{
      * @param clearanceLevel
      * @param ID
      */
-    public Admin(String firstName, String lastName, String username, String password, String email, int phoneNumber,
+    public Admin(String firstName, String lastName, String username, String password, String email, Long phoneNumber,
             int clearanceLevel, int ID) {
         super(firstName, lastName, username, password, email, phoneNumber, clearanceLevel, ID);
     }
