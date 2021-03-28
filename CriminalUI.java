@@ -12,7 +12,6 @@ public class CriminalUI {
     private boolean reset=true;
     private CriminalApplication application;
     private User user;
-    private Criminal criminal;
     private Case crime;
 
     /**
@@ -250,7 +249,7 @@ public class CriminalUI {
             scanner.next();
             String enter = scanner.nextLine();
             if (enter.equals("print")){
-                application.print();
+                System.out.println(crime.toString());
             }
             reset = true;
         }   
@@ -275,8 +274,6 @@ public class CriminalUI {
         System.out.println("Address: ");
         String address = scanner.nextLine();
         ArrayList<Integer> pastCrimes=new ArrayList<Integer>();
-        System.out.println("Creator (your name): ");
-        String creator = scanner.nextLine();
         System.out.println("Shoe size: ");
         double shoeSize = scanner.nextDouble();
         System.out.println("Priority: ");
@@ -405,7 +402,7 @@ public class CriminalUI {
                 application.searchByAttributes(physicalAttributes);
             }
             System.out.println("Here are your results: ");
-            System.out.println(application.refinedList);
+            System.out.println(application.refinedListToString());
             System.out.println("Enter \"refine\" to add another search parameter, enter \"reset\" to start a new search, or enter \"exit\" to go back to the main menu");
             scanner.next();
             String entry = scanner.nextLine();
@@ -468,7 +465,8 @@ public class CriminalUI {
         System.out.println("(2) Search a criminal or crime");
         System.out.println("(3) Account");
         System.out.println("(4) Edit criminal or edit crime");
-        System.out.println("What would you like to do? (1-4)");
+        System.err.println("(9) To exit the program");
+        System.out.println("What would you like to do? (1-4, 9)");
     }
 
     /**

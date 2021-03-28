@@ -44,6 +44,7 @@ public class CriminalApplication {
         ArrayList<Criminal> ret = new ArrayList<Criminal>();
         for(Criminal criminal : refinedList) {
             if(criminal.getFirstName().contentEquals(firstName) && criminal.getLastName().contentEquals(lastName)) {
+                System.out.println(criminal.toString());
                 ret.add(criminal);
             }
         }
@@ -400,12 +401,9 @@ public class CriminalApplication {
      * This method converts refined list to string
      * @return refined list
      */
-    public String toString() {
-        String ret = "";
-        for (int i = 0; i < refinedList.size(); i++) {
-            
-        }
-        return ret;
+    public String refinedListToString() {
+        //System.out.println(refinedList.get(0).getFirstName());
+        return "Test";
     }
 
     /**
