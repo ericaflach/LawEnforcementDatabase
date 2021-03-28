@@ -264,7 +264,6 @@ public class CriminalUI {
         System.out.println("First name: ");
         scanner.nextLine();
         String name = scanner.nextLine();
-        System.out.println("Test: " + name);
         System.out.println("Last name: ");
         String lastName = scanner.nextLine();
         System.out.println("Age: ");
