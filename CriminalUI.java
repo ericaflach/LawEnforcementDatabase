@@ -170,7 +170,7 @@ public class CriminalUI {
         if(choice == 1 && user.getClearanceLevel() >=2) {
             System.out.println("First enter the criminal ID");
             int criminalID = scanner.nextInt();
-            System.out.println("What would you like to edit on the criminal?" + "\n(1) Name" + "\n(2) Age" + "\n(3) Past Crimes" + "\n(4) Address" + "\n(5) Physical Attributes" + "\n(6) Tattoos" + "\n(7) In Jail");
+            System.out.println("What would you like to edit on the criminal?\n(1) Name\n(2) Age\n(3) Past Crimes\n(4) Address\n(5) Physical Attributes\n(6) Tattoos\n(7) In Jail");
             scanner.next();
             choice = scanner.nextInt();
             if(choice == 1) {
