@@ -402,7 +402,7 @@ public class CriminalUI {
                 application.searchByAttributes(physicalAttributes);
             }
             System.out.println("Here are your results: ");
-            System.out.println(application.refinedList);
+            System.out.println(application.refinedListToString());
             System.out.println("Enter \"refine\" to add another search parameter, enter \"reset\" to start a new search, or enter \"exit\" to go back to the main menu");
             scanner.next();
             String entry = scanner.nextLine();
