@@ -170,9 +170,10 @@ public class CriminalApplication {
      * @param caseType
      */
     public void createCase(int creatorID, ArrayList<Integer> witnesses, ArrayList<Integer> peopleOfInterest, ArrayList<Integer> suspects, 
-    ArrayList<Integer> criminals, ArrayList<Integer> victims, boolean caseOpen, int ID, ArrayList<String> evidence, int crimeLevel,
+    ArrayList<Integer> criminals, ArrayList<Integer> victims, boolean caseOpen, ArrayList<String> evidence, int crimeLevel,
     ArrayList<Integer> officers, int legalClearance, String caseType) {
-        caseList.addCase(creatorID, witnesses, peopleOfInterest, suspects, criminals, victims, caseOpen, ID, evidence, crimeLevel, officers, legalClearance, caseType);
+        
+        caseList.addCase(creatorID, witnesses, peopleOfInterest, suspects, criminals, victims, caseOpen, caseList.getUniqueID(), evidence, crimeLevel, officers, legalClearance, caseType);
     }
 
     /**
@@ -420,6 +421,26 @@ public class CriminalApplication {
         return admin; 
     }
 
+    public int addWitness(String firstName, String lastName, int age, String DOB, char sex, String description, String contact) {
+        int ID = witnessList.getUniqueID();
+        witnessList.addWitness(firstName, lastName, age, DOB, ID, sex, description, contact);
+        return ID; 
+    }
+
+    public int addPOI(String firstName, String lastName, int age, String DOB, char sex, String description, String contact) {
+        int ID = personOfInterestList.getUniqueID();
+        personOfInterestList.addPersonOfInterest(firstName, lastName, age, DOB, ID, sex, description, contact);
+        return ID;
+    }
+
+    public int addSuspect(int age, char sex, ArrayList<String>attributes, int priority, ArrayList<String> tattoos, int creatorID) {
+        int ID = suspectList.getUniqueID();
+        String unknown = "unknown";
+        double unknownShoeSize = -1.0; 
+        ArrayList<Integer> crimesUnknown = null;
+        suspectList.addSuspect(unknown, unknown, age, unknown, ID, sex, creatorID, crimesUnknown, unknown, unknownShoeSize, priority, true, attributes, false, tattoos, unknown);
+        return ID;
+    }
     public boolean logout() {
         criminalList.saveCriminals();
         adminList.saveAdmins();

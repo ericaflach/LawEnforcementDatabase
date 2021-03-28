@@ -4,17 +4,19 @@
 package LawEnforcementDatabase;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class CaseList {
 
     private static CaseList caseList;
     private static ArrayList<Case> cases;
-
+    private Random rand; 
     /**
      * This method sets the cases
      */
     private CaseList() {
         cases = DataLoader.getCases();
+        rand = new Random();
     }
 
     /**
@@ -106,6 +108,21 @@ public class CaseList {
         cases.add(new Case(creatorID, witnesses, peopleOfInterest, suspects, criminals, victims, caseOpen, ID,
          evidence, crimeLevel, officers, legalClearance, caseType));
          return true;
+    }
+
+    public int getUniqueID() {
+        boolean unique = false;
+        int ID = rand.nextInt((9999999) + 1);
+        while (!unique) {
+            unique = true;
+            for(Case crimes : cases) {
+                if(crimes.getCaseID() == ID) {
+                    unique = false;
+                    ID = rand.nextInt((9999999) + 1);
+                }
+            }
+        }
+        return ID;
     }
 
     /**

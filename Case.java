@@ -470,7 +470,9 @@ public class Case {
         if(officers.contains(officerID))
             officers.remove(officerID);
     }
-
+    public int getCaseID() {
+        return ID;
+    }
     /**
      * This method turns case information to string
      * @return case information

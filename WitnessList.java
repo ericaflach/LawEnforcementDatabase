@@ -4,16 +4,18 @@
 package LawEnforcementDatabase;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class WitnessList {
     private static WitnessList witnessList;
     private static ArrayList<Witness> witnesses;
-
+    private Random rand;
     /**
      * This method sets the witnesses
      */
     public WitnessList() {
         witnesses = DataLoader.getWitnesses();
+        rand = new Random();
     }
 
     /**
@@ -89,6 +91,20 @@ public class WitnessList {
         return true;
     }
 
+    public int getUniqueID() {
+        boolean unique = false;
+        int ID = rand.nextInt((9999999) + 1);
+        while (!unique) {
+            unique = true;
+            for(Witness witness: witnesses) {
+                if(witness.getID() == ID) {
+                    unique = false;
+                    ID = rand.nextInt((9999999) + 1);
+                }
+            }
+        }
+        return ID;
+    }
     /**
      * This method saves the witnesses to json
      */

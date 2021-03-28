@@ -4,16 +4,18 @@
 package LawEnforcementDatabase;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class PersonOfInterestList {
     private static PersonOfInterestList personsOfInterestList;
     private static ArrayList<PersonOfInterest> personsOfInterest;
-
+    private Random rand;
      /**
      * This method sets the personsOfInterest
      */
     private PersonOfInterestList() {
         personsOfInterest = DataLoader.getPeopleOfInterest();
+        rand = new Random();
     }
 
      /**
@@ -87,6 +89,21 @@ public class PersonOfInterestList {
 
         personsOfInterest.add(new PersonOfInterest(firstName, lastName, age, DOB, ID, sex, description, contact));
         return true;
+    }
+
+    public int getUniqueID() {
+        boolean unique = false;
+        int ID = rand.nextInt((9999999) + 1);
+        while (!unique) {
+            unique = true;
+            for(PersonOfInterest poi: personsOfInterest) {
+                if(poi.getID() == ID) {
+                    unique = false;
+                    ID = rand.nextInt((9999999) + 1);
+                }
+            }
+        }
+        return ID;
     }
 
     /**

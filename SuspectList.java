@@ -4,16 +4,19 @@
 package LawEnforcementDatabase;
 
 import java.util.ArrayList;
+import java.util.Random;
 public class SuspectList {
 
     private static SuspectList suspectList;
     private static ArrayList<Suspect> suspects;
+    private Random rand;
 
     /**
      * This method sets the suspects
      */
     private SuspectList() {
         suspects = DataLoader.getSuspects();
+        rand = new Random();
     }
 
     /**
@@ -99,6 +102,20 @@ public class SuspectList {
         return true;
     }
 
+    public int getUniqueID() {
+        boolean unique = false;
+        int ID = rand.nextInt((9999999) + 1);
+        while (!unique) {
+            unique = true;
+            for(Suspect suspect: suspects) {
+                if(suspect.getID() == ID) {
+                    unique = false;
+                    ID = rand.nextInt((9999999) + 1);
+                }
+            }
+        }
+        return ID;
+    }
     /**
      * This method saves the suspects to json
      */
