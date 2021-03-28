@@ -1,30 +1,25 @@
+/**
+ * @author Erica Flach and Chris Nelson
+ */
 package LawEnforcementDatabase;
 
-/**
-     * This method 
-     * @return 
-     */
+
 import java.util.ArrayList;
-/**
-     * This method 
-     * @return 
-     */
 public class AdminList {
 
     private static AdminList adminList;
     private static ArrayList<Admin> admins;
     
     /**
-     * This method 
-     * @return 
+     * This method sets the admins
      */
     private AdminList() {
         admins = DataLoader.getAdmins();
     }
     
     /**
-     * This method 
-     * @return 
+     * This method gets the one instance of admins
+     * @return admin list
      */
     public static AdminList getInstance() {
         if(adminList == null) {
@@ -34,8 +29,9 @@ public class AdminList {
     }
 
     /**
-     * This method 
-     * @return 
+     * This method checks if admins has an admin
+     * @param username
+     * @return true or false
      */
     public boolean haveAdmin(String userName) {
         for(Admin admin : admins) {
@@ -48,8 +44,9 @@ public class AdminList {
     }
 
     /**
-     * This method 
-     * @return 
+     * This method finds an admin from it's username
+     * @param username
+     * @return admin that matches username
      */
     public Admin getAdmin(String userName) {
         for(Admin admin : admins) {
@@ -62,16 +59,24 @@ public class AdminList {
     }
 
     /**
-     * This method 
-     * @return 
+     * This method gets all admins
+     * @return admins
      */
     public ArrayList<Admin> getAdmins() {
         return admins;
     }
 
     /**
-     * This method 
-     * @return 
+     * This method adds an admin to admins
+     * @param firstName
+     * @param lastName
+     * @param userName
+     * @param password
+     * @param email
+     * @param phoneNumber
+     * @param clearanceLevel
+     * @param ID
+     * @return true or false
      */
     public boolean addAdmin(String firstName, String lastName, String userName, String password, String email, int phoneNumber,
     int clearanceLevel, int ID) {
@@ -84,8 +89,7 @@ public class AdminList {
     }
 
     /**
-     * This method 
-     * @return 
+     * This method saves the admins to json
      */
     public void saveAdmins() {
         DataWriter.saveAdmins();

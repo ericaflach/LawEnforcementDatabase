@@ -12,6 +12,9 @@ import org.json.simple.JSONObject;
 
 public class DataWriter extends DataConstants {
     
+    /**
+     * This method saves writes criminals to Criminal.json
+     */
     public static void saveCriminals() {
        CriminalList criminalList = CriminalList.getInstance();
        ArrayList<Criminal> criminals = criminalList.getCriminals();
@@ -29,6 +32,9 @@ public class DataWriter extends DataConstants {
        }
     }
 
+    /**
+     * This method saves writes suspects to Suspect.json
+     */
     public static void saveSuspects() {
         SuspectList suspectList = SuspectList.getInstance();
         ArrayList<Suspect> suspects = suspectList.getSuspects();
@@ -46,6 +52,9 @@ public class DataWriter extends DataConstants {
         }
     }
 
+    /**
+     * This method saves writes victims to Victim.json
+     */
     public static void saveVictims() {
         VictimList victimList = VictimList.getInstance();
         ArrayList<Victim> victims = victimList.getVictims();
@@ -63,6 +72,9 @@ public class DataWriter extends DataConstants {
         }
     }
 
+    /**
+     * This method saves writes people of interest to PersonOfInterest.json
+     */
     public static void savePeopleOfInterest() {
         PersonOfInterestList personOfInterestList = PersonOfInterestList.getInstance();
         ArrayList<PersonOfInterest> peopleOfInterest = personOfInterestList.getPersonsOfInterest();
@@ -80,6 +92,9 @@ public class DataWriter extends DataConstants {
         }
     }
 
+    /**
+     * This method saves writes witnesses to Witness.json
+     */
     public static void saveWitnesses() {
         WitnessList witnessList = WitnessList.getInstance();
         ArrayList<Witness> witnesses = witnessList.getWitnesses();
@@ -97,6 +112,9 @@ public class DataWriter extends DataConstants {
         }
     }
 
+    /**
+     * This method saves writes admins to Admin.json
+     */
     public static void saveAdmins() {
         AdminList adminList = AdminList.getInstance();
         ArrayList<Admin> admins = adminList.getAdmins();
@@ -114,6 +132,9 @@ public class DataWriter extends DataConstants {
         }
     }
 
+    /**
+     * This method saves writes police officers to PoliceOfficer.json
+     */
     public static void savePoliceOfficers() {
         PoliceOfficerList officerList = PoliceOfficerList.getInstance();
         ArrayList<PoliceOfficer> officers = officerList.getPoliceOfficers();
@@ -131,6 +152,9 @@ public class DataWriter extends DataConstants {
         }
     }
 
+    /**
+     * This method saves writes cases to Case.json
+     */
     public static void saveCases() {
         CaseList caseList = CaseList.getInstance();
         ArrayList<Case> cases = caseList.getCases();
@@ -148,6 +172,11 @@ public class DataWriter extends DataConstants {
         }
     }
 
+    /**
+     * This method assigns the JSON object's attributes to criminal's attributes
+     * @param criminal
+     * @return JSON object of a criminal
+     */
     public static JSONObject getCriminalJSON(Criminal criminal) {
         JSONObject criminalDetails = new JSONObject();
 
@@ -170,6 +199,11 @@ public class DataWriter extends DataConstants {
         return criminalDetails;
     }
 
+    /**
+     * This method assigns the JSON object's attributes to suspect's attributes
+     * @param suspect
+     * @return JSON object of a suspect
+     */
     public static JSONObject getSuspectJSON(Suspect suspect) {
         JSONObject suspectDetails = new JSONObject();
 
@@ -193,6 +227,11 @@ public class DataWriter extends DataConstants {
         return suspectDetails;
     }
 
+    /**
+     * This method assigns the JSON object's attributes to victim's attributes
+     * @param victim
+     * @return JSON object of a victim
+     */
     public static JSONObject getVictimJSON(Victim victim) {
         JSONObject victimDetails = new JSONObject();
 
@@ -208,6 +247,11 @@ public class DataWriter extends DataConstants {
         return victimDetails;
     }
 
+    /**
+     * This method assigns the JSON object's attributes to person of interest's attributes
+     * @param personOfInterest
+     * @return JSON object of a person of interest
+     */
     public static JSONObject getPersonOfInterestJSON(PersonOfInterest personOfInterest) {
         JSONObject personOfInterestDetails = new JSONObject();
 
@@ -223,6 +267,11 @@ public class DataWriter extends DataConstants {
         return personOfInterestDetails;
     }
 
+    /**
+     * This method assigns the JSON object's attributes to witness's attributes
+     * @param witness
+     * @return JSON object of a witness
+     */
     public static JSONObject getWitnessJSON(Witness witness) {
         JSONObject witnessDetails = new JSONObject();
 
@@ -238,6 +287,11 @@ public class DataWriter extends DataConstants {
         return witnessDetails;
     }
 
+    /**
+     * This method assigns the JSON object's attributes to admin's attributes
+     * @param admin
+     * @return JSON object of an admin
+     */
     public static JSONObject getAdminJSON(Admin admin) {
         JSONObject adminDetails = new JSONObject();
 
@@ -253,6 +307,11 @@ public class DataWriter extends DataConstants {
         return adminDetails;
         }
 
+    /**
+     * This method assigns the JSON object's attributes to police officer's attributes
+     * @param officer
+     * @return JSON object of a police officer
+     */
     public static JSONObject getPoliceOfficerJSON(PoliceOfficer officer) {
         JSONObject officerDetails = new JSONObject();
 
@@ -271,6 +330,11 @@ public class DataWriter extends DataConstants {
         return officerDetails;
     }
 
+    /**
+     * This method assigns the JSON object's attributes to case's attributes
+     * @param case
+     * @return JSON object of a case
+     */
     public static JSONObject getCaseJSON(Case case1) {
         JSONObject caseDetails = new JSONObject();
 

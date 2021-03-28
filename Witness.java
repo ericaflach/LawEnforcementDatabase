@@ -1,17 +1,23 @@
+/**
+ * @author Ben Friend
+ */
 package LawEnforcementDatabase;
 
 public class Witness extends Person{
    
-     /**
-     * This method 
-     * @return 
-     */
     private String description;
     private String contact;
 
-     /**
-     * This method 
-     * @return 
+    /**
+     * This method creates a witness
+     * @param firstName
+     * @param lastName
+     * @param age
+     * @param DOB
+     * @param ID
+     * @param sex
+     * @param description
+     * @param contact
      */
     public Witness(String firstName, String lastName, int age, String DOB, int ID,
      char sex, String description, String contact) {
@@ -21,41 +27,41 @@ public class Witness extends Person{
         this.contact = contact;
     }
 
-     /**
-     * This method 
-     * @return 
+    /**
+     * This method gets the witness's description
+     * @return description
      */
     public String getDescription() {
         return description;
     }
 
      /**
-     * This method 
-     * @return 
+     * This method gets the witness's contact
+     * @return contact
      */
     public String getContact() {
         return contact;
     }
 
      /**
-     * This method 
-     * @return 
+     * This method sets the witness's description
+     * @param description
      */
     public void setDescription(String description) {
         this.description = description;
     }
 
-     /**
-     * This method setContact updates the value of the variable Contact
-     * @return the unique attribute value Contact
+    /**
+     * This method sets the witness's contact
+     * @param contact
      */
     public void setContact(String contact) {
         this.contact = contact;
     }
 
-     /**
-     * This method toString contains the listed objects 
-     * @return the unique conditions values.
+    /**
+     * This method turns the witness' information in a string
+     * @return witness's information
      */
     public String toString() {
         return super.toString()

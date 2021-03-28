@@ -11,6 +11,10 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 public class DataLoader extends DataConstants {
 
+    /**
+     * This method reads and parses Criminal.json
+     * @return ArrayList of Criminals from JSON
+     */
     public static ArrayList<Criminal> getCriminals() {
         ArrayList<Criminal> criminals = new ArrayList<Criminal>();
 
@@ -62,6 +66,10 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    /**
+     * This method reads and parses PersonOfInterest.json
+     * @return ArrayList of PeopleOfInterest from JSON
+     */
     public static ArrayList<PersonOfInterest> getPeopleOfInterest() {
         ArrayList<PersonOfInterest> peopleOfInterest = new ArrayList<PersonOfInterest>();
 
@@ -93,6 +101,10 @@ public class DataLoader extends DataConstants {
         return null;
     }
     
+    /**
+     * This method reads and parses Suspect.json
+     * @return ArrayList of Suspects from JSON
+     */
     public static ArrayList<Suspect> getSuspects() {
         ArrayList<Suspect> suspects = new ArrayList<Suspect>();
 
@@ -145,6 +157,10 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    /**
+     * This method reads and parses Victim.json
+     * @return ArrayList of Victims from JSON
+     */
     public static ArrayList<Victim> getVictims() {
         ArrayList<Victim> victims = new ArrayList<Victim>();
 
@@ -176,6 +192,10 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    /**
+     * This method reads and parses Witness.json
+     * @return ArrayList of Witnesses from JSON
+     */
     public static ArrayList<Witness> getWitnesses() {
         ArrayList<Witness> witnesses = new ArrayList<Witness>();
 
@@ -207,6 +227,10 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    /**
+     * This method reads and parses Admin.json
+     * @return ArrayList of Admins from JSON
+     */
     public static ArrayList<Admin> getAdmins() {
         ArrayList<Admin> admins = new ArrayList<Admin>();
 
@@ -237,6 +261,10 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    /**
+     * This method reads and parses PoliceOfficer.json
+     * @return ArrayList of PoliceOfficers from JSON
+     */
     public static ArrayList<PoliceOfficer> getPoliceOfficers() {
         ArrayList<PoliceOfficer> policeOfficers = new ArrayList<PoliceOfficer>();
 
@@ -281,6 +309,10 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    /**
+     * This method reads and parses Case.json
+     * @return ArrayList of Cases from JSON
+     */
     public static ArrayList<Case> getCases() {
         ArrayList<Case> cases = new ArrayList<Case>();
 		
@@ -356,11 +388,4 @@ public class DataLoader extends DataConstants {
 		
 		return null;
     }
-    /*public static void main(String[] args){
-        ArrayList<Case> x = DataLoader.getCases();
-
-        for (int i=0; i < x.size(); i++){
-            System.out.println(x.get(i).toString());
-        }
-    }*/
 }

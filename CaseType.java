@@ -1,3 +1,6 @@
+/**
+ * @author Chris Nelson
+ */
 package LawEnforcementDatabase;
 
 public enum CaseType {

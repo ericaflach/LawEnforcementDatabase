@@ -1,3 +1,6 @@
+/**
+ * @author Caleb Howard
+ */
 package LawEnforcementDatabase;
 
 public enum CriminalOffense {
