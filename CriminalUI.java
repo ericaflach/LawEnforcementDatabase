@@ -171,6 +171,7 @@ public class CriminalUI {
             System.out.println("First enter the criminal ID");
             int criminalID = scanner.nextInt();
             System.out.println("What would you like to edit on the criminal?" + "\n(1) Name" + "\n(2) Age" + "\n(3) Past Crimes" + "\n(4) Address" + "\n(5) Physical Attributes" + "\n(6) Tattoos" + "\n(7) In Jail");
+            scanner.next();
             choice = scanner.nextInt();
             if(choice == 1) {
                 String firstName = scanner.nextLine();
@@ -406,7 +407,7 @@ public class CriminalUI {
             System.out.println("Here are your results: ");
             System.out.println(application.refinedListToString());
             System.out.println("Enter \"refine\" to add another search parameter, enter \"reset\" to start a new search, or enter \"exit\" to go back to the main menu");
-            scanner.next();
+            scanner.nextLine();
             String entry = scanner.nextLine();
             if (entry.equalsIgnoreCase("reset")) {
             refine = true;
