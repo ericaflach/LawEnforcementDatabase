@@ -88,6 +88,21 @@ public class CriminalApplication {
         refinedList = ret;
         return ret;
     }
+
+    public ArrayList<Criminal> searchByAttributes(ArrayList<String> physicalAttributes) {
+        ArrayList<Criminal> ret = new ArrayList<Criminal>();
+        for (int i = 0; i < refinedList.size(); i++) {
+            for (int j = 0; j < physicalAttributes.size(); j++) {
+                for (int k = 0; k < refinedList.get(i).getPhysicalAttributes().size(); k++) {
+                    if (refinedList.get(i).getPhysicalAttributes().get(k).contains(physicalAttributes.get(j))) {
+                        ret.add(refinedList.get(i));
+                    }
+                }
+            }
+        }
+        refinedList = ret;
+        return ret;
+    }
     
     /**
      * This method searches criminals by location
