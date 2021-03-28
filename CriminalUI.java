@@ -358,6 +358,7 @@ public class CriminalUI {
                 System.out.println("Search by crimes committed");
                 System.out.println("You may enter up to three crimes, type \"exit\" to stop");
                 ArrayList<String> searchedCrimes=new ArrayList<String>();
+                scanner.nextLine();
                 for (int i=0; i<4; i++) {
                     System.out.println("Enter crime "+(i + 1)+": ");
                     String crime = scanner.nextLine();
