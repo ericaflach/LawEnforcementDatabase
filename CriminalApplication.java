@@ -188,7 +188,7 @@ public class CriminalApplication {
      * @param officerID
      */
     public void createPoliceOfficer(String firstName, String lastName, String username, String email,
-     int phoneNumber, String password, int clearanceLevel, String department, int officerID) {
+     Long phoneNumber, String password, int clearanceLevel, String department, int officerID) {
          ArrayList<Integer> myCriminals = null; 
          ArrayList<Integer> myCases = null;
         officerList.addUser(firstName, lastName, username, password, email, phoneNumber, clearanceLevel, officerID, department, myCriminals, myCases);
@@ -206,7 +206,7 @@ public class CriminalApplication {
      * @param adminID
      */
     public void createAdmin(String firstName, String lastName, String username, String email,
-     int phoneNumber, String password, int clearanceLevel, int adminID) {
+     Long phoneNumber, String password, int clearanceLevel, int adminID) {
         adminList.addAdmin(firstName, lastName, username, password, email, phoneNumber, clearanceLevel, adminID);
     }
 
@@ -374,7 +374,7 @@ public class CriminalApplication {
      * @param phoneNumber
      * @param officerID
      */
-    public void editUserPhoneNumber(int phoneNumber, int officerID) {
+    public void editUserPhoneNumber(Long phoneNumber, int officerID) {
         officerList.getPoliceOfficer(officerID).setPhoneNumber(phoneNumber);
     }
     
