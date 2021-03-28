@@ -403,4 +403,14 @@ public class CriminalApplication {
         }
         return admin; 
     }
+
+    public boolean logout() {
+        criminalList.saveCriminals();
+        adminList.saveAdmins();
+        officerList.saveUsers();
+        victimList.saveVictims();
+        witnessList.saveWitnesses();
+        suspectList.saveSuspects();
+        return true;
+    }
 }

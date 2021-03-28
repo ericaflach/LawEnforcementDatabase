@@ -87,7 +87,7 @@ public class CriminalUI {
 
             witnessID = 0; 
         }
-        ArrayList<Integer> poiIDs = new ArrayList<Integer>;
+        ArrayList<Integer> poiIDs = new ArrayList<Integer>();
         System.out.println("Enter the people of interest");
         for (int i = 0; i < 10; i++) {
             System.out.println("Person of interest ID " + (i+1) + ": ");
