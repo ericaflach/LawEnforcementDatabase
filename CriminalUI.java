@@ -60,6 +60,7 @@ public class CriminalUI {
             } else if (option == 4) {
                 editMenu();
             } else if (option == 9){
+                application.logout();
                 System.out.println("Goodbye!");
                 System.exit(0);
             } else {
