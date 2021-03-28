@@ -75,84 +75,112 @@ public class CriminalUI {
      * Adds a new crime to the database
      */
     public void addCrime(){
+        scanner.nextLine();
         System.out.println("\n-----Add a crime-----");
         System.out.println("Please enter as much of the following as possible, if you do not know, press enter to leave that field blank.");
         System.out.println("Crime: ");
         String caseType = scanner.nextLine();
-        System.out.println("Enter the witnesses IDs");
+        System.out.println("How many witnesses are there?");
+        int numOfWitnesses = scanner.nextInt();
+        scanner.nextLine();
         ArrayList<Integer> witnesses = new ArrayList<Integer>();
-        int witnessID = 0;
-        for (int i = 0; i < 3; i++) {
-            System.out.println("Witness ID " + (i+1) + ": ");
-            witnessID = scanner.nextInt();
-            witnesses.add(witnessID);
-
-            witnessID = 0; 
+        while (numOfWitnesses != 0) {
+            System.out.println("First Name: ");
+            String firstName = scanner.nextLine();
+            System.out.println("Last Name: ");
+            String lastName = scanner.nextLine();
+            System.out.println("Age: ");
+            int age = scanner.nextInt();
+            scanner.nextLine();
+            System.out.println("DOB: ");
+            String DOB = scanner.nextLine();
+            System.out.println("Sex: ");
+            String entry = scanner.nextLine();
+            char sex = entry.charAt(0);
+            System.out.println("Witness statement: ");
+            String description = scanner.nextLine();
+            System.out.println("Contact: ");
+            String contact = scanner.nextLine();
+            witnesses.add(application.addWitness(firstName, lastName, age, DOB, sex, description, contact));
+            numOfWitnesses--;
         }
         ArrayList<Integer> peopleOfInterest = new ArrayList<Integer>();
-        System.out.println("Enter the people of interest IDs");
-        for (int i = 0; i < 3; i++) {
-            System.out.println("Person of interest ID " + (i+1) + ": ");
-            int poiID = scanner.nextInt();
-            peopleOfInterest.add(poiID);
-            
-            poiID = 0; 
+        System.out.println("How many People of Interest are there?");
+        int numOfPOI = scanner.nextInt();
+        scanner.nextLine();
+       while(numOfPOI != 0) {
+            System.out.println("First Name: ");
+            String firstName = scanner.nextLine();
+            System.out.println("Last Name: ");
+            String lastName = scanner.nextLine();
+            System.out.println("Age: ");
+            int age = scanner.nextInt();
+            scanner.nextLine();
+            System.out.println("DOB: ");
+            String DOB = scanner.nextLine();
+            System.out.println("Sex: ");
+            String entry = scanner.nextLine();
+            char sex = entry.charAt(0);
+            System.out.println("Person of Interest statement: ");
+            String description = scanner.nextLine();
+            System.out.println("Contact: ");
+            String contact = scanner.nextLine();
+            peopleOfInterest.add(application.addPOI(firstName, lastName, age, DOB, sex, description, contact));
+            numOfPOI--;
         }
         ArrayList<Integer> suspects = new ArrayList<Integer>();
-        System.out.println("Enter the suspects IDs");
-        int suspectID = 0;
-        for (int i = 0; i < 3; i++) {
-            System.out.println("Suspect ID " + (i+1) + ": ");
-            suspectID = scanner.nextInt();
-            suspects.add(suspectID);
-
-            suspectID = 0; 
+        System.out.println("Enter the number of suspects");
+        int numOfSuspects = scanner.nextInt();
+        scanner.nextLine();
+        while (numOfSuspects != 0){
+            System.out.println("Possible Age: ");
+            int age = scanner.nextInt();
+            scanner.nextLine();
+            System.out.println("Sex: ");
+            char sex = scanner.nextLine().charAt(0);
+            System.out.println("Attributes: (Enter attribute and press enter. Type \"exit\" when finished)");
+            String attribute = scanner.nextLine();
+            ArrayList<String> attributes = new ArrayList<String>();
+            while(!attribute.equals("exit")) {
+                attributes.add(attribute);
+                attribute = scanner.nextLine();
+            }
+            System.out.println("Priority: ");
+            int priority = scanner.nextInt();
+            scanner.nextLine();
+            ArrayList<String> tattoos = new ArrayList<String>();
+            System.out.println("Tattoos: (Enter attribute and press enter. Type \"exit\" when finished)");
+            String tattoo = scanner.nextLine();
+            while(!tattoo.equals("exit")) {
+                tattoos.add(tattoo);
+                tattoo = scanner.nextLine();
+            }
+            suspects.add(application.addSuspect(age, sex, attributes, priority, tattoos, user.getID()));
+            numOfSuspects--;
         }
         ArrayList<Integer> victims = new ArrayList<Integer>();
-        System.out.println("Enter the victims IDs");
-        int victimID = 0;
-        for (int i = 0; i < 3; i++) {
-            System.out.println("Victim ID " + (i+1) + ": ");
-            victimID = scanner.nextInt();
-            victims.add(victimID);
-            
-            victimID = 0; 
+        System.out.println("How many victims? (Enter victim information and press enter. Type \"exit\" when finished)");
+        int numOfVictims = scanner.nextInt();
+        while (numOfVictims!=0) {
+            numOfVictims--;
         }
         ArrayList<Integer> criminals = new ArrayList<Integer>();
-        int criminalID = 0;
-        for (int i = 0; i < 3; i++) {
-            System.out.println("Witness ID " + (i+1) + ": ");
-            criminalID = scanner.nextInt();
-            criminals.add(criminalID);
-
-            criminalID = 0; 
-        }
         ArrayList<Integer> officers = new ArrayList<Integer>();
-        System.out.println("Enter officers IDs");
-        for (int i = 0; i < 3; i++) {
-            System.out.println("Officer ID " + (i+1) + ": ");
-            int offID = scanner.nextInt();
-            officers.add(offID);
-            
-            offID = 0; 
-        }
-        System.out.println("Case Open: (true/false");
-        boolean caseOpen = scanner.nextBoolean();
-        System.out.println("Case ID: ");
-        int ID = scanner.nextInt();
+        officers.add(user.getID());
+        boolean caseOpen = true;
         System.out.println("Crime level: (1-3, 1 being the worst i.e. murder)");
         int crimeLevel = scanner.nextInt();
         System.out.println("Legal clearance: (1-3)");
         int legalClearance = scanner.nextInt();
         ArrayList<String> evidence = new ArrayList<String>();
-        System.out.println("Enter the evidence");
-        for (int i = 0; i < 3; i++) {
-            System.out.println("Evidence " + (i+1) + ": ");
-            String exhibit = scanner.nextLine();
-            evidence.add(exhibit);
+        System.out.println("Evidence? (Enter the evidence and press enter. Type \"exit\" when finished");
+        String evidenceString = scanner.nextLine();
+        while (!evidenceString.equals("exit")) {
+            evidence.add(evidenceString);
+            evidenceString = scanner.nextLine();
         }
         int creatorID = user.getID();
-        application.createCase(creatorID, witnesses, peopleOfInterest, suspects, criminals, victims, caseOpen, ID, evidence, crimeLevel, officers, legalClearance, caseType);
+        application.createCase(creatorID, witnesses, peopleOfInterest, suspects, criminals, victims, caseOpen, evidence, crimeLevel, officers, legalClearance, caseType);
         System.out.println("New crime successfully added.");
         reset = true;
     }
