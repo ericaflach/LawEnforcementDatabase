@@ -60,13 +60,70 @@ public class Case {
         return victims;
     }
 
+    public boolean getCaseOpen() {
+        return caseOpen;
+    }
+
+    public int getID() {
+        return ID;
+    }
+
     public ArrayList<String> getEvidence() {
         return evidence;
+    }
+
+    public int getCrimeLevel() {
+        return crimeLevel;
     }
 
     public ArrayList<Integer> getOfficers() {
         return officers;
     }
+
+    public int getLegalClearance() {
+        return legalClearance;
+    }
+
+    public String getCaseType() {
+        return caseType;
+    }
+
+    public void setCreatorID(int creatorID) {
+        this.creatorID = creatorID;
+    }
+
+    public void setWitnesses(ArrayList<Integer> witnesses) {
+        this.witnesses = witnesses;
+    }
+
+    public void setPeopleOfInterest(ArrayList<Integer> peopleOfInterest) {
+        this.peopleOfInterest = peopleOfInterest;
+    }
+
+    public void setSuspects(ArrayList<Integer> suspects) {
+        this.suspects = suspects;
+    }
+
+    public void setCriminals(ArrayList<Integer> criminals) {
+        
+    }
+
+    public void setCaseOpen(boolean caseOpen) {
+        this.caseOpen = caseOpen;
+    }
+
+    public void setCaseNum(int ID) {
+        this.ID = ID;
+    }
+
+    public void setCrimeLevel(int crimeLevel) {
+        this.crimeLevel = crimeLevel;
+    }
+
+    public void setLegalClearance(int legalClearance) {
+        this.legalClearance = legalClearance;
+    }
+
 
     public String witnessesToString() {  
         String ret = "";
@@ -113,14 +170,6 @@ public class Case {
         return ret;
     }
 
-    public boolean getCaseOpen() {
-        return caseOpen;
-    }
-
-    public int getID() {
-        return ID;
-    }
-
     public String evidenceToString() {
         String ret = "";
         for(int i = 0; i < evidence.size(); i++)
@@ -130,10 +179,6 @@ public class Case {
         return ret;
     }
 
-    public int getCrimeLevel() {
-        return crimeLevel;
-    }
-
     public String officersToString() {
         String ret = "";
         for(int i = 0; i < officers.size(); i++)
@@ -141,26 +186,6 @@ public class Case {
             ret += officers.get(i) + ", "; 
         }
         return ret;
-    }
-
-    public int getLegalClearance() {
-        return legalClearance;
-    }
-
-    public void setCaseOpen(boolean caseOpen) {
-        this.caseOpen = caseOpen;
-    }
-
-    public void setCaseNum(int ID) {
-        this.ID = ID;
-    }
-
-    public void setCrimeLevel(int crimeLevel) {
-        this.crimeLevel = crimeLevel;
-    }
-
-    public void setLegalClearance(int legalClearance) {
-        this.legalClearance = legalClearance;
     }
 
     public void addWitnesses(Integer witnessID) {
@@ -224,10 +249,6 @@ public class Case {
     public void removeOfficers(Integer officerID) {
         if(officers.contains(officerID))
             officers.remove(officerID);
-    }
-
-    public String getCaseType() {
-        return caseType.toString();
     }
 
     public String toString() {
