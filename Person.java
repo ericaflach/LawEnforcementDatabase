@@ -134,6 +134,10 @@ public class Person {
         this.sex = sex;
     }
 
+    public String sexToString() {
+        return String.valueOf(sex);
+    }
+
      /**
      * This method turns the person's information to a string
      * @return person's information
