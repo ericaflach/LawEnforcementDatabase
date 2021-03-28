@@ -12,7 +12,6 @@ public class CriminalUI {
     private boolean reset=true;
     private CriminalApplication application;
     private User user;
-    private Criminal criminal;
     private Case crime;
 
     /**
@@ -276,8 +275,6 @@ public class CriminalUI {
         System.out.println("Address: ");
         String address = scanner.nextLine();
         ArrayList<Integer> pastCrimes=new ArrayList<Integer>();
-        System.out.println("Creator (your name): ");
-        String creator = scanner.nextLine();
         System.out.println("Shoe size: ");
         double shoeSize = scanner.nextDouble();
         System.out.println("Priority: ");
