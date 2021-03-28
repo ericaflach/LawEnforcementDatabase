@@ -243,7 +243,7 @@ public class CriminalUI {
                 String email = scanner.nextLine();
                 application.editUserEmail(email, officerID);
             } else if (choice == 3) {
-                int number = scanner.nextInt();
+                long number = scanner.nextInt();
                 application.editUserPhoneNumber(number, officerID);
             } else if (choice == 4) {
                 int level = scanner.nextInt();
