@@ -86,22 +86,6 @@ public class Person {
      * This method 
      * @return 
      */
-    public void setSex(char sex){
-        this.sex = sex;
-    }
-
-     /**
-     * This method 
-     * @return 
-     */
-    public void setID(int ID){
-        this.ID = ID;
-    }
-
-     /**
-     * This method 
-     * @return 
-     */
     public void setFirstName(String name) {
         this.firstName = name;
     }
@@ -128,6 +112,14 @@ public class Person {
      */
     public void setDOB(String DOB) {
         this.dateOfBirth = DOB;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+    public void setSex(char sex) {
+        this.sex = sex;
     }
 
      /**

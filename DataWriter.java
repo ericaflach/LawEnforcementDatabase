@@ -1,5 +1,6 @@
 /**
- * Written by Erica Flach
+ * @author Erica Flach
+ * Writes data to json files
  */
 package LawEnforcementDatabase;
 

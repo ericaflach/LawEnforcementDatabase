@@ -4,15 +4,15 @@ import java.util.ArrayList;
 
 public class Criminal extends Person {
 
-    private int creatorID;
-    private ArrayList<Integer> pastCrimes;
-    private String address;
-    private double shoeSize;
-    private int priority;
-    private boolean alive;
-    private ArrayList<String> physicalAttributes;
-    private boolean inJail;
-    private ArrayList<String> tattoos;
+    protected int creatorID;
+    protected ArrayList<Integer> pastCrimes;
+    protected String address;
+    protected double shoeSize;
+    protected int priority;
+    protected boolean alive;
+    protected ArrayList<String> physicalAttributes;
+    protected boolean inJail;
+    protected ArrayList<String> tattoos;
 
     public Criminal(String firstName, String lastName, int age, String DOB, int ID, char sex, int creatorID,
      ArrayList<Integer> pastCrimes, String address, double shoeSize, int priority, boolean alive,
@@ -70,6 +70,14 @@ public class Criminal extends Person {
         return tattoos;
     }
 
+    public void setCreatorID(int creatorID) {
+        this.creatorID = creatorID;
+    }
+
+    public void setPastCrimes(ArrayList<Integer> pastCrimes) {
+        this.pastCrimes = pastCrimes;
+    }
+
     public void setAddress(String address) {
         this.address = address;
     }
@@ -84,6 +92,18 @@ public class Criminal extends Person {
 
     public void setAlive(boolean alive) {
         this.alive = alive;
+    }
+
+    public void setPhysicalAttributes(ArrayList<String> physicalAttributes) {
+        this.physicalAttributes = physicalAttributes;
+    }
+
+    public void setInJail(boolean inJail) {
+        this.inJail = inJail;
+    }
+
+    public void setTattoos(ArrayList<String> tattoos) {
+        this.tattoos = tattoos;
     }
 
     public void addPhysicalAttributes(String attribute) {
@@ -102,13 +122,14 @@ public class Criminal extends Person {
         tattoos.remove(tattoo);
     }
 
-    public void addPastCrime(int caseNumber) {
-        pastCrimes.add(caseNumber);
+    public void addPastCrime(int caseID) {
+        pastCrimes.add(caseID);
     }
 
-    public void removePastCrime(int caseNumber) {
-        pastCrimes.remove(caseNumber);
+    public void removePastCrime(int caseID) {
+        pastCrimes.remove(caseID);
     }
+    
     public String physicalAttributesToString() {
         String attributes = "";
         if (physicalAttributes == null) {

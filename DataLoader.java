@@ -1,5 +1,6 @@
 /**
- * Written by Erica Flach and Chris Nelson
+ * @author Erica Flach and Chris Nelson
+ * Loads data from json files
  */
 package LawEnforcementDatabase;
 
@@ -340,7 +341,7 @@ public class DataLoader extends DataConstants {
                     }
 
                 int legalClearance = ((Long)caseJSON.get(CASE_LEGAL_CLEARANCE)).intValue();
-                String caseType = "";
+                String caseType = (String)caseJSON.get(CASE_TYPE);
 
                 cases.add(new Case(creatorID, witnesses, peopleOfInterest, suspects, criminals, victims,
                 caseOpen, ID, evidence, crimeLevel, officers, legalClearance, caseType));
