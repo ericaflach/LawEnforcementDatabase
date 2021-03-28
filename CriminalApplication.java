@@ -400,11 +400,12 @@ public class CriminalApplication {
      * This method converts refined list to string
      * @return refined list
      */
-    public String toString() {
-        String ret = "";
-        for (int i = 0; i < refinedList.size(); i++) {
-            
+    public String refinedListToString() {
+        String ret = "[";
+        for(Criminal criminal : refinedList) {
+            ret = ret + criminal.getName() + ", ";
         }
+        ret += "]";
         return ret;
     }
 

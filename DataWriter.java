@@ -185,7 +185,7 @@ public class DataWriter extends DataConstants {
         criminalDetails.put(PERSON_AGE, criminal.getAge());
         criminalDetails.put(PERSON_DATEOFBIRTH, criminal.getDateOfBirth());
         criminalDetails.put(PERSON_ID, criminal.getID());
-        criminalDetails.put(PERSON_SEX, criminal.getSex());
+        criminalDetails.put(PERSON_SEX, criminal.sexToString());
         criminalDetails.put(CRIMINAL_CREATORID, criminal.getCreatorID());
         criminalDetails.put(CRIMINAL_PAST_CRIMES, criminal.getPastCrimes());
         criminalDetails.put(CRIMINAL_ADDRESS, criminal.getAddress());
@@ -212,7 +212,7 @@ public class DataWriter extends DataConstants {
         suspectDetails.put(PERSON_AGE, suspect.getAge());
         suspectDetails.put(PERSON_DATEOFBIRTH, suspect.getDateOfBirth());
         suspectDetails.put(PERSON_ID, suspect.getID());
-        suspectDetails.put(PERSON_SEX, suspect.getSex());
+        suspectDetails.put(PERSON_SEX, suspect.sexToString());
         suspectDetails.put(CRIMINAL_CREATOR_ID, suspect.getCreatorID());
         suspectDetails.put(CRIMINAL_PAST_CRIMES, suspect.getPastCrimes());
         suspectDetails.put(CRIMINAL_ADDRESS, suspect.getAddress());
@@ -240,7 +240,7 @@ public class DataWriter extends DataConstants {
         victimDetails.put(PERSON_AGE, victim.getAge());
         victimDetails.put(PERSON_DATEOFBIRTH, victim.getDateOfBirth());
         victimDetails.put(PERSON_ID, victim.getID());
-        victimDetails.put(PERSON_SEX, victim.getSex());
+        victimDetails.put(PERSON_SEX, victim.sexToString());
         victimDetails.put(VICTIM_DESCRIPTION, victim.getDescription());
         victimDetails.put(VICTIM_CONTACT, victim.getContact());
 
@@ -260,7 +260,7 @@ public class DataWriter extends DataConstants {
         personOfInterestDetails.put(PERSON_AGE, personOfInterest.getAge());
         personOfInterestDetails.put(PERSON_DATEOFBIRTH, personOfInterest.getDateOfBirth());
         personOfInterestDetails.put(PERSON_ID, personOfInterest.getID());
-        personOfInterestDetails.put(PERSON_SEX, personOfInterest.getSex());
+        personOfInterestDetails.put(PERSON_SEX, personOfInterest.sexToString());
         personOfInterestDetails.put(PERSON_OF_INTEREST_DESCRIPTION, personOfInterest.getDescription());
         personOfInterestDetails.put(PERSON_OF_INTEREST_CONTACT, personOfInterest.getContact());
 
@@ -280,7 +280,7 @@ public class DataWriter extends DataConstants {
         witnessDetails.put(PERSON_AGE, witness.getAge());
         witnessDetails.put(PERSON_DATEOFBIRTH, witness.getDateOfBirth());
         witnessDetails.put(PERSON_ID, witness.getID());
-        witnessDetails.put(PERSON_SEX, witness.getSex());
+        witnessDetails.put(PERSON_SEX, witness.sexToString());
         witnessDetails.put(WITNESS_DESCRIPTION, witness.getDescription());
         witnessDetails.put(WITNESS_CONTACT, witness.getContact());
 

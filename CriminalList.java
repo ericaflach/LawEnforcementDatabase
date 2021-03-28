@@ -9,14 +9,13 @@ public class CriminalList {
 
     private static CriminalList criminalList; 
     private static ArrayList<Criminal> criminals;
-    private static ArrayList<Criminal> refinedList;
+
 
     /**
      * This method sets the criminals
      */
     private CriminalList() {
         criminals = DataLoader.getCriminals();
-        refinedList = criminals;
     }
 
     /**
