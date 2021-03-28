@@ -246,7 +246,7 @@ public class DataLoader extends DataConstants {
                   String userName = (String)adminJSON.get(USER_USERNAME);
                   String password = (String)adminJSON.get(USER_PASSWORD);
                   String email = (String)adminJSON.get(USER_EMAIL);
-                  int phoneNumber = ((Long)adminJSON.get(USER_PHONE_NUMBER)).intValue();
+                  Long phoneNumber = (Long)adminJSON.get(USER_PHONE_NUMBER);
                   int clearanceLevel = ((Long)adminJSON.get(USER_CLEARANCE_LEVEL)).intValue();
                   int ID = ((Long)adminJSON.get(USER_ID)).intValue();
 
@@ -280,7 +280,7 @@ public class DataLoader extends DataConstants {
                   String userName = (String)policeOfficerJSON.get(USER_USERNAME);
                   String password = (String)policeOfficerJSON.get(USER_PASSWORD);
                   String email = (String)policeOfficerJSON.get(USER_EMAIL);
-                  int phoneNumber = ((Long)policeOfficerJSON.get(USER_PHONE_NUMBER)).intValue();
+                  Long phoneNumber = (Long)policeOfficerJSON.get(USER_PHONE_NUMBER);
                   int clearanceLevel = ((Long)policeOfficerJSON.get(USER_CLEARANCE_LEVEL)).intValue();
                   int ID = ((Long)policeOfficerJSON.get(USER_ID)).intValue();
                   String policeDepartment = (String)policeOfficerJSON.get(POLICE_DEPARTMENT);

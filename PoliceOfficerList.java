@@ -85,7 +85,7 @@ public class PoliceOfficerList {
      * @return true or false
      */
     public boolean addUser(String firstName, String lastName, String userName, String password, String email,
-    int phoneNumber, int clearanceLevel, int ID, String policeDepartment, ArrayList<Integer> myCriminals,
+    Long phoneNumber, int clearanceLevel, int ID, String policeDepartment, ArrayList<Integer> myCriminals,
     ArrayList<Integer> myCases) {
         if(havePoliceOfficer(userName)) {
             return false;
