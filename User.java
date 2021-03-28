@@ -18,7 +18,8 @@ public class User{
      * This method 
      * @return 
      */
-    public User(String firstName, String lastName, String userName, String password, String email, int phoneNumber, int clearanceLevel, int ID) {
+    public User(String firstName, String lastName, String userName, String password,
+     String email, int phoneNumber, int clearanceLevel, int ID) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;

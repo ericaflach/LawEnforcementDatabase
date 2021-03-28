@@ -87,7 +87,7 @@ public class AdminList {
      * This method 
      * @return 
      */
-    public void saveAdminss() {
+    public void saveAdmins() {
         DataWriter.saveAdmins();
     }
 }

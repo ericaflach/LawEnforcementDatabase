@@ -105,8 +105,8 @@ public class CriminalApplication {
 
     public boolean login(String username, String password) {
         if(officerList.havePoliceOfficer(username)) {
-            if(officerList.getPoliceOfficer(username).checkPassword(password)) {
-                officer = officerList.getPoliceOfficer(username);
+            if(officerList.getPoliceOfficerUsername(username).checkPassword(password)) {
+                officer = officerList.getPoliceOfficerUsername(username);
                 return true;
             }
         }
@@ -147,6 +147,55 @@ public class CriminalApplication {
         return larger.toLowerCase().contains(shorter.toLowerCase());
     }
 
+    public void editCriminalName(String firstName, String lastName, int criminalID) {
+        criminalList.getCriminal(criminalID).setFirstName(firstName);
+        criminalList.getCriminal(criminalID).setLastName(lastName);
+    }
+
+    public void editCriminalAge(int age, int criminalID) {
+        criminalList.getCriminal(criminalID).setAge(age);
+    }
+    public void editCriminalPastCrimes(int caseID, int criminalID) {
+        criminalList.getCriminal(criminalID).addPastCrime(caseID);
+    }
+
+    public void editCriminalAddress(String address, int criminalID) {
+        criminalList.getCriminal(criminalID).setAddress(address);
+    }
+
+    public void editCriminalPhysicalAttributes(String attribute, int criminalID) {
+        criminalList.getCriminal(criminalID).addPhysicalAttributes(attribute);
+    }
+
+    public void editCriminalTattoos(String tattoo, int criminalID) {
+        criminalList.getCriminal(criminalID).addTattoos(tattoo);
+    }
+    
+    public void editCriminalInJail(boolean inJail, int criminalID) {
+        criminalList.getCriminal(criminalID).setInJail(inJail);
+    }
+    
+    public void editUserName(String firstName, String lastName, int officerID) {
+        officerList.getPoliceOfficer(officerID).setFirstName(firstName);
+        officerList.getPoliceOfficer(officerID).setLastName(lastName);
+    }
+
+    public void editUserEmail(String email, int officerID) {
+        officerList.getPoliceOfficer(officerID).setEmail(email);
+    }
+    
+    public void editUserPhoneNumber(int phoneNumber, int officerID) {
+        officerList.getPoliceOfficer(officerID).setPhoneNumber(phoneNumber);
+    }
+    
+    public void editUserClearanceLevel(int clearanceLevel, int officerID) {
+        officerList.getPoliceOfficer(officerID).setClearanceLevel(clearanceLevel);
+    }
+    
+    public void editUserDepartment(String department, int officerID) {
+        officerList.getPoliceOfficer(officerID).setPoliceDepartment(department);
+    }
+    
     public String toString() {
         String ret = "";
         for (int i = 0; i < refinedList.size(); i++) {

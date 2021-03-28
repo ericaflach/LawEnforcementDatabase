@@ -57,6 +57,9 @@ public class CriminalUI {
                 }
             } else if (option == 3) {
                 accountMenu();
+            } else if (option == 4) {
+                editMenu();
+                    
             } else {
                 System.out.println("Incorrect Option");
                 reset=true;
@@ -122,18 +125,73 @@ public class CriminalUI {
     public void editMenu(){
         System.out.println("-----Edit-----");
         System.out.println("Only an admin. can edit a user, anyone can edit a criminal.");
-        if (user.getClearanceLevel()>=2){
-            System.out.println("(1) Edit criminal");
-        } else if (user.getClearanceLevel() == 3) {
-            System.out.println("(2) Edit user");
+        System.out.println("Would you like to edit a criminal or crime?");
+        System.out.println("(1) Criminal" + "\n(2) Crime");
+        int choice = scanner.nextInt();
+        if(choice == 1 && user.getClearanceLevel() >=2) {
+            System.out.println("First enter the criminal ID");
+            int criminalID = scanner.nextInt();
+            System.out.println("What would you like to edit on the criminal?" + "\n(1) Name" + "\n(2) Age" + "\n(3) Past Crimes" + "\n(4) Address" + "\n(5) Physical Attributes" + "\n(6) Tattoos" + "\n(7) In Jail");
+            choice = scanner.nextInt();
+            if(choice == 1) {
+                String firstName = scanner.nextLine();
+                String lastName = scanner.nextLine();
+                application.editCriminalName(firstName, lastName, criminalID);
+            } else if (choice == 2) {
+                int age = scanner.nextInt();
+                application.editCriminalAge(age, criminalID);
+            } else if (choice == 3) {
+                int caseID = scanner.nextInt();
+                application.editCriminalPastCrimes(caseID, criminalID);
+            } else if (choice == 4) {
+                String address = scanner.nextLine();
+                application.editCriminalAddress(address, criminalID);
+            } else if (choice == 5) {
+                String attribute = scanner.nextLine();
+                application.editCriminalPhysicalAttributes(attribute, criminalID);
+            } else if (choice == 6) {
+                String tattoo = scanner.nextLine();
+                application.editCriminalTattoos(tattoo, criminalID);
+            } else if (choice == 7) {
+                int entry = scanner.nextInt();
+                boolean inJail = false;
+                if (entry == 1) {
+                    inJail = true;
+                }
+                application.editCriminalInJail(inJail, criminalID);
+            } else {
+                System.out.println("Invalid choice.");
+            }
+        
+        } else if (choice == 2) {
+            System.out.println("First enter the officerID");
+            int officerID = scanner.nextInt();
+            System.out.println("What would you like to edit on the user?");
+            System.out.println("\n(1) Name" + "\n(2) E-mail" + "(3) Phone number" + "(4) Clearance Level" + "(5) Police Department");
+            choice = scanner.nextInt();
+            if (choice == 1) {
+                String firstName = scanner.nextLine();
+                String lastName = scanner.nextLine();
+                application.editUserName(firstName, lastName, officerID);
+            } else if (choice == 2) {
+                String email = scanner.nextLine();
+                application.editUserEmail(email, officerID);
+            } else if (choice == 3) {
+                int number = scanner.nextInt();
+                application.editUserPhoneNumber(number, officerID);
+            } else if (choice == 4) {
+                int level = scanner.nextInt();
+                application.editUserClearanceLevel(level, officerID);
+            } else if (choice == 5) {
+                String department = scanner.nextLine();
+                application.editUserDepartment(department, officerID);
+            } else {
+                System.out.println("Invalid option.");
+            }
+        } else {
+            System.out.println("Invalid choice");
         }
-        System.out.println("What would you like to do (1-2)?");
-        String entry = scanner.next();
-        if (entry == 1) {
-            application.editCriminal();
-        } else if (entry == 2) {
-            application.editUser();
-        }
+        
     }
 
     // Search for a specific crime
@@ -313,13 +371,14 @@ public class CriminalUI {
             {
                 System.out.println("Login successful.");
                 login = true;
+                user = application.getUser();
             }
             if (!login) {
                 System.out.println("Login unsuccessful. Please try again");
             }
             if (attempts == 2) {
                 System.out.println("Too many unsuccessful attempts. Goodbye!");
-                
+                System.exit(0);
             }
         }
     }
@@ -337,6 +396,7 @@ public class CriminalUI {
         System.out.println("(1) Add a criminal or crime");
         System.out.println("(2) Search a criminal or crime");
         System.out.println("(3) Account");
+        System.out.println("(4) Edit criminal or edit crime");
         System.out.println("What would you like to do? (1-3)");
     }
 

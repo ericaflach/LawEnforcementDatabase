@@ -11,7 +11,8 @@
     "evidence":["fingerprints found"],
     "crimeLevel":2,
     "officers":[1965],
-    "legalClearance":3
+    "legalClearance":3,
+    "caseType":"Murder"
     },{
     "creatorID":2965,
     "witnesses":[2282, 4198],
@@ -24,7 +25,8 @@
     "evidence":["black glove"],
     "crimeLevel":2,
     "officers":[2965],
-    "legalClearance":3
+    "legalClearance":3,
+    "caseType":"Robbery"
     },{
     "creatorID":2816,
     "witnesses":[7899],
@@ -37,7 +39,8 @@
     "evidence":["blood found on scene", "fingerprints"],
     "crimeLevel":2,
     "officers":[2816],
-    "legalClearance":3
+    "legalClearance":3,
+    "caseType":"Assault"
     },{
     "creatorID":9943,
     "witnesses":[],
@@ -50,7 +53,8 @@
     "evidence":["iphone found near crimescene", "blood"],
     "crimeLevel":2,
     "officers":[9943],
-    "legalClearance":3
+    "legalClearance":3,
+    "caseType":"Murder"
     },{
     "creatorID":1965,
     "witnesses":[7355],
@@ -63,7 +67,8 @@
     "evidence":["N/A"],
     "crimeLevel":2,
     "officers":[1965],
-    "legalClearance":3
+    "legalClearance":3,
+    "caseType":"Assault"
     },{
     "creatorID":2965,
     "witnesses":[5601],
@@ -76,6 +81,7 @@
     "evidence":["fingerprints", "white t-shirt"],
     "crimeLevel":2,
     "officers":[2965],
-    "legalClearance":3
+    "legalClearance":3,
+    "caseType":"Aggrivated Assault"
     }
 ]

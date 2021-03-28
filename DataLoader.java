@@ -112,9 +112,9 @@ public class DataLoader extends DataConstants {
                   int creatorID = ((Long)suspectJSON.get(CRIMINAL_CREATOR_ID)).intValue();
                   JSONArray pastCrimesJSON = (JSONArray)suspectJSON.get(CRIMINAL_PAST_CRIMES);
                   ArrayList<Integer> pastCrimes = new ArrayList<Integer>();
-                    for (int j = 0; j < pastCrimesJSON.size(); j++) {
-                        pastCrimes.add(((Long)pastCrimesJSON.get(j)).intValue());
-                    }
+                  for (int j = 0; j < pastCrimes.size(); j++) {
+                      pastCrimes.add(((Long)pastCrimesJSON.get(j)).intValue());
+                  }
                   String address = (String)suspectJSON.get(CRIMINAL_ADDRESS);
                   double shoeSize = Double.parseDouble((String)suspectJSON.get(CRIMINAL_SHOE_SIZE));
                   int priority = ((Long)suspectJSON.get(CRIMINAL_PRIORITY)).intValue();
@@ -295,6 +295,7 @@ public class DataLoader extends DataConstants {
 
                 JSONArray witnessesJSON = (JSONArray)caseJSON.get(CASE_WITNESSES);
                 ArrayList<Integer> witnesses = new ArrayList<Integer>();
+                
                     for (int j = 0; j < witnessesJSON.size(); j++) {
                         witnesses.add(((Long)witnessesJSON.get(j)).intValue());
                     }
@@ -336,10 +337,11 @@ public class DataLoader extends DataConstants {
 
                 JSONArray officersJSON = (JSONArray)caseJSON.get(CASE_OFFICERS);
                 ArrayList<Integer> officers = new ArrayList<Integer>();
+                
                     for (int j = 0; j < officersJSON.size(); j++) {
-                        officers.add(((Long)officersJSON.get(i)).intValue());
+                        officers.add(((Long)officersJSON.get(j)).intValue());
                     }
-
+                
                 int legalClearance = ((Long)caseJSON.get(CASE_LEGAL_CLEARANCE)).intValue();
                 String caseType = (String)caseJSON.get(CASE_TYPE);
 

@@ -105,7 +105,11 @@ public class Case {
     }
 
     public void setCriminals(ArrayList<Integer> criminals) {
-        
+        this.criminals = criminals;
+    }
+
+    public void setVictims(ArrayList<Integer> victims) {
+        this.victims = victims;
     }
 
     public void setCaseOpen(boolean caseOpen) {
@@ -116,14 +120,25 @@ public class Case {
         this.ID = ID;
     }
 
+    public void setEvidence(ArrayList<String> evidence) {
+        this.evidence = evidence;
+    }
+
     public void setCrimeLevel(int crimeLevel) {
         this.crimeLevel = crimeLevel;
+    }
+
+    public void setOfficers(ArrayList<Integer> officers) {
+        this.officers = officers;
     }
 
     public void setLegalClearance(int legalClearance) {
         this.legalClearance = legalClearance;
     }
 
+    public void setCaseType(String caseType) {
+        this.caseType = caseType;
+    }
 
     public String witnessesToString() {  
         String ret = "";
@@ -187,7 +202,6 @@ public class Case {
         }
         return ret;
     }
-
     public void addWitnesses(Integer witnessID) {
         witnesses.add(witnessID);
     }

@@ -91,6 +91,10 @@ public class PoliceOfficer extends User {
         myCriminals.add(criminalID);
     }
 
+    public void addToMyCases(int caseID) {
+        myCases.add(caseID);
+    }
+
    /**
      * This method 
      * @return 

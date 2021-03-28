@@ -27,9 +27,10 @@ public class PoliceOfficerList {
 
         return false;
     }
-    public PoliceOfficer getPoliceOfficer(String userName) {
+
+    public PoliceOfficer getPoliceOfficer(int officerID) {
         for(PoliceOfficer officer : policeOfficers) {
-            if(officer.getUsername().equals(userName)) {
+            if(officer.getID() == officerID) {
                 return officer;
             }
         }
@@ -37,6 +38,15 @@ public class PoliceOfficerList {
         return null;
     }
 
+    public PoliceOfficer getPoliceOfficerUsername(String username) {
+        for(PoliceOfficer officer : policeOfficers) {
+            if(officer.getUsername().equals(username)) {
+                return officer;
+            }
+        }
+
+        return null;
+    }
     public ArrayList<PoliceOfficer> getPoliceOfficers() {
         return policeOfficers;
     }
