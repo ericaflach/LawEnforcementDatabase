@@ -27,7 +27,7 @@ public class CriminalUI {
      * Starts the system and calls all of the other methods
      */
     public void run(){
-        System.out.println("-----Welcome to the Criminal Database-----");
+        System.out.println("\n-----Welcome to the Criminal Database-----");
         System.out.println();
         System.out.println("Please log in");
         System.out.println();
@@ -75,7 +75,7 @@ public class CriminalUI {
      * Adds a new crime to the database
      */
     public void addCrime(){
-        System.out.println("-----Add a crime-----");
+        System.out.println("\n-----Add a crime-----");
         System.out.println("Please enter as much of the following as possible, if you do not know, press enter to leave that field blank.");
         System.out.println("Crime: ");
         String caseType = scanner.nextLine();
@@ -162,7 +162,7 @@ public class CriminalUI {
      * Displays the menu for editing contents of the database
      */
     public void editMenu(){
-        System.out.println("-----Edit-----");
+        System.out.println("\n-----Edit-----");
         System.out.println("Only an admin. can edit a user, anyone can edit a criminal.");
         System.out.println("Would you like to edit a criminal or crime?");
         System.out.println("(1) Criminal" + "\n(2) Crime");
@@ -236,7 +236,7 @@ public class CriminalUI {
      * Search for a specific crime
      */
     public void searchCrime(){
-        System.out.println("-----Search a crime-----");
+        System.out.println("\n-----Search a crime-----");
         System.out.println("You can lookup a specific case by its ID number, or enter 0 to go back to the menu, where you can search for criminals by their past crimes.");
         System.out.println("Case ID number: ");
         int ID = scanner.nextInt();
@@ -260,7 +260,7 @@ public class CriminalUI {
      * adds a new criminal to the database
      */
     public void addCriminal(){
-        System.out.println("-----Add a criminal-----");
+        System.out.println("\n-----Add a criminal-----");
         System.out.println("Please enter as much of the following as possible, if you do not know, press enter to leave that field blank.");
         System.out.println("First name: ");
         scanner.nextLine();
@@ -327,7 +327,7 @@ public class CriminalUI {
      * Search a criminal in the database
      */
     public void searchCriminal(){
-        System.out.println("-----Search a criminal-----");
+        System.out.println("\n-----Search a criminal-----");
         System.out.println();
         boolean refine = true;
         while (refine){
@@ -338,7 +338,7 @@ public class CriminalUI {
             System.out.println("(3) Crimes committed");
             System.out.println("(4) Location");
             System.out.println("(5) Sex");
-            System.out.println("(6) Physical attribute")
+            System.out.println("(6) Physical attribute");
             System.out.println("How would you like to search? (1-6)");
             int choice = scanner.nextInt();
             if (choice == 1){
@@ -462,7 +462,7 @@ public class CriminalUI {
      * Displays the main menu to the user
      */
     public void displayMainMenu(){
-        System.out.println("-----Main Menu-----");
+        System.out.println("\n-----Main Menu-----");
         System.out.println();
         System.out.println("(1) Add a criminal or crime");
         System.out.println("(2) Search a criminal or crime");
@@ -475,7 +475,7 @@ public class CriminalUI {
      * Displays the menu for searching the database
      */
     public void searchMenu(){
-        System.out.println("-----Search Menu-----");
+        System.out.println("\n-----Search Menu-----");
         System.out.println();
         System.out.println("(1) Search a criminal");
         System.out.println("(2) Search a crime");
@@ -486,7 +486,7 @@ public class CriminalUI {
      * Displays the menu for adding things to the database
      */
     public void addMenu(){
-        System.out.println("-----Add Menu-----");
+        System.out.println("\n-----Add Menu-----");
         System.out.println();
         System.out.println("(1) Add a criminal");
         System.out.println("(2) Add a crime");
@@ -497,9 +497,9 @@ public class CriminalUI {
      * Displays the account information of the user
      */
     public void accountMenu(){
-        System.out.println("-----Account Info-----");
+        System.out.println("\n-----Account Info-----");
         System.out.println();
-        System.out.print(user.toString());
+        System.out.println(user.toString());
         reset = true;
     }
 
