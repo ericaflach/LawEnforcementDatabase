@@ -1,23 +1,23 @@
 [{
 "firstName":"Megan",
 "lastName":"Watson",
-"age": 34,
-"dateOfBirth":"05/03/1987",
+"age": 44,
+"dateOfBirth":"05/03/1977",
 "ID":8675,
-"sex":"M",
+"sex":"F",
 "creatorID":2965,
 "pastCrimes":[3937],
 "address":"13 Cali Dr.",
 "shoeSize":"9.5",
 "priority":2,
-"alive":"false",
+"alive":"true",
 "physicalAttributes":["tall", "skinny"],
 "inJail":"false",
-"tatoos":["cross", "bird"]
+"tatoos":["dove", "bird"]
 },{
 "firstName":"Steven",
 "lastName":"Frez",
-"age": 55,
+"age": 39,
 "dateOfBirth":"08/12/1966",
 "ID":3090,
 "sex":"M",
@@ -27,13 +27,13 @@
 "shoeSize":"10.5",
 "priority":3,
 "alive":"false",
-"physicalAttributes":["average height", "wearing a black hoodie"],
+"physicalAttributes":["wearing a black hoodie", "thick black hair", "tall"],
 "inJail":"false",
 "tatoos":["eagle on chest"]
 },{
 "firstName":"Pro",
 "lastName":"Karry",
-"age": 21,
+"age": 31,
 "dateOfBirth":"10/28/199",
 "ID":3416,
 "sex":"M",
@@ -49,8 +49,8 @@
 },{
 "firstName":"Morgan",
 "lastName":"Freeman",
-"age": 76,
-"dateOfBirth":"06/12/1945",
+"age": 31,
+"dateOfBirth":"01/12/2000",
 "ID":9219,
 "sex":"M",
 "creatorID":9943,
@@ -60,12 +60,12 @@
 "priority":2,
 "alive":"true",
 "physicalAttributes":["Green eyes", "red hair"],
-"inJail":"false",
-"tatoos":["N/A"]
+"inJail":"true",
+"tatoos":["dove"]
 },{
 "firstName":"Carol",
 "lastName":"Baskin",
-"age": 54,
+"age": 31,
 "dateOfBirth":"05/05/1967",
 "ID":6034,
 "sex":"F",
@@ -75,13 +75,13 @@
 "shoeSize":"9.0",
 "priority":3,
 "alive":"true",
-"physicalAttributes":["Brown eyes", "black hair", "scar over right eyebrow"],
+"physicalAttributes":["Brown eyes", "thick black hair", "scar over right eyebrow", "tall"],
 "inJail":"true",
 "tatoos":["N/A"]
 },{
 "firstName":"Karl",
 "lastName":"Pension",
-"age": 44,
+"age": 34,
 "dateOfBirth":"05/01/1967",
 "ID":8243,
 "sex":"M",
@@ -91,7 +91,7 @@
 "shoeSize":"12.0",
 "priority":2,
 "alive":"false",
-"physicalAttributes":["Brown eyes", "brown hair"],
+"physicalAttributes":["Brown eyes", "brown hair", "thick black hair", "tall"],
 "inJail":"false",
 "tatoos":["heart on right forearm"]
 }]

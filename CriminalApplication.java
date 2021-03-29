@@ -3,6 +3,9 @@
  */
 package LawEnforcementDatabase;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class CriminalApplication {
@@ -92,13 +95,17 @@ public class CriminalApplication {
     public ArrayList<Criminal> searchByAttributes(ArrayList<String> physicalAttributes) {
         ArrayList<Criminal> ret = new ArrayList<Criminal>();
         for (int i = 0; i < refinedList.size(); i++) {
-            for (int j = 0; j < physicalAttributes.size(); j++) {
-                for (int k = 0; k < refinedList.get(i).getPhysicalAttributes().size(); k++) {
-                    if (refinedList.get(i).getPhysicalAttributes().get(k).contains(physicalAttributes.get(j))) {
+            ArrayList<String> attributes = refinedList.get(i).getPhysicalAttributes();
+            for(int j = 0; j < attributes.size(); j++) {
+                String attribute = attributes.get(j);
+                for(int k = 0; k < physicalAttributes.size(); k++) {
+                    String compare = physicalAttributes.get(k);
+                    if(attribute.contains(compare) && !retListHasCriminal(ret, refinedList.get(i))) {
                         ret.add(refinedList.get(i));
                     }
                 }
             }
+            
         }
         refinedList = ret;
         return ret;
@@ -127,9 +134,29 @@ public class CriminalApplication {
      * @return criminals that match sex
      */
     public ArrayList<Criminal> searchBySex(char sex) {
-        return null;
+        ArrayList<Criminal> ret = new ArrayList<Criminal>();
+        for (int i = 0; i < refinedList.size(); i++) {
+            if(refinedList.get(i).getSex() == sex) {
+                ret.add(refinedList.get(i));
+            }
+        }
+        refinedList = ret;
+        return ret;
     }
 
+    public ArrayList<Criminal> searchByTattoos(String tattoo) {
+        ArrayList<Criminal> ret = new ArrayList<Criminal>();
+        for (int i = 0; i < refinedList.size(); i++) {
+            for (int j = 0; j < refinedList.get(i).getTattoos().size(); j++) {
+                if(refinedList.get(i).getTattoos().get(j).contains(tattoo)) {
+                    ret.add(refinedList.get(i));
+                }    
+            
+            }
+        }
+        refinedList = ret;
+        return ret;
+    }
     /**
      * This method creates a new criminal
      * @param firstName
@@ -498,5 +525,38 @@ public class CriminalApplication {
         "\nCase Type: " + case1.getCaseType();
         return ret; 
     }
-
+    public void printCriminalToTextFile(String fileName) {
+        try {
+            File myFile = new File(fileName);
+            PrintWriter out = new PrintWriter(myFile);
+            
+            for (Criminal criminal : refinedList) {
+                out.println(criminal.toString());
+            }
+            out.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        
+    }
+    public void printCaseToTextFile(String fileName, int caseID) {
+        try {
+            File myFile = new File(fileName);
+            PrintWriter out = new PrintWriter(myFile);
+            out.println(caseToString(caseList.getCase(caseID)));
+            out.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        
+    }
+    public boolean retListHasCriminal(ArrayList<Criminal> ret, Criminal criminal) {
+        for (Criminal person: ret) {
+            if(criminal.getID() == person.getID())
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }

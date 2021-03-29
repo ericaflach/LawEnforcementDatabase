@@ -1,14 +1,14 @@
 [
     {
     "creatorID":1965,
-    "witnesses":[1199],
+    "witnesses":[1199, 2282],
     "peopleOfInterest":[8941, 2109],
     "suspects":[2501],
     "criminals":[],
     "victims":[9875],
     "caseOpen":"true",
     "ID":9874,
-    "evidence":["fingerprints found"],
+    "evidence":["fingerprints found", "body found on the scene"],
     "crimeLevel":2,
     "officers":[1965],
     "legalClearance":3,
@@ -40,7 +40,7 @@
     "crimeLevel":2,
     "officers":[2816],
     "legalClearance":3,
-    "caseType":"Assault"
+    "caseType":"murdering a watermelon"
     },{
     "creatorID":9943,
     "witnesses":[],
@@ -68,7 +68,7 @@
     "crimeLevel":2,
     "officers":[1965],
     "legalClearance":3,
-    "caseType":"Assault"
+    "caseType":"robbing a bar and stealing liquor"
     },{
     "creatorID":2965,
     "witnesses":[5601],

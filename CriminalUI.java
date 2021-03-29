@@ -268,6 +268,7 @@ public class CriminalUI {
         System.out.println("You can lookup a specific case by its ID number, or enter 0 to go back to the menu, where you can search for criminals by their past crimes.");
         System.out.println("Case ID number: ");
         int ID = scanner.nextInt();
+        scanner.nextLine();
         if (ID == 0) {
             reset=true;
         } else {
@@ -275,10 +276,12 @@ public class CriminalUI {
             System.out.println("Here is your case: ");
             System.out.println(application.caseToString(crime));
             System.out.println("Enter \"print\" to print to a text file, or type \"exit\" to return to the main menu");
-            scanner.next();
             String enter = scanner.nextLine();
-            if (enter.equals("print")){
-                System.out.println(crime.toString());
+            if (enter.equalsIgnoreCase("print")){
+                System.out.println("Enter file name");
+                String fileName = scanner.nextLine();
+                application.printCaseToTextFile(fileName, ID);
+                System.out.println("Printed to text file");
             }
             reset = true;
         }   
@@ -365,7 +368,8 @@ public class CriminalUI {
             System.out.println("(4) Location");
             System.out.println("(5) Sex");
             System.out.println("(6) Physical attribute");
-            System.out.println("How would you like to search? (1-6)");
+            System.out.println("(7) Tattoos");
+            System.out.println("How would you like to search? (1-7)");
             int choice = scanner.nextInt();
             if (choice == 1){
                 System.out.println("Search by name");
@@ -381,6 +385,7 @@ public class CriminalUI {
                 int lowerAge = scanner.nextInt();
                 System.out.println("Upper age bound: ");
                 int upperAge = scanner.nextInt();
+                scanner.nextLine();
                 application.searchByAge(lowerAge, upperAge);
             } else if (choice == 3) {
                 System.out.println("Search by crimes committed");
@@ -417,12 +422,14 @@ public class CriminalUI {
                     }
                     application.searchBySex(sex);
             } else if (choice == 6) {
+                scanner.nextLine();
                 System.out.println("Search by physical attributes");
                 ArrayList<String> physicalAttributes=new ArrayList<String>();
                 System.out.println("Enter up to 10 physical attributes. Type \"exit\" when done entering attributes");
                 for (int i=0; i<10; i++) {
                     System.out.println("Physical attribute "+(i + 1)+": ");
                     String attribute = scanner.nextLine();
+                    System.out.println("Test attribute: " + attribute);
                     if (attribute.equals("exit")) {
                         break;
                     } else {
@@ -430,18 +437,29 @@ public class CriminalUI {
                     }
                 }
                 application.searchByAttributes(physicalAttributes);
+            } else if (choice == 7) {
+                System.out.println("Enter a tattoo to search for");
+                scanner.nextLine();
+                String tattoo = scanner.nextLine();
+                application.searchByTattoos(tattoo);
             }
             System.out.println("Here are your results: ");
             System.out.println(application.refinedListToString());
-            System.out.println("Enter \"refine\" to add another search parameter, enter \"reset\" to start a new search, or enter \"exit\" to go back to the main menu");
+            System.out.println("Enter \"refine\" to add another search parameter, enter \"reset\" to start a new search, \"print\" to print to a text file or enter \"exit\" to go back to the main menu");
             String entry = scanner.nextLine();
             if (entry.equalsIgnoreCase("reset")) {
             refine = true;
             application.resetRefinedList();
             } else if (entry.equalsIgnoreCase("refine")) {
             refine = true;
-            } else {
-            reset = true;
+            } else if(entry.equalsIgnoreCase("print")){
+                System.out.println("Enter file name");
+
+                String fileName = scanner.nextLine();
+                application.printCriminalToTextFile(fileName);
+                System.out.println("Printed to text file");
+            }else {
+                reset = true;
             }
          }
      }

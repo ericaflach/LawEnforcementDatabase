@@ -1,4 +1,16 @@
 [{
+"firstName":"You",
+"lastName":"Pick",
+"userName":"youPick",
+"password": "password",
+"email":"ypick@sb.gov",
+"phoneNumber": 8034445555,
+"clearanceLevel": 2,
+"ID":1740,
+"policeDepartment":"You Pick Police Department",
+"myCriminals": [],
+"myCases": [9874, 7983]
+},{
 "firstName":"Casey",
 "lastName":"Siffa",
 "userName":"Csiffa",
