@@ -94,4 +94,14 @@ public class AdminList {
     public void saveAdmins() {
         DataWriter.saveAdmins();
     }
+
+    public Admin getAdminFromID(int adminID) {
+        for(Admin admin : admins) {
+            if(admin.getID()==adminID) {
+                return admin;
+            }
+        }
+
+        return null;
+    }
 }

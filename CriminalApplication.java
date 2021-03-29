@@ -450,4 +450,53 @@ public class CriminalApplication {
         suspectList.saveSuspects();
         return true;
     }
+    public String caseToString(Case case1) {
+        String ret = "";
+        PoliceOfficer officer = officerList.getPoliceOfficer(case1.getCreatorID());
+        Admin admin = adminList.getAdminFromID(case1.getCreatorID());
+        if(admin == null) {
+            ret = ret + "Creator: " + officer.getName();
+        } else {
+            ret = ret + "Creator: " + admin.getName();
+        }
+        ArrayList<String> witnesses = new ArrayList<String>();
+        for(Integer witnessID : case1.getWitnesses()) {
+            witnesses.add(witnessList.getWitnessFromID(witnessID).getName());
+        }
+        ArrayList<String> peopleOfInterest = new ArrayList<String>();
+        for(Integer poiID : case1.getPeopleOfInterest()) {
+            witnesses.add(personOfInterestList.getPersonOfInterestFromID(poiID).getName());
+        }
+        ArrayList<String> suspects = new ArrayList<String>();
+        for(Integer suspectID : case1.getSuspects()) {
+            suspects.add(suspectList.getSuspectFromID(suspectID).getName());
+        }
+        ArrayList<String> criminals = new ArrayList<String>();
+        for(Integer criminalID : case1.getCriminals()) {
+            criminals.add(criminalList.getCriminal(criminalID).getName());
+        }
+        ArrayList<String> victims = new ArrayList<String>();
+        for(Integer victimID : case1.getVictims()) {
+            victims.add(victimList.getVictimFromID(victimID).getName());
+        }
+        ArrayList<String>  officers = new ArrayList<String>();
+        for(Integer officerID : case1.getOfficers()) {
+            officers.add(officerList.getPoliceOfficer(officerID).getName());
+        }
+        ret += 
+        "\nWitnesses: " + witnesses +
+        "\nPeople of Interest: " + peopleOfInterest +
+        "\nSuspects: " + suspects +
+        "\nCriminals: " + criminals +
+        "\nVictims: " + victims +
+        "\nCase Open: " + case1.getCaseOpen() +
+        "\nID: " + case1.getID() +
+        "\nEvidence: " + case1.getEvidence().toString() +
+        "\nCrime Level: " + case1.getCrimeLevel() +
+        "\nOfficers: " + officers +
+        "\nLegal Clearance: " + case1.getLegalClearance() +
+        "\nCase Type: " + case1.getCaseType();
+        return ret; 
+    }
+
 }

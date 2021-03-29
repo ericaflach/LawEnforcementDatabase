@@ -59,6 +59,15 @@ public class VictimList {
         return null;
     }
 
+    public Victim getVictimFromID(int ID) {
+        for(Victim victim : victims) {
+            if(victim.getID() == ID) {
+                return victim;
+            }
+        }
+
+        return null;
+    }
     /**
      * This method gets all victims
      * @return victims

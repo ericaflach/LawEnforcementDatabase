@@ -60,7 +60,15 @@ public class WitnessList {
 
         return null;
     }
+    public Witness getWitnessFromID(int ID) {
+        for(Witness witness : witnesses) {
+            if(witness.getID() == ID) {
+                return witness;
+            }
+        }
 
+        return null;
+    }
     /**
      * This method gets all witnesses
      * @return witnesses

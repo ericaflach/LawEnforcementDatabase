@@ -62,6 +62,16 @@ public class SuspectList {
         return null;
     }
 
+    public Suspect getSuspectFromID(int ID) {
+        for(Suspect suspect : suspects) {
+            if(suspect.getID() == ID) {
+                return suspect;
+            }
+        }
+
+        return null;
+    }
+
     /**
      * This method gets all suspects
      * @return suspects

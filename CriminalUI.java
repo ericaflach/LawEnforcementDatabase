@@ -273,7 +273,7 @@ public class CriminalUI {
         } else {
             crime = application.searchCaseID(ID);
             System.out.println("Here is your case: ");
-            System.out.println(crime.toString());
+            System.out.println(application.caseToString(crime));
             System.out.println("Enter \"print\" to print to a text file, or type \"exit\" to return to the main menu");
             scanner.next();
             String enter = scanner.nextLine();

@@ -61,6 +61,16 @@ public class PersonOfInterestList {
         return null;
     }
 
+    public PersonOfInterest getPersonOfInterestFromID(int ID) {
+        for(PersonOfInterest personOfInterest : personsOfInterest) {
+            if(personOfInterest.getID() == ID) {
+                return personOfInterest;
+            }
+        }
+
+        return null;
+    }
+
     /**
      * This method gets all persons of interest
      * @return persons of interest
