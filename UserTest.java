@@ -1,8 +1,6 @@
 package LawEnforcementDatabase;
 import static org.junit.jupiter.api.Assertions.*;
 
-import jdk.jfr.Timestamp;
-
 public class UserTestTemplate {
     private User user = User.getInstance();
     private ArrayList<User> userList = user.getUser();
