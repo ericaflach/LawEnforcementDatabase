@@ -1,35 +1,37 @@
 package LawEnforcementDatabase;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 public class DataWriterTest {
-    private User user = User.getInstance();
-    private ArrayList<User> userList = user.getUser();
+    private AdminList Admin = AdminList.getInstance();
+    private ArrayList<Admin> adminList= Admin.getAdmins();
 
-    @BeforeEach
+    @Test
     public void setup(){
-        Users.getInstance().getUser()().clear();
+        Admin.getInstance().getUser()().clear();
         DataWriter.saveUser();
     }
 
-    @AfterEach
+    @Test
     public void tearDown(){
-        User.getInstance().getUser().clear();
-        DataWriter.saveUser();
+        Admin.getInstance().getUser().clear();
+        DataWriter.saveAdmins();
     }
     @Test
-    void testWritingZeroUsers(){
-        userList = DataLoader.getUser();
-        assertEquals(0, userList.size());
+    void testWritingZeroAdmins(){
+        adminList = DataLoader.getAdmins();
+        assertEquals(0, adminList.size());
     }
     @Test
     void testWritingOneUser(){
-    User.getInstance().getUser().clear();
-    assertEquals(0, userList.size());
+        Admin.getInstance().getAdmins().clear();
+        assertEquals(0, aminList.size());
     }
     @Test
     void testWritingFiveUsers(){
-        userList = DataLoader.getUser();
-        assertEquals("jturner", userList.get(0).getUserName());
+        adminList = DataLoader.getAdmins();
+        assertEquals("jturner", adminList.get(0).getUserName());
     }
 }
