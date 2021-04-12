@@ -14,8 +14,8 @@ public class DataWriterTest {
     @Test
     public void setup(){
         admins.clear();
-        admins.add(new Admin("Amy", "Smith", "asmith", "IloveFrodo", "asmith.gov", 8034543344, 3, 234123));
-        admins.add(new Admin("Clark", "Sith", "csith", "DarthVader33", "csith.gov", 8033333344, 3, 234339));
+        admins.add(new admins("Amy", "Smith", "asmith", "IloveFrodo", "asmith.gov", "803-454-3344", 3, 234123));
+        admins.add(new admins("Clark", "Sith", "csith", "DarthVader33", "csith.gov", "803-333-3344", 3, 234339));
         DataWriter.saveAdmins();
     }
     @Test

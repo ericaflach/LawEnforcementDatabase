@@ -13,7 +13,7 @@ import org.json.simple.JSONObject;
 public class DataWriter extends DataConstants {
     
     /**
-     * This method saves writes criminals to Criminal.json
+     * This method saves criminals to Criminal.json
      */
     public static void saveCriminals() {
        CriminalList criminalList = CriminalList.getInstance();
@@ -33,7 +33,7 @@ public class DataWriter extends DataConstants {
     }
 
     /**
-     * This method saves writes suspects to Suspect.json
+     * This method saves suspects to Suspect.json
      */
     public static void saveSuspects() {
         SuspectList suspectList = SuspectList.getInstance();
@@ -53,7 +53,7 @@ public class DataWriter extends DataConstants {
     }
 
     /**
-     * This method saves writes victims to Victim.json
+     * This method saves victims to Victim.json
      */
     public static void saveVictims() {
         VictimList victimList = VictimList.getInstance();
@@ -73,7 +73,7 @@ public class DataWriter extends DataConstants {
     }
 
     /**
-     * This method saves writes people of interest to PersonOfInterest.json
+     * This method saves people of interest to PersonOfInterest.json
      */
     public static void savePeopleOfInterest() {
         PersonOfInterestList personOfInterestList = PersonOfInterestList.getInstance();
@@ -93,7 +93,7 @@ public class DataWriter extends DataConstants {
     }
 
     /**
-     * This method saves writes witnesses to Witness.json
+     * This method saves witnesses to Witness.json
      */
     public static void saveWitnesses() {
         WitnessList witnessList = WitnessList.getInstance();
@@ -113,7 +113,7 @@ public class DataWriter extends DataConstants {
     }
 
     /**
-     * This method saves writes admins to Admin.json
+     * This method saves admins to Admin.json
      */
     public static void saveAdmins() {
         AdminList adminList = AdminList.getInstance();
@@ -133,7 +133,7 @@ public class DataWriter extends DataConstants {
     }
 
     /**
-     * This method saves writes police officers to PoliceOfficer.json
+     * This method saves police officers to PoliceOfficer.json
      */
     public static void savePoliceOfficers() {
         PoliceOfficerList officerList = PoliceOfficerList.getInstance();
@@ -153,7 +153,7 @@ public class DataWriter extends DataConstants {
     }
 
     /**
-     * This method saves writes cases to Case.json
+     * This method saves cases to Case.json
      */
     public static void saveCases() {
         CaseList caseList = CaseList.getInstance();
