@@ -1,3 +1,7 @@
+/**
+ * @author Caleb Howard 
+ */
+
 package LawEnforcementDatabase;
 
 import static org.junit.jupiter.api.Assertions.*;
