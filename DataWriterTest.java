@@ -1,37 +1,41 @@
 package LawEnforcementDatabase;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 public class DataWriterTest {
-    private AdminList Admin = AdminList.getInstance();
-    private ArrayList<Admin> adminList= Admin.getAdmins();
+    private AdminList Admins = AdminList.getInstance();
+    private ArrayList<Admin> admins = Admins.getAdmins();
 
     @Test
     public void setup(){
-        Admin.getInstance().getUser()().clear();
-        DataWriter.saveUser();
+        admins.clear();
+        admins.add(new admins("Amy", "Smith", "asmith", "IloveFrodo", "asmith.gov", "803-454-3344", 3, 234123));
+        admins.add(new admins("Clark", "Sith", "csith", "DarthVader33", "csith.gov", "803-333-3344", 3, 234339));
+        DataWriter.saveAdmins();
     }
-
     @Test
     public void tearDown(){
-        Admin.getInstance().getUser().clear();
+        AdminList.getInstance().getAdmins().clear();
         DataWriter.saveAdmins();
     }
     @Test
     void testWritingZeroAdmins(){
-        adminList = DataLoader.getAdmins();
-        assertEquals(0, adminList.size());
+        admins = DataLoader.getAdmins();
+        assertEquals(0, admins.size());
     }
     @Test
     void testWritingOneUser(){
-        Admin.getInstance().getAdmins().clear();
-        assertEquals(0, aminList.size());
+        AdminList.getInstance().getAdmins().clear();
+        assertEquals(0, admins.size());
     }
     @Test
     void testWritingFiveUsers(){
-        adminList = DataLoader.getAdmins();
-        assertEquals("jturner", adminList.get(0).getUserName());
+        admins = DataLoader.getAdmins();
+        assertEquals("jturner", admins.get(0).getUsername());
     }
 }
