@@ -1,45 +1,55 @@
 /**
- * @author Caleb Howard 
+ * @author Chris Nelson
  */
 
 package LawEnforcementDatabase;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+
 public class DataWriterTest {
-    private AdminList Admins = AdminList.getInstance();
-    private ArrayList<Admin> admins = Admins.getAdmins();
+    private AdminList adminList = AdminList.getInstance();
+    private ArrayList<Admin> admins = adminList.getAdmins();
+    private PoliceOfficerList officerList = PoliceOfficerList.getInstance();
+    private ArrayList<PoliceOfficer> policeOfficers = officerList.getPoliceOfficers();
+
+    @BeforeEach
+    public void setup() {
+        AdminList.getInstance().getAdmins().clear();
+        admins = AdminList.getInstance().getAdmins();
+        DataWriter.saveAdmins();
+    }
+
+    @AfterEach
+    public void tearDown() {
+        AdminList.getInstance().getAdmins().clear();
+        DataWriter.saveAdmins();
+    }
 
     @Test
-    public void setup(){
-        admins.clear();
-        admins.add(new admins("Amy", "Smith", "asmith", "IloveFrodo", "asmith.gov", "803-454-3344", 3, 234123));
-        admins.add(new admins("Clark", "Sith", "csith", "DarthVader33", "csith.gov", "803-333-3344", 3, 234339));
-        DataWriter.saveAdmins();
-    }
-    @Test
-    public void tearDown(){
-        AdminList.getInstance().getAdmins().clear();
-        DataWriter.saveAdmins();
-    }
-    @Test
-    void testWritingZeroAdmins(){
-        admins = DataLoader.getAdmins();
+    public void testWritingZeroAdmins() {
+        admins = adminList.getAdmins();
         assertEquals(0, admins.size());
     }
-    @Test
-    void testWritingOneUser(){
-        AdminList.getInstance().getAdmins().clear();
-        assertEquals(0, admins.size());
+
+    @Test 
+    public void testWritingOneAdmin() {
+        System.out.println(admins.toString());
+        admins.add(new Admin("Amy", "Smith", "asmith", "password", "asmith@gmail.com", 8642234231L, 2, 1123));
+        DataWriter.saveAdmins();
+        assertEquals("asmith", DataLoader.getAdmins().get(0).getUsername());
     }
-    @Test
-    void testWritingFiveUsers(){
-        admins = DataLoader.getAdmins();
-        assertEquals("jturner", admins.get(0).getUsername());
+
+    
+    @Test 
+    public void testWritingOneUser() {
+        policeOfficers.add(new PoliceOfficer("Bob", "Baker", "bbakes", "password", "bbakes@yahoo.com", 8032123339L, 2, 11242, "Long Island", new ArrayList<Integer>(), new ArrayList<Integer>()));
+        DataWriter.saveAdmins();
+        assertEquals("bbakes", DataLoader.getPoliceOfficers().get(0).getUsername());
     }
 }

@@ -470,7 +470,7 @@ public class CriminalApplication {
     }
     public boolean logout() {
         criminalList.saveCriminals();
-        adminList.saveAdmins();
+        adminList.saveAdmins();;
         officerList.saveUsers();
         victimList.saveVictims();
         witnessList.saveWitnesses();

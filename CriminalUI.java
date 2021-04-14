@@ -458,6 +458,7 @@ public class CriminalUI {
                 String fileName = scanner.nextLine();
                 application.printCriminalToTextFile(fileName);
                 System.out.println("Printed to text file");
+                reset = true;
             }else {
                 reset = true;
             }
