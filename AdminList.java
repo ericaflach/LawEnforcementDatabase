@@ -94,7 +94,6 @@ public class AdminList {
     public void saveAdmins() {
         DataWriter.saveAdmins();
     }
-
     public Admin getAdminFromID(int adminID) {
         for(Admin admin : admins) {
             if(admin.getID()==adminID) {
@@ -104,4 +103,8 @@ public class AdminList {
 
         return null;
     }
+    public void clear() {
+        adminList = null;
+    }
+
 }
