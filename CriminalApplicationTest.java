@@ -36,6 +36,8 @@ public class CriminalApplicationTest {
     @Test
     public void testSearchByName() {
         criminalApplication.createCriminal("Bob", "Baker", 19, "10/22/00", 01234, 'M', 12935, new ArrayList<Integer>(), "123 Lane", 9.5, 2, true, new ArrayList<String>(), true, new ArrayList<String>());
-        criminalApplication.
+        ArrayList<Criminal> criminal = criminalApplication.searchByName("Bob", "Baker");
+        assertEquals(12935, criminal.get(0).getID());
+        
     }
 }
