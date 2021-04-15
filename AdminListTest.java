@@ -6,9 +6,7 @@ package LawEnforcementDatabase;
 
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import java.util.ArrayList;
-
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -41,13 +39,13 @@ public class AdminListTest {
 
     @Test
     public void testAddNewAdmin(){
-        boolean addAdmin= adminList.addAdmin("Ben", "Friend", "bfriend", "Password1!", "bfriend@email.sc.edu", (long) 6140671, 3, 14);
+        boolean addAdmin=adminList.addAdmin("Ben", "Friend", "bfriend", "Password1!", "bfriend@email.sc.edu", (long) 6140671, 3, 14);
         assertTrue(addAdmin);
     }
 
     @Test
     public void testAddOldAdmin(){
-        boolean addAdmin=adminList.addAdmin("Jake", "Bakes", "Jbakes", "Yak22beF!", "jbrakes@sb.gov", (long) 843221001, 3, 2426);
+        boolean addAdmin= adminList.addAdmin("Jake", "Bakes", "Jbakes", "Yak22beF!", "jbrakes@sb.gov", (long) 843221001, 3, 2426);
         assertFalse(addAdmin);
     }
 

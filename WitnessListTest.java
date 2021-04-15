@@ -1,7 +1,7 @@
+package LawEnforcementDatabase;
 /**
  * @author Ben Friend
  */
-package LawEnforcementDatabase;
 
 
 import static org.junit.jupiter.api.Assertions.*;

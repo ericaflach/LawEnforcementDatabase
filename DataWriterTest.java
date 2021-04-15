@@ -4,7 +4,7 @@
 
 package LawEnforcementDatabase;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 
@@ -14,7 +14,7 @@ import org.junit.jupiter.api.BeforeEach;
 
 public class DataWriterTest {
     private AdminList adminList = AdminList.getInstance();
-    private ArrayList<Admin> admins = AdminList.getInstance().getAdmins();
+    private ArrayList<Admin> admins = adminList.getAdmins();
     private PoliceOfficerList officerList = PoliceOfficerList.getInstance();
     private ArrayList<PoliceOfficer> policeOfficers = officerList.getPoliceOfficers();
 
@@ -29,7 +29,7 @@ public class DataWriterTest {
 
     @AfterEach
     public void tearDown() {
-        AdminList.clear();
+        AdminList.getInstance().getAdmins().clear();
         PoliceOfficerList.getInstance().getPoliceOfficers().clear();
         DataWriter.saveAdmins();
         DataWriter.savePoliceOfficers();
