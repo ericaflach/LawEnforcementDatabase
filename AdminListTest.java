@@ -1,3 +1,4 @@
+package LawEnforcementDatabase;
 /**
  * @author Ben Friend
  */
@@ -9,10 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
-
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 public class AdminListTest {
     private AdminList adminList;
@@ -21,7 +19,7 @@ public class AdminListTest {
     @BeforeEach
     public void setup(){
         admins=DataLoader.getAdmins();
-        adminList=new AdminList();
+        adminList= AdminList.getInstance();
     }
 
     @AfterEach
@@ -31,25 +29,25 @@ public class AdminListTest {
 
     @Test
     public void testHasAdmin(){
-        boolean hasAdmin=AdminList.haveAdmin("Jbakes");
+        boolean hasAdmin= adminList.haveAdmin("Jbakes");
         assertTrue(hasAdmin);
     }
 
     @Test
     public void testHasNoAdmin(){
-        boolean hasAdmin=AdminList.haveAdmin("benfriend");
+        boolean hasAdmin= adminList.haveAdmin("benfriend");
         assertFalse(hasAdmin);
     }
 
     @Test
     public void testAddNewAdmin(){
-        boolean addAdmin=AdminList.addAdmin("Ben", "Friend", "bfriend", "Password1!", "bfriend@email.sc.edu", (long) 6140671, 3, 14);
+        boolean addAdmin= adminList.addAdmin("Ben", "Friend", "bfriend", "Password1!", "bfriend@email.sc.edu", (long) 6140671, 3, 14);
         assertTrue(addAdmin);
     }
 
     @Test
     public void testAddOldAdmin(){
-        boolean addAdmin=AdminList.addAdmin("Jake", "Bakes", "Jbakes", "Yak22beF!", "jbrakes@sb.gov", (long) 843221001, 3, 2426);
+        boolean addAdmin=adminList.addAdmin("Jake", "Bakes", "Jbakes", "Yak22beF!", "jbrakes@sb.gov", (long) 843221001, 3, 2426);
         assertFalse(addAdmin);
     }
 

@@ -95,6 +95,10 @@ public class AdminList {
         DataWriter.saveAdmins();
     }
 
+    public static void clear () {
+        admins = new ArrayList<Admin>();
+    }
+    
     public Admin getAdminFromID(int adminID) {
         for(Admin admin : admins) {
             if(admin.getID()==adminID) {

@@ -35,7 +35,7 @@ public class CriminalList {
      * @param lastName
      * @return true or false
      */
-    public static boolean haveCriminal(String firstName, String lastName) {
+    public boolean haveCriminal(String firstName, String lastName) {
         for(Criminal criminal : criminals) {
             if(criminal.getFirstName().contentEquals(firstName) && criminal.getLastName().contentEquals(lastName)) {
                 return true;

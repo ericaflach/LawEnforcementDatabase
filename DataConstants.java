@@ -13,7 +13,7 @@ public abstract class DataConstants {
         protected static final String PERSON_ID = "ID";
         protected static final String PERSON_SEX = "sex";
         
-        protected static final String CRIMINAL_FILE_NAME = "LawEnforcementDatabase/Criminal.json";
+        protected static final String CRIMINAL_FILE_NAME = "C:\\Users\\chris\\OneDrive\\Documents\\csce247\\LawEnforcementDatabase\\Criminal.json";
         protected static final String CRIMINAL_CREATOR_ID = "creatorID";
         protected static final String CRIMINAL_PAST_CRIMES = "pastCrimes";
         protected static final String CRIMINAL_ADDRESS = "address";
@@ -25,23 +25,22 @@ public abstract class DataConstants {
         protected static final String CRIMINAL_TATOOS = "tatoos";
         protected static final String CRIMINAL_CREATORID = "tatoos";
 
-        protected static final String PERSON_OF_INTEREST_FILE_NAME = "LawEnforcementDatabase/PersonOfInterest.json";
+        protected static final String PERSON_OF_INTEREST_FILE_NAME = "C:\\Users\\chris\\OneDrive\\Documents\\csce247\\LawEnforcementDatabase\\PersonOfInterest.json";
         protected static final String PERSON_OF_INTEREST_DESCRIPTION = "description";
         protected static final String PERSON_OF_INTEREST_CONTACT = "contact";
         protected static final String PERSON_OF_INTEREST_ID = "personOfInterestID";
 
-        protected static final String SUSPECT_FILE_NAME = "LawEnforcementDatabase/Suspect.json";
+        protected static final String SUSPECT_FILE_NAME = "C:\\Users\\chris\\OneDrive\\Documents\\csce247\\LawEnforcementDatabase\\Suspect.json";
         protected static final String SUSPECT_ALIBI = "alibi";
 
-        protected static final String VICTIM_FILE_NAME = "LawEnforcementDatabase/Victim.json";
+        protected static final String VICTIM_FILE_NAME = "C:\\Users\\chris\\OneDrive\\Documents\\csce247\\LawEnforcementDatabase\\Victim.json";
         protected static final String VICTIM_DESCRIPTION = "description";
         protected static final String VICTIM_CONTACT = "contact";
 
-        protected static final String WITNESS_FILE_NAME = "LawEnforcementDatabase/Witness.json";
+        protected static final String WITNESS_FILE_NAME = "C:\\Users\\chris\\OneDrive\\Documents\\csce247\\LawEnforcementDatabase\\Witness.json";
         protected static final String WITNESS_DESCRIPTION = "description";
         protected static final String WITNESS_CONTACT = "contact";
 
-        protected static final String USER_FILE_NAME = "LawEnforcementDatabase/User.json";
         protected static final String USER_FIRST_NAME = "firstName";
         protected static final String USER_LAST_NAME = "lastName";
         protected static final String USER_USERNAME = "userName";
@@ -51,14 +50,14 @@ public abstract class DataConstants {
         protected static final String USER_CLEARANCE_LEVEL = "clearanceLevel";
         protected static final String USER_ID = "ID";
 
-        protected static final String POLICE_FILE_NAME = "LawEnforcementDatabase/PoliceOfficer.json";
+        protected static final String POLICE_FILE_NAME = "C:\\Users\\chris\\OneDrive\\Documents\\csce247\\LawEnforcementDatabase\\PoliceOfficer.json";
         protected static final String POLICE_DEPARTMENT = "policeDepartment";
         protected static final String POLICE_MY_CRIMINALS = "myCriminals";
         protected static final String POLICE_MY_CASES = "myCases";
 
-        protected static final String ADMIN_FILE_NAME = "LawEnforcementDatabase/Admin.json";
+        protected static final String ADMIN_FILE_NAME = "C:\\Users\\chris\\OneDrive\\Documents\\csce247\\LawEnforcementDatabase\\Admin.json";
 
-        protected static final String CASE_FILE_NAME = "LawEnforcementDatabase/Case.json";
+        protected static final String CASE_FILE_NAME = "C:\\Users\\chris\\OneDrive\\Documents\\csce247\\LawEnforcementDatabase\\Case.json";
         protected static final String CASE_CREATOR_ID = "creatorID";
         protected static final String CASE_WITNESSES = "witnesses";
         protected static final String CASE_PEOPLE_OF_INTEREST = "peopleOfInterest";
